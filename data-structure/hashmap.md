@@ -4,7 +4,7 @@
 
 ## 操作
 #### HashMap<$KeyType,ValType$> HashMap($N$)
-キーの型が $KeyTyp $ 、要素の型が $ValType$ で、バケットサイズが$N$のハッシュテーブルを構築する。計算量はO($N$)。
+キーの型が $KeyTyp $ 、値の型が $ValType$ で、バケットサイズが$N$のハッシュテーブルを構築する。計算量はO($N$)。
 #### insert($a,b$)
 キーが $a$ 、値が $b$ の要素を挿入する。計算量はO(1)。
 #### erase($a$)
