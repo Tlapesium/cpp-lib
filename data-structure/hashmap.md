@@ -1,16 +1,16 @@
-## ����
-�J�Ԓn�@�ɂ��n�b�V���e�[�u���̎����B�L�[�̏d���������Ȃ��B
-�C�e���[�^�őS�v�f���擾���邱�Ƃ��\�B
+## 説明
+開番地法によるハッシュテーブルの実装。キーの重複を許さない。
+イテレータで全要素を取得することも可能。
 
-## ����
+## 操作
 #### HashMap<$KeyType,ValType$> HashMap($N$)
-�L�[�̌^�� $KeyTyp $ �A�l�̌^�� $ValType$ �ŁA�o�P�b�g�T�C�Y��$N$�̃n�b�V���e�[�u�����\�z����B�v�Z�ʂ�O($N$)�B
+キーの型が $KeyTyp $ 、値の型が $ValType$ で、バケットサイズが$N$のハッシュテーブルを構築する。計算量はO($N$)。
 #### insert($a,b$)
-�L�[�� $a$ �A�l�� $b$ �̗v�f��ǉ�����B�v�Z�ʂ�O(1)�B
+キーが $a$ 、値が $b$ の要素を追加する。計算量はO(1)。
 #### erase($a$)
-�L�[�� $a$ �ł���悤�ȗv�f���폜����B�v�Z�ʂ�O(1)�B
+キーが $a$ であるような要素を削除する。計算量はO(1)。
 #### operator[] ($a$)
-�L�[�� $a$ �ł���悤�ȗv�f�̒l�̎Q�Ƃ��擾����B�v�Z�ʂ�O(1)�B
-�L�[�� $a$ �ł���悤�ȗv�f�������v�f��ǉ��ł���Ƃ��A�����ŗv�f���ǉ������B
+キーが $a$ であるような要素の値の参照を取得する。計算量はO(1)。
+キーが $a$ であるような要素が無く要素を追加できるとき、自動で要素が追加される。
 
 
