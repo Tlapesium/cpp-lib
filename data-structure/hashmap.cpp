@@ -4,7 +4,7 @@
 
 /**
  * @title HashMap
- * @docs data_structure/hashmap.md
+ * @docs data-structure/hashmap.md
  */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
