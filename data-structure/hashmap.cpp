@@ -6,6 +6,7 @@
  * @title HashMap
  * @docs data_structure/hashmap.md
  */
+
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
 	int BucketSize = 0; // バケットの数
@@ -108,7 +109,7 @@ struct HashMap {
 		throw "Not Found";
 	}
 
-	ValType& operator[] (KeyType key) {
+	ValType& operator[] (const KeyType& key) {
 		if (DataSize + 1 > MaxSize)resize(BucketSize << 1);
 		unsigned long long Hash = Hasher(key);
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
@@ -122,7 +123,7 @@ struct HashMap {
 		return Buckets[Hash & (BucketSize - 1)].data.second;
 	}
 
-	const ValType& operator[] (KeyType key) const {
-		return (*this)[key];
+	const ValType& operator[] (const KeyType& key) const {
+		return at(key);
 	}
 };
