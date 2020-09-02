@@ -9,9 +9,9 @@
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
-	int BucketSize = 0; // �o�P�b�g�̐�
-	int MaxSize = 0; // MaxSize < DataSize �̂Ƃ����n�b�V������
-	int DataSize = 0; // �ۑ�����Ă���f�[�^�̐�
+	int BucketSize = 0; // バケットの数
+	int MaxSize = 0; // MaxSize < DataSize のときリハッシュする
+	int DataSize = 0; // 保存されているデータの数
 
 	struct Record {
 		// 0 -> empty  1 -> used  2 -> deleted
