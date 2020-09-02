@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#9883497098c636ad7eea3c1a0d797cd1">verify/data-structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/data-structure/hashmap.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-09-02 15:07:28+09:00
+    - Last commit date: 2020-09-02 15:15:16+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/associative_array">https://judge.yosupo.jp/problem/associative_array</a>
@@ -83,7 +83,7 @@ int main() {
 
 /**
  * @title HashMap
- * @docs data_structure/hashmap.md
+ * @docs data-structure/hashmap.md
  */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
