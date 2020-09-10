@@ -41,6 +41,13 @@ layout: default
 * :heavy_check_mark: <a href="library/data-structure/hashmap.cpp.html">HashMap</a>
 
 
+<div id="67b732dc42aaffa9056d34cc477c863c"></div>
+
+### utility
+
+* :warning: <a href="library/utility/xorshift.cpp.html">XORShift</a>
+
+
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/example/example.test.cpp.html">example/example.test.cpp</a>
