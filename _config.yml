@@ -9,3 +9,4 @@ plugins:
 remote_theme: thelehhman/texture
 theme: null
 timezone: Asia/Tokyo
+base_url: /texture
