@@ -8,4 +8,4 @@ plugins:
 - jekyll-remote-theme
 timezone: Asia/Tokyo
 theme: null
-remote_theme: aterenin/minima-reboot
+remote_theme: rosario/kasper
