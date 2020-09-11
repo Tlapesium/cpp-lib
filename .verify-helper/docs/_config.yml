@@ -5,7 +5,5 @@ lang: ja
 docs: {}
 plugins:
 - jemoji
-- jekyll-remote-theme
 timezone: Asia/Tokyo
-theme: null
-remote_theme: thelehhman/texture
+theme: minima
