@@ -9,5 +9,7 @@ minima:
     twitter: t1apes1um
 plugins:
 - jemoji
-theme: minima
+- jekyll-remote-theme
+remote_theme: Tlapesium/minima
+theme: null
 timezone: Asia/Tokyo
