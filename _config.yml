@@ -3,4 +3,3 @@ docs: {}
 plugins:
 - jemoji
 remote_theme: ejjoo/jekyll-theme-monos
-theme: jekyll-theme-minimal
