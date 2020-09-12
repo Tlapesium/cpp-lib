@@ -45,7 +45,7 @@ layout: default
 
 ### utility
 
-* :warning: <a href="library/utility/gettime.cpp.html">utility/gettime.cpp</a>
+* :warning: <a href="library/utility/gettime.cpp.html">getTime</a>
 * :warning: <a href="library/utility/xorshift.cpp.html">XORShift</a>
 
 

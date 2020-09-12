@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: utility/gettime.cpp
+# :warning: getTime
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#67b732dc42aaffa9056d34cc477c863c">utility</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utility/gettime.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-09-12 00:26:30+09:00
+    - Last commit date: 2020-09-12 17:40:04+09:00
 
 
 
@@ -42,6 +42,10 @@ layout: default
 {% raw %}
 ```cpp
 #include <chrono>
+
+/**
+ * @title getTime
+ */
 
 long long getTime() {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
@@ -55,6 +59,10 @@ long long getTime() {
 ```cpp
 #line 1 "utility/gettime.cpp"
 #include <chrono>
+
+/**
+ * @title getTime
+ */
 
 long long getTime() {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
