@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: XORShift
+# :warning: utility/xorshift.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#67b732dc42aaffa9056d34cc477c863c">utility</a>
 * <a href="{{ site.github.repository_url }}/blob/master/utility/xorshift.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-09-12 17:40:04+09:00
+    - Last commit date: 2020-09-12 17:50:43+09:00
 
 
 
@@ -44,10 +44,6 @@ layout: default
 #pragma once
 #include <smmintrin.h>
 #include <immintrin.h>
-
-/**
- * @title XORShift
- */
 
  //need SSE2
 struct xorshift_32_4 {
@@ -114,10 +110,6 @@ unsigned long long int xorshift_64_4::x[] = { 0xf77bcfb23d5143cfULL, 0xbda154512
 #line 2 "utility/xorshift.cpp"
 #include <smmintrin.h>
 #include <immintrin.h>
-
-/**
- * @title XORShift
- */
 
  //need SSE2
 struct xorshift_32_4 {

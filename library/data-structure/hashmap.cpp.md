@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: HashMap
+# :heavy_check_mark: data-structure/hashmap.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#36397fe12f935090ad150c6ce0c258d4">data-structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data-structure/hashmap.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-09-12 17:40:04+09:00
+    - Last commit date: 2020-09-12 17:50:43+09:00
 
 
 
@@ -49,10 +49,6 @@ layout: default
 #pragma once
 #include <functional>
 #include <utility>
-
-/**
- * @title HashMap
- */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
@@ -183,10 +179,6 @@ struct HashMap {
 #line 2 "data-structure/hashmap.cpp"
 #include <functional>
 #include <utility>
-
-/**
- * @title HashMap
- */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {

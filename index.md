@@ -38,15 +38,15 @@ layout: default
 
 ### data-structure
 
-* :heavy_check_mark: <a href="library/data-structure/hashmap.cpp.html">HashMap</a>
+* :heavy_check_mark: <a href="library/data-structure/hashmap.cpp.html">data-structure/hashmap.cpp</a>
 
 
 <div id="67b732dc42aaffa9056d34cc477c863c"></div>
 
 ### utility
 
-* :warning: <a href="library/utility/gettime.cpp.html">getTime</a>
-* :warning: <a href="library/utility/xorshift.cpp.html">XORShift</a>
+* :warning: <a href="library/utility/gettime.cpp.html">utility/gettime.cpp</a>
+* :warning: <a href="library/utility/xorshift.cpp.html">utility/xorshift.cpp</a>
 
 
 ## Verify Files
