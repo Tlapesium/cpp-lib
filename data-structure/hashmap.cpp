@@ -2,6 +2,11 @@
 #include <functional>
 #include <utility>
 
+/**
+ * @title HashMap
+ * @docs documents/hashmap.md
+ */
+
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
 	int BucketSize = 0; // バケットの数

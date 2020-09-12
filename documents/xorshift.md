@@ -1,7 +1,3 @@
----
-title: XORShift
-documentation_of: utility/xorshift.cpp
----
 
 ## 説明
 SIMDを用いて高速化したXORShift。<br>

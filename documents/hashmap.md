@@ -1,7 +1,3 @@
----
-title: HashMap
-documentation_of: data-structure/hashmap.cpp
----
 
 ## 説明
 開番地法によるハッシュテーブルの実装。キーの重複を許さない。
