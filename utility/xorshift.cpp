@@ -4,7 +4,6 @@
 
 /**
  * @title XORShift
- * @docs utility/xorshift.md
  */
 
  //need SSE2

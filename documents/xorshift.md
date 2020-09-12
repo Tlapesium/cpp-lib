@@ -1,14 +1,19 @@
+---
+title: XORShift
+documentation_of: utility/xorshift.cpp
+---
+
 ## 説明
 SIMDを用いて高速化したXORShift。<br>
 乱数がボトルネックになることはあんまりない気がするが、早くて困ることはなさそう。
 
-#### xorshift_32_4
+### xorshift_32_4
 周期が $2^{32} - 1$ の32bit乱数を生成する。SSE2が必要。
 
-#### xorshift_32_8
+### xorshift_32_8
 周期が $2^{32} - 1$ の32bit乱数を生成する。AVX2が必要。
 
-#### xorshift_64_4
+### xorshift_64_4
 周期が $2^{64} - 1$ の64bit乱数を生成する。AVX2が必要。
 
 ## ベンチマーク
