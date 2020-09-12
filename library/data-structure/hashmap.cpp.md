@@ -25,15 +25,32 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: data-structure/hashmap.cpp
+# :heavy_check_mark: HashMap
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#36397fe12f935090ad150c6ce0c258d4">data-structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/data-structure/hashmap.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-09-12 17:50:43+09:00
+    - Last commit date: 2020-09-12 18:00:28+09:00
 
 
+
+
+
+## 説明
+開番地法によるハッシュテーブルの実装。キーの重複を許さない。
+イテレータで全要素を取得することも可能。
+
+## 操作
+### HashMap<$KeyType,ValType$> HashMap($N$)
+キーの型が $KeyType$ 、値の型が $ValType$ で、バケットサイズが$N$のハッシュテーブルを構築する。計算量はO($N$)。
+### insert($a,b$)
+キーが $a$ 、値が $b$ の要素を追加する。計算量はO(1)。
+### erase($a$)
+キーが $a$ であるような要素を削除する。計算量はO(1)。
+### operator[] ($a$)
+キーが $a$ であるような要素の値の参照を取得する。計算量はO(1)。
+キーが $a$ であるような要素が無く要素を追加できるとき、自動で要素が追加される。
 
 
 ## Verified with
@@ -49,6 +66,11 @@ layout: default
 #pragma once
 #include <functional>
 #include <utility>
+
+/**
+ * @title HashMap
+ * @docs documents/hashmap.md
+ */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
@@ -179,6 +201,11 @@ struct HashMap {
 #line 2 "data-structure/hashmap.cpp"
 #include <functional>
 #include <utility>
+
+/**
+ * @title HashMap
+ * @docs documents/hashmap.md
+ */
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
