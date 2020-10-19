@@ -13,10 +13,10 @@ struct SegmentTree {
 	const Monoid E;
 	const int sz;
 
-	// ’PˆÊŒ³‚Å‰Šú‰»‚³‚ê‚½ƒZƒO–Ø‚ğ\’z O(N)
+	// å˜ä½å…ƒã§åˆæœŸåŒ–ã•ã‚ŒãŸã‚»ã‚°æœ¨ã‚’æ§‹ç¯‰ O(N)
 	SegmentTree(int n, MonoidOp F, Monoid E) : F(F), E(E), sz(n) { dat.assign(sz * 2 + 1, E); }
 
-	// vector‚ğŠî‚É\’z O(N)
+	// vectorã‚’åŸºã«æ§‹ç¯‰ O(N)
 	SegmentTree(const std::vector<Monoid>& vec, MonoidOp F, Monoid E) : F(F), E(E), sz(vec.size()) {
 		dat.assign(sz * 2 + 1, E);
 		for (int i = 0; i < sz; i++) dat[i + sz] = vec[i];
@@ -27,7 +27,7 @@ struct SegmentTree {
 
 	const Monoid& operator[] (int idx) { return dat[idx + sz]; }
 
-	// fold(l,l+1,...,r-1) ‚ğ•Ô‚·
+	// fold(l,l+1,...,r-1) ã‚’è¿”ã™
 	Monoid get(int l, int r) {
 		l += sz; r += sz;
 		Monoid lm(E), rm(E);
@@ -57,7 +57,7 @@ struct SegmentTree {
 		return i - sz;
 	}
 
-	// isOK(fold(l,l+1,...,r-1,r)) == 1 ‚Æ‚È‚éÅ¬‚Ìr‚ğ‹‚ß‚é
+	// isOK(fold(l,l+1,...,r-1,r)) == 1 ã¨ãªã‚‹æœ€å°ã®rã‚’æ±‚ã‚ã‚‹
 	template<class DetermineFunc>
 	int search_r(DetermineFunc isOK, int l = 0) {
 		l += sz;
