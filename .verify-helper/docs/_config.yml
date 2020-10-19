@@ -6,9 +6,3 @@ plugins:
 - jemoji
 - jekyll-remote-theme
 timezone: Asia/Tokyo
-theme: null
-remote_theme: Tlapesium/minima
-minima:
-  social_links:
-    github: Tlapesium
-    twitter: t1apes1um
