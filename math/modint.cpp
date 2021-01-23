@@ -57,10 +57,10 @@ Modint operator-(const long long& l, const Modint& r) { return Modint(l, r.mod) 
 Modint operator*(const long long& l, const Modint& r) { return Modint(l, r.mod) *= r; }
 Modint operator/(const long long& l, const Modint& r) { return Modint(l, r.mod) /= r; }
 
-ostream& operator << (ostream& stream, const Modint& mi) {
+std::ostream& operator << (std::ostream& stream, const Modint& mi) {
 	return stream << mi.val;
 };
-istream& operator >> (istream& stream, Modint& mi) {
+std::istream& operator >> (std::istream& stream, Modint& mi) {
 	long long tmp;
 	stream >> tmp;
 	mi = Modint(tmp);
