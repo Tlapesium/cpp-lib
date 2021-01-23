@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/data-structure/DSL_2_A.test.cpp
+    title: verify/data-structure/DSL_2_A.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: Segment Tree
     links: []
@@ -89,8 +92,9 @@ data:
   path: data-structure/segment_tree.cpp
   requiredBy: []
   timestamp: '2020-10-20 01:04:29+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify/data-structure/DSL_2_A.test.cpp
 documentation_of: data-structure/segment_tree.cpp
 layout: document
 redirect_from:

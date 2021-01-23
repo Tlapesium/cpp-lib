@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/hashmap.cpp
       title: HashMap
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
   - name: math
@@ -30,8 +30,11 @@ data:
       title: example/example.test.cpp
   - name: verify/data-structure
     pages:
+    - icon: ':x:'
+      path: verify/data-structure/DSL_2_A.test.cpp
+      title: verify/data-structure/DSL_2_A.test.cpp
     - icon: ':heavy_check_mark:'
-      path: verify/data-structure/hashmap.test.cpp
-      title: verify/data-structure/hashmap.test.cpp
+      path: verify/data-structure/associative_array.test.cpp
+      title: verify/data-structure/associative_array.test.cpp
 layout: toppage
 ---

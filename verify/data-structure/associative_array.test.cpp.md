@@ -14,8 +14,8 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/associative_array
     links:
     - https://judge.yosupo.jp/problem/associative_array
-  bundledCode: "#line 1 \"verify/data-structure/hashmap.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/associative_array\"\r\n#include <bits/stdc++.h>\r\
+  bundledCode: "#line 1 \"verify/data-structure/associative_array.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/associative_array\"\r\n#include <bits/stdc++.h>\r\
     \n#line 4 \"data-structure/hashmap.cpp\"\n\r\n/**\r\n * @title HashMap\r\n * @docs\
     \ documents/hashmap.md\r\n */\r\n\r\ntemplate<typename KeyType, typename ValType,\
     \ typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>\r\
@@ -70,7 +70,7 @@ data:
     Hash++;\r\n\t\t}\r\n\t\tBuckets[Hash & (BucketSize - 1)] = { 1,{key,ValType()}\
     \ };\r\n\t\tDataSize++;\r\n\t\treturn Buckets[Hash & (BucketSize - 1)].data.second;\r\
     \n\t}\r\n\r\n\tconst ValType& operator[] (const KeyType& key) const {\r\n\t\t\
-    return at(key);\r\n\t}\r\n};\n#line 4 \"verify/data-structure/hashmap.test.cpp\"\
+    return at(key);\r\n\t}\r\n};\n#line 4 \"verify/data-structure/associative_array.test.cpp\"\
     \nusing namespace std;\r\ntypedef long long ll;\r\n\r\n\r\nint main() {\r\n\t\
     HashMap<ll, ll> hm;\r\n\tint Q;\r\n\tcin >> Q;\r\n\tll t, k, v;\r\n\tfor (int\
     \ i = 0; i < Q; i++) {\r\n\t\tcin >> t >> k;\r\n\t\tif (t) {\r\n\t\t\tcout <<\
@@ -85,15 +85,15 @@ data:
   dependsOn:
   - data-structure/hashmap.cpp
   isVerificationFile: true
-  path: verify/data-structure/hashmap.test.cpp
+  path: verify/data-structure/associative_array.test.cpp
   requiredBy: []
-  timestamp: '2020-09-12 18:00:28+09:00'
+  timestamp: '2021-01-24 02:08:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/data-structure/hashmap.test.cpp
+documentation_of: verify/data-structure/associative_array.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/data-structure/hashmap.test.cpp
-- /verify/verify/data-structure/hashmap.test.cpp.html
-title: verify/data-structure/hashmap.test.cpp
+- /verify/verify/data-structure/associative_array.test.cpp
+- /verify/verify/data-structure/associative_array.test.cpp.html
+title: verify/data-structure/associative_array.test.cpp
 ---

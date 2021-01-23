@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/data-structure/hashmap.test.cpp
-    title: verify/data-structure/hashmap.test.cpp
+    path: verify/data-structure/associative_array.test.cpp
+    title: verify/data-structure/associative_array.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -132,7 +132,7 @@ data:
   timestamp: '2020-09-12 18:00:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/hashmap.test.cpp
+  - verify/data-structure/associative_array.test.cpp
 documentation_of: data-structure/hashmap.cpp
 layout: document
 redirect_from:
