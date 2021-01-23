@@ -15,7 +15,7 @@ public:
 		v = std::vector(N, std::vector(N, 0LL));
 		for (int i = 0; i < N; i++)v[i][i] = 1;
 	}
-	Matrix(int N, int M, ll x) {
+	Matrix(int N, int M, long long x) {
 		v = std::vector(N, std::vector(M, x));
 	}
 	Matrix(std::initializer_list<std::initializer_list<long long>> list) {
@@ -72,20 +72,3 @@ public:
 Matrix operator+(const Matrix& l, const Matrix& r) { return Matrix(l) += r; }
 Matrix operator-(const Matrix& l, const Matrix& r) { return Matrix(l) -= r; }
 Matrix operator*(const Matrix& l, const Matrix& r) { return Matrix(l) *= r; }
-
-struct modmat : public Matrix {
-	using Matrix::Matrix;
-	modmat& operator*= (const modmat& r) {
-		std::vector c(height(), std::vector(r.width(), 0LL));
-		for (int i = 0; i < height(); i++) {
-			for (int j = 0; j < r.width(); j++) {
-				for (int k = 0; k < width(); k++) {
-					c[i][j] += v[i][k] * r.v[k][j] % MOD;
-					c[i][j] %= MOD;
-				}
-			}
-		}
-		v = c;
-		return *this;
-	}
-};
