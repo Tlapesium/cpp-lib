@@ -8,19 +8,25 @@
  */
 
 struct matrix {
+public:
 	std::vector<std::vector<long long>> v;
 	matrix() = default;
-	matrix(int N, int M) {
-		v = std::vector(N, std::vector(M, 0LL));
+	matrix(int N) {
+		v = std::vector(N, std::vector(N, 0LL));
+		for (int i = 0; i < N; i++)v[i][i] = 1;
 	}
-	int height() const { return v.size(); };
-	int width() const { return v[0].size(); };
-
+	matrix(int N, int M, long long x) {
+		v = std::vector(N, std::vector(M, x));
+	}
 	matrix(std::initializer_list<std::initializer_list<long long>> list) {
 		for (auto&& row : list) {
 			v.push_back(row);
 		}
 	}
+
+	int height() const { return v.size(); };
+	int width() const { return v[0].size(); };
+
 	matrix& operator=(std::initializer_list<std::initializer_list<long long>> list) {
 		v.clear();
 		for (auto&& row : list) {
