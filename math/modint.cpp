@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <utility>
 
 /**
  * @title Modint
@@ -26,8 +27,8 @@ struct Modint {
 		long long a = r.val, b = mod, u = 1, v = 0;
 		while (b) {
 			long long t = a / b;
-			a -= t * b; swap(a, b);
-			u -= t * v; swap(u, v);
+			a -= t * b; std::swap(a, b);
+			u -= t * v; std::swap(u, v);
 		}
 		u %= mod;
 		if (u < 0) u += mod;
