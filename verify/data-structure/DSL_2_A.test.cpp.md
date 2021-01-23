@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/segment_tree.cpp
     title: Segment Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
@@ -16,7 +16,7 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
   bundledCode: "#line 1 \"verify/data-structure/DSL_2_A.test.cpp\"\n#define PROBLEM\
     \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\r\n#include\
-    \ <bits/stdc++.h>\r\n#line 3 \"data-structure/segment_tree.cpp\"\n\r\n/**\r\n\
+    \ <bits/stdc++.h>\r\n#line 4 \"data-structure/segment_tree.cpp\"\n\r\n/**\r\n\
     \ * @title Segment Tree\r\n */\r\n\r\ntemplate <class Monoid, class MonoidOp>\r\
     \nstruct SegmentTree {\r\n\tstd::vector<Monoid> dat;\r\n\r\n\tconst MonoidOp F;\r\
     \n\tconst Monoid E;\r\n\tconst int sz;\r\n\r\n\t// \u5358\u4F4D\u5143\u3067\u521D\
@@ -47,13 +47,13 @@ data:
     \ >= 0; tmp--) {\r\n\t\t\tint r_ = r >> tmp;\r\n\t\t\tif (r_ & 1) {\r\n\t\t\t\t\
     r_--;\r\n\t\t\t\tif (isOK(F(sum, dat[r_])))return internal_search(sum, r_, isOK);\r\
     \n\t\t\t\tsum = F(sum, dat[r_]);\r\n\t\t\t}\r\n\t\t}\r\n\t\treturn -1;\r\n\t}\r\
-    \n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < dat.size(); i++) cout << dat[i]\
-    \ << (i != dat.size() ? \" \" : \"\\n\");\r\n\t}\r\n};\r\n\r\ntemplate<class Monoid,\
-    \ class MonoidOp>\r\nSegmentTree<Monoid, MonoidOp> makeSegTree(int n, MonoidOp\
-    \ F, Monoid E) {\r\n\treturn SegmentTree<Monoid, MonoidOp>(n, F, E);\r\n}\r\n\r\
-    \ntemplate<class Monoid, class MonoidOp>\r\nSegmentTree<Monoid, MonoidOp> makeSegTree(const\
-    \ std::vector<Monoid>& vec, MonoidOp F, Monoid E) {\r\n\treturn SegmentTree<Monoid,\
-    \ MonoidOp>(vec, F, E);\r\n}\r\n#line 4 \"verify/data-structure/DSL_2_A.test.cpp\"\
+    \n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < dat.size(); i++) std::cout <<\
+    \ dat[i] << (i != dat.size() ? \" \" : \"\\n\");\r\n\t}\r\n};\r\n\r\ntemplate<class\
+    \ Monoid, class MonoidOp>\r\nSegmentTree<Monoid, MonoidOp> makeSegTree(int n,\
+    \ MonoidOp F, Monoid E) {\r\n\treturn SegmentTree<Monoid, MonoidOp>(n, F, E);\r\
+    \n}\r\n\r\ntemplate<class Monoid, class MonoidOp>\r\nSegmentTree<Monoid, MonoidOp>\
+    \ makeSegTree(const std::vector<Monoid>& vec, MonoidOp F, Monoid E) {\r\n\treturn\
+    \ SegmentTree<Monoid, MonoidOp>(vec, F, E);\r\n}\r\n#line 4 \"verify/data-structure/DSL_2_A.test.cpp\"\
     \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N,\
     \ Q;\r\n\tcin >> N >> Q;\r\n\tll INF = (1LL << 31LL) - 1LL;\r\n\tauto ST = makeSegTree(vector(N,\
     \ INF), [](ll& l, ll& r) {return min(l, r); }, INF);\r\n\tfor (int i = 0; i <\
@@ -71,8 +71,8 @@ data:
   isVerificationFile: true
   path: verify/data-structure/DSL_2_A.test.cpp
   requiredBy: []
-  timestamp: '2021-01-24 02:08:41+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-24 02:20:47+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/DSL_2_A.test.cpp
 layout: document

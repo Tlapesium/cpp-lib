@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/hashmap.cpp
       title: HashMap
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
   - name: math
@@ -30,7 +30,7 @@ data:
       title: example/example.test.cpp
   - name: verify/data-structure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_A.test.cpp
       title: verify/data-structure/DSL_2_A.test.cpp
     - icon: ':heavy_check_mark:'
