@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/math/yuki1136.test.cpp
     title: verify/math/yuki1136.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Matrix
     links: []
@@ -18,11 +18,11 @@ data:
     \ = default;\r\n\tMatrix(int N) {\r\n\t\tv = std::vector(N, std::vector(N, T(0)));\r\
     \n\t\tfor (int i = 0; i < N; i++)v[i][i] = T(1);\r\n\t}\r\n\tMatrix(int N, int\
     \ M, T x) {\r\n\t\tv = std::vector(N, std::vector(M, x));\r\n\t}\r\n\tMatrix(std::initializer_list<std::initializer_list<long\
-    \ long>> list) {\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(vector<T>());\r\
+    \ long>> list) {\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(std::vector<T>());\r\
     \n\t\t\tfor (auto x : row) {\r\n\t\t\t\tv.back().push_back(T(x));\r\n\t\t\t}\r\
     \n\t\t}\r\n\t}\r\n\r\n\tint height() const { return v.size(); };\r\n\tint width()\
     \ const { return v[0].size(); };\r\n\r\n\tMatrix& operator=(std::initializer_list<std::initializer_list<long\
-    \ long>> list) {\r\n\t\tv.clear();\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(vector<T>());\r\
+    \ long>> list) {\r\n\t\tv.clear();\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(std::vector<T>());\r\
     \n\t\t\tfor (auto x : row) {\r\n\t\t\t\tv.back().push_back(T(x));\r\n\t\t\t}\r\
     \n\t\t}\r\n\t\treturn *this;\r\n\t}\r\n\r\n\tMatrix& operator+= (const Matrix&\
     \ r) {\r\n\t\tfor (int i = 0; i < height(); i++)for (int j = 0; j < width(); j++)\
@@ -47,11 +47,11 @@ data:
     \ = default;\r\n\tMatrix(int N) {\r\n\t\tv = std::vector(N, std::vector(N, T(0)));\r\
     \n\t\tfor (int i = 0; i < N; i++)v[i][i] = T(1);\r\n\t}\r\n\tMatrix(int N, int\
     \ M, T x) {\r\n\t\tv = std::vector(N, std::vector(M, x));\r\n\t}\r\n\tMatrix(std::initializer_list<std::initializer_list<long\
-    \ long>> list) {\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(vector<T>());\r\
+    \ long>> list) {\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(std::vector<T>());\r\
     \n\t\t\tfor (auto x : row) {\r\n\t\t\t\tv.back().push_back(T(x));\r\n\t\t\t}\r\
     \n\t\t}\r\n\t}\r\n\r\n\tint height() const { return v.size(); };\r\n\tint width()\
     \ const { return v[0].size(); };\r\n\r\n\tMatrix& operator=(std::initializer_list<std::initializer_list<long\
-    \ long>> list) {\r\n\t\tv.clear();\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(vector<T>());\r\
+    \ long>> list) {\r\n\t\tv.clear();\r\n\t\tfor (auto row : list) {\r\n\t\t\tv.push_back(std::vector<T>());\r\
     \n\t\t\tfor (auto x : row) {\r\n\t\t\t\tv.back().push_back(T(x));\r\n\t\t\t}\r\
     \n\t\t}\r\n\t\treturn *this;\r\n\t}\r\n\r\n\tMatrix& operator+= (const Matrix&\
     \ r) {\r\n\t\tfor (int i = 0; i < height(); i++)for (int j = 0; j < width(); j++)\
@@ -74,8 +74,8 @@ data:
   isVerificationFile: false
   path: math/matrix.cpp
   requiredBy: []
-  timestamp: '2021-01-24 05:23:14+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-01-24 05:34:14+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/math/yuki1136.test.cpp
 documentation_of: math/matrix.cpp
