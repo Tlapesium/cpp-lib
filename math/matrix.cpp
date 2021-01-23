@@ -7,18 +7,18 @@
  * @title Matrix
  */
 
-struct matrix {
+struct Matrix {
 public:
 	std::vector<std::vector<long long>> v;
-	matrix() = default;
-	matrix(int N) {
+	Matrix() = default;
+	Matrix(int N) {
 		v = std::vector(N, std::vector(N, 0LL));
 		for (int i = 0; i < N; i++)v[i][i] = 1;
 	}
-	matrix(int N, int M, long long x) {
+	Matrix(int N, int M, ll x) {
 		v = std::vector(N, std::vector(M, x));
 	}
-	matrix(std::initializer_list<std::initializer_list<long long>> list) {
+	Matrix(std::initializer_list<std::initializer_list<long long>> list) {
 		for (auto&& row : list) {
 			v.push_back(row);
 		}
@@ -27,7 +27,7 @@ public:
 	int height() const { return v.size(); };
 	int width() const { return v[0].size(); };
 
-	matrix& operator=(std::initializer_list<std::initializer_list<long long>> list) {
+	Matrix& operator=(std::initializer_list<std::initializer_list<long long>> list) {
 		v.clear();
 		for (auto&& row : list) {
 			v.push_back(row);
@@ -35,21 +35,21 @@ public:
 		return *this;
 	}
 
-	matrix& operator+= (const matrix& r) {
+	Matrix& operator+= (const Matrix& r) {
 		for (int i = 0; i < height(); i++)for (int j = 0; j < width(); j++) {
 			v[i][j] += r.v[i][j];
 		}
 		return *this;
 	}
 
-	matrix& operator-= (const matrix& r) {
+	Matrix& operator-= (const Matrix& r) {
 		for (int i = 0; i < height(); i++)for (int j = 0; j < width(); j++) {
 			v[i][j] -= r.v[i][j];
 		}
 		return *this;
 	}
 
-	matrix& operator*= (const matrix& r) {
+	Matrix& operator*= (const Matrix& r) {
 		std::vector c(height(), std::vector(r.width(), 0LL));
 		for (int i = 0; i < height(); i++) {
 			for (int j = 0; j < r.width(); j++) {
@@ -69,6 +69,23 @@ public:
 	}
 };
 
-matrix operator+(const matrix& l, const matrix& r) { return matrix(l) += r; }
-matrix operator-(const matrix& l, const matrix& r) { return matrix(l) -= r; }
-matrix operator*(const matrix& l, const matrix& r) { return matrix(l) *= r; }
+Matrix operator+(const Matrix& l, const Matrix& r) { return Matrix(l) += r; }
+Matrix operator-(const Matrix& l, const Matrix& r) { return Matrix(l) -= r; }
+Matrix operator*(const Matrix& l, const Matrix& r) { return Matrix(l) *= r; }
+
+struct modmat : public Matrix {
+	using Matrix::Matrix;
+	modmat& operator*= (const modmat& r) {
+		std::vector c(height(), std::vector(r.width(), 0LL));
+		for (int i = 0; i < height(); i++) {
+			for (int j = 0; j < r.width(); j++) {
+				for (int k = 0; k < width(); k++) {
+					c[i][j] += v[i][k] * r.v[k][j] % MOD;
+					c[i][j] %= MOD;
+				}
+			}
+		}
+		v = c;
+		return *this;
+	}
+};

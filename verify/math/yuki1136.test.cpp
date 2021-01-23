@@ -6,8 +6,8 @@ typedef long long ll;
 
 constexpr int MOD = 1000000007;
 
-struct modmat : public matrix {
-	using matrix::matrix;
+struct modmat : public Matrix {
+	using Matrix::Matrix;
 	modmat& operator*= (const modmat& r) {
 		std::vector c(height(), std::vector(r.width(), 0LL));
 		for (int i = 0; i < height(); i++) {
