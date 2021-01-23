@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <iostream>
 
 /**
  * @title Segment Tree
@@ -82,7 +83,7 @@ struct SegmentTree {
 	}
 
 	void dump() {
-		for (int i = 0; i < dat.size(); i++) cout << dat[i] << (i != dat.size() ? " " : "\n");
+		for (int i = 0; i < dat.size(); i++) std::cout << dat[i] << (i != dat.size() ? " " : "\n");
 	}
 };
 
