@@ -1,29 +1,11 @@
 #define PROBLEM "https://yukicoder.me/problems/no/1136"
 #include <bits/stdc++.h>
+#include "math/modint.cpp"
 #include "math/matrix.cpp"
 using namespace std;
 typedef long long ll;
 
-constexpr int MOD = 1000000007;
-
-struct modmat : public Matrix {
-	using Matrix::Matrix;
-	modmat& operator*= (const modmat& r) {
-		std::vector c(height(), std::vector(r.width(), 0LL));
-		for (int i = 0; i < height(); i++) {
-			for (int j = 0; j < r.width(); j++) {
-				for (int k = 0; k < width(); k++) {
-					c[i][j] += v[i][k] * r.v[k][j] % MOD;
-					c[i][j] %= MOD;
-				}
-			}
-		}
-		v = c;
-		return *this;
-	}
-};
-
-modmat operator*(const modmat& l, const modmat& r) { return modmat(l) *= r; }
+using modmat = Matrix<Modint>;
 
 modmat matpow(const modmat& x, ll n) {
 	if (n == 0)return modmat(x.height());

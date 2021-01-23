@@ -7,20 +7,24 @@
  * @title Matrix
  */
 
+template <class T>
 struct Matrix {
 public:
-	std::vector<std::vector<long long>> v;
+	std::vector<std::vector<T>> v;
 	Matrix() = default;
 	Matrix(int N) {
-		v = std::vector(N, std::vector(N, 0LL));
-		for (int i = 0; i < N; i++)v[i][i] = 1;
+		v = std::vector(N, std::vector(N, T(0)));
+		for (int i = 0; i < N; i++)v[i][i] = T(1);
 	}
-	Matrix(int N, int M, long long x) {
+	Matrix(int N, int M, T x) {
 		v = std::vector(N, std::vector(M, x));
 	}
 	Matrix(std::initializer_list<std::initializer_list<long long>> list) {
-		for (auto&& row : list) {
-			v.push_back(row);
+		for (auto row : list) {
+			v.push_back(vector<T>());
+			for (auto x : row) {
+				v.back().push_back(T(x));
+			}
 		}
 	}
 
@@ -29,8 +33,11 @@ public:
 
 	Matrix& operator=(std::initializer_list<std::initializer_list<long long>> list) {
 		v.clear();
-		for (auto&& row : list) {
-			v.push_back(row);
+		for (auto row : list) {
+			v.push_back(vector<T>());
+			for (auto x : row) {
+				v.back().push_back(T(x));
+			}
 		}
 		return *this;
 	}
@@ -50,10 +57,10 @@ public:
 	}
 
 	Matrix& operator*= (const Matrix& r) {
-		std::vector c(height(), std::vector(r.width(), 0LL));
+		std::vector c(height(), std::vector(r.width(), T(0)));
 		for (int i = 0; i < height(); i++) {
-			for (int j = 0; j < r.width(); j++) {
-				for (int k = 0; k < width(); k++) {
+			for (int k = 0; k < width(); k++) {
+				for (int j = 0; j < r.width(); j++) {
 					c[i][j] += v[i][k] * r.v[k][j];
 				}
 			}
@@ -68,7 +75,9 @@ public:
 		}
 	}
 };
-
-Matrix operator+(const Matrix& l, const Matrix& r) { return Matrix(l) += r; }
-Matrix operator-(const Matrix& l, const Matrix& r) { return Matrix(l) -= r; }
-Matrix operator*(const Matrix& l, const Matrix& r) { return Matrix(l) *= r; }
+template <class T>
+Matrix<T> operator+(const Matrix<T>& l, const Matrix<T>& r) { return Matrix<T>(l) += r; }
+template <class T>
+Matrix<T> operator-(const Matrix<T>& l, const Matrix<T>& r) { return Matrix<T>(l) -= r; }
+template <class T>
+Matrix<T> operator*(const Matrix<T>& l, const Matrix<T>& r) { return Matrix<T>(l) *= r; }
