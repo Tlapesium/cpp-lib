@@ -21,7 +21,7 @@ public:
 	}
 	Matrix(std::initializer_list<std::initializer_list<long long>> list) {
 		for (auto row : list) {
-			v.push_back(vector<T>());
+			v.push_back(std::vector<T>());
 			for (auto x : row) {
 				v.back().push_back(T(x));
 			}
@@ -34,7 +34,7 @@ public:
 	Matrix& operator=(std::initializer_list<std::initializer_list<long long>> list) {
 		v.clear();
 		for (auto row : list) {
-			v.push_back(vector<T>());
+			v.push_back(std::vector<T>());
 			for (auto x : row) {
 				v.back().push_back(T(x));
 			}
