@@ -9,6 +9,11 @@ data:
     - icon: ':warning:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
+  - name: math
+    pages:
+    - icon: ':warning:'
+      path: math/matrix.cpp
+      title: Matrix
   - name: utility
     pages:
     - icon: ':warning:'

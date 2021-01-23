@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/hashmap.test.cpp
     title: verify/data-structure/hashmap.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
