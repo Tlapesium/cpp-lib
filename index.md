@@ -11,9 +11,12 @@ data:
       title: Segment Tree
   - name: math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/matrix.cpp
       title: Matrix
+    - icon: ':x:'
+      path: math/modint.cpp
+      title: Modint
   - name: utility
     pages:
     - icon: ':warning:'
@@ -38,7 +41,7 @@ data:
       title: verify/data-structure/associative_array.test.cpp
   - name: verify/math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: verify/math/yuki1136.test.cpp
       title: verify/math/yuki1136.test.cpp
 layout: toppage
