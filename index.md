@@ -7,6 +7,9 @@ data:
       path: data-structure/hashmap.cpp
       title: HashMap
     - icon: ':heavy_check_mark:'
+      path: data-structure/lazy_segment_tree.cpp
+      title: Lazy Segment Tree
+    - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
   - name: math
@@ -36,6 +39,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_A.test.cpp
       title: verify/data-structure/DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/data-structure/DSL_2_F.test.cpp
+      title: verify/data-structure/DSL_2_F.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/associative_array.test.cpp
       title: verify/data-structure/associative_array.test.cpp
