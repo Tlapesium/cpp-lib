@@ -12,6 +12,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
+    - icon: ':heavy_check_mark:'
+      path: data-structure/sparse_table.cpp
+      title: Sparce Table
+  - name: graph
+    pages:
+    - icon: ':warning:'
+      path: graph/graph.cpp
+      title: "\u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -45,6 +53,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/associative_array.test.cpp
       title: verify/data-structure/associative_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/data-structure/static_rmq.test.cpp
+      title: verify/data-structure/static_rmq.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
