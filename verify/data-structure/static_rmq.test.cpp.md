@@ -15,8 +15,8 @@ data:
     links:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"verify/data-structure/static_rmq.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/staticrmq\"\r\n#include <bits/stdc++.h>\r\n\
-    #line 3 \"data-structure/sparse_table.cpp\"\n\r\n/**\r\n * @title Sparce Table\r\
+    \ \"https://judge.yosupo.jp/problem/staticrmq\"\r\n#line 2 \"data-structure/sparse_table.cpp\"\
+    \n#include <vector>\r\n#include <functional>\r\n\r\n/**\r\n * @title Sparce Table\r\
     \n */\r\n\r\ntemplate<class T, class Comp = std::less<T> >\r\nstruct SparseTable\
     \ {\r\n\tstd::vector<std::vector<T>> st;\r\n\tconst int size;\r\n\tconst Comp\
     \ comp;\r\n\tSparseTable(const std::vector<T>& v, Comp c = Comp()) : size(v.size()),\
@@ -30,14 +30,14 @@ data:
     if (comp(st[l][k], st[r - (1 << k)][k])) {\r\n\t\t\treturn st[l][k];\r\n\t\t}\r\
     \n\t\telse {\r\n\t\t\treturn st[r - (1 << k)][k];\r\n\t\t}\r\n\t}\r\n};\r\n\r\n\
     template<class T, class Comp>\r\nSparseTable<T, Comp> makeSparseTable(const std::vector<T>&\
-    \ v, Comp c) {\r\n\treturn SparseTable<T, Comp>(v, c);\r\n}\r\n#line 4 \"verify/data-structure/static_rmq.test.cpp\"\
-    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\n\r\nint main() {\r\n\t\
-    int N, Q;\r\n\tcin >> N >> Q;\r\n\tvector<int> v(N);\r\n\tfor (int i = 0; i <\
-    \ N; i++)cin >> v[i];\r\n\tSparseTable ST(v);\r\n\tfor (int i = 0; i < Q; i++)\
-    \ {\r\n\t\tint l, r;\r\n\t\tcin >> l >> r;\r\n\t\tcout << ST.get(l, r) << endl;\r\
-    \n\t}\r\n}\n"
+    \ v, Comp c) {\r\n\treturn SparseTable<T, Comp>(v, c);\r\n}\r\n#line 3 \"verify/data-structure/static_rmq.test.cpp\"\
+    \n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\n\
+    \r\n\r\nint main() {\r\n\tint N, Q;\r\n\tcin >> N >> Q;\r\n\tvector<int> v(N);\r\
+    \n\tfor (int i = 0; i < N; i++)cin >> v[i];\r\n\tSparseTable ST(v);\r\n\tfor (int\
+    \ i = 0; i < Q; i++) {\r\n\t\tint l, r;\r\n\t\tcin >> l >> r;\r\n\t\tcout << ST.get(l,\
+    \ r) << endl;\r\n\t}\r\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\r\n#include\
-    \ <bits/stdc++.h>\r\n#include \"data-structure/sparse_table.cpp\"\r\nusing namespace\
+    \ \"data-structure/sparse_table.cpp\"\r\n#include <bits/stdc++.h>\r\nusing namespace\
     \ std;\r\ntypedef long long ll;\r\n\r\n\r\nint main() {\r\n\tint N, Q;\r\n\tcin\
     \ >> N >> Q;\r\n\tvector<int> v(N);\r\n\tfor (int i = 0; i < N; i++)cin >> v[i];\r\
     \n\tSparseTable ST(v);\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tint l, r;\r\n\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2021-02-02 04:50:26+09:00'
+  timestamp: '2021-02-02 05:03:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/static_rmq.test.cpp
