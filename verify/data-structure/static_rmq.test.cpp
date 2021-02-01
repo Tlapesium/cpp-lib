@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
-#include <bits/stdc++.h>
 #include "data-structure/sparse_table.cpp"
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
