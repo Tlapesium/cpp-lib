@@ -17,7 +17,10 @@ data:
       title: Sparce Table
   - name: graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.cpp
+      title: "\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\u6CD5"
+    - icon: ':heavy_check_mark:'
       path: graph/graph.cpp
       title: "\u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: math
@@ -56,6 +59,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/static_rmq.test.cpp
       title: verify/data-structure/static_rmq.test.cpp
+  - name: verify/graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/GRL_1_A.test.cpp
+      title: verify/graph/GRL_1_A.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
