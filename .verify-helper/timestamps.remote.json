@@ -4,6 +4,7 @@
 "verify/data-structure/DSL_2_F.test.cpp": "2021-02-02 05:03:20 +0900",
 "verify/data-structure/associative_array.test.cpp": "2021-02-09 06:48:00 +0900",
 "verify/data-structure/static_rmq.test.cpp": "2021-02-02 05:03:20 +0900",
-"verify/graph/GRL_1_A.test.cpp": "2021-02-09 07:57:03 +0900",
+"verify/graph/GRL_1_A.test.cpp": "2021-02-09 08:06:38 +0900",
+"verify/graph/GRL_1_B.test.cpp": "2021-02-09 08:06:38 +0900",
 "verify/math/yuki1136.test.cpp": "2021-02-02 05:03:20 +0900"
 }
