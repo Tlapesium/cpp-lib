@@ -6,10 +6,9 @@
 #include "graph/graph.cpp"
 
 /**
- * @title ダイクストラ法
+ * @title Shortest Path (Dijkstra)
  */
 
- //Dijkstra法
 auto Dijkstra(int s, WeightedGraph& g) {
 	constexpr auto inf = std::numeric_limits<long long>::max();
 	using P = std::pair<long long, int>;
