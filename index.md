@@ -18,8 +18,11 @@ data:
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
+      path: graph/bellman_ford.cpp
+      title: Shortest Path (Bellman-Ford)
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.cpp
-      title: "\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\u6CD5"
+      title: Shortest Path (Dijkstra)
     - icon: ':heavy_check_mark:'
       path: graph/graph.cpp
       title: "\u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -64,6 +67,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/graph/GRL_1_A.test.cpp
       title: verify/graph/GRL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/GRL_1_B.test.cpp
+      title: verify/graph/GRL_1_B.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
