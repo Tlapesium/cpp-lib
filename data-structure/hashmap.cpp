@@ -12,6 +12,7 @@ struct HashMap {
 	int BucketSize = 0; // バケットの数
 	int MaxSize = 0; // MaxSize < DataSize のときリハッシュする
 	int DataSize = 0; // 保存されているデータの数
+	int TombSize = 0; // 削除されたデータの個数
 
 	struct Record {
 		// 0 -> empty  1 -> used  2 -> deleted
@@ -57,6 +58,8 @@ struct HashMap {
 		return x;
 	}
 
+	int size() { return DataSize - TombSize; }
+
 	void resize(int NewBucketSize) {
 		int OldBucketSize = BucketSize;
 		BucketSize = NewBucketSize;
@@ -91,6 +94,7 @@ struct HashMap {
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
 			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, key)) {
 				Buckets[Hash & (BucketSize - 1)].used = 2;
+				TombSize++;
 				return;
 			}
 			Hash++;
