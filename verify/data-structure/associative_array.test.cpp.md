@@ -17,10 +17,9 @@ data:
   bundledCode: "#line 1 \"verify/data-structure/associative_array.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/associative_array\"\r\n#line 2 \"\
     data-structure/hashmap.cpp\"\n#include <functional>\r\n#include <utility>\r\n\r\
-    \n/**\r\n * @title HashMap\r\n * @docs documents/hashmap.md\r\n */\r\n\r\ntemplate<typename\
-    \ KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename\
-    \ isEqual = std::equal_to<KeyType>>\r\nstruct HashMap {\r\n\tint BucketSize =\
-    \ 0; // \u30D0\u30B1\u30C3\u30C8\u306E\u6570\r\n\tint MaxSize = 0; // MaxSize\
+    \ntemplate<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>,\
+    \ typename isEqual = std::equal_to<KeyType>>\r\nstruct HashMap {\r\n\tint BucketSize\
+    \ = 0; // \u30D0\u30B1\u30C3\u30C8\u306E\u6570\r\n\tint MaxSize = 0; // MaxSize\
     \ < DataSize \u306E\u3068\u304D\u30EA\u30CF\u30C3\u30B7\u30E5\u3059\u308B\r\n\t\
     int DataSize = 0; // \u4FDD\u5B58\u3055\u308C\u3066\u3044\u308B\u30C7\u30FC\u30BF\
     \u306E\u6570\r\n\tint TombSize = 0; // \u524A\u9664\u3055\u308C\u305F\u30C7\u30FC\
@@ -90,7 +89,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/associative_array.test.cpp
   requiredBy: []
-  timestamp: '2021-02-09 06:48:00+09:00'
+  timestamp: '2021-02-09 08:23:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/associative_array.test.cpp
