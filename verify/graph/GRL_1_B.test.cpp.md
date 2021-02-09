@@ -19,13 +19,12 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B
   bundledCode: "#line 1 \"verify/graph/GRL_1_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \r\n#line 2 \"graph/graph.cpp\"\n#include <vector>\r\n#include <utility>\r\n\r\
-    \n/**\r\n * @title \u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
-    \r\n */\r\n\r\nusing UnWeightedGraph = std::vector<std::vector<int>>;\r\nusing\
-    \ WeightedGraph = std::vector<std::vector<std::pair<int, long long>>>;\n#line\
-    \ 4 \"graph/bellman_ford.cpp\"\n#include <limits>\r\n#line 6 \"graph/bellman_ford.cpp\"\
-    \n\r\n/**\r\n * @title Shortest Path (Bellman-Ford)\r\n */\r\n\r\nauto BellmanFord(int\
-    \ s, WeightedGraph& g) {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\
-    \n\tstd::vector d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size();\
+    \nusing UnWeightedGraph = std::vector<std::vector<int>>;\r\nusing WeightedGraph\
+    \ = std::vector<std::vector<std::pair<int, long long>>>;\n#line 4 \"graph/bellman_ford.cpp\"\
+    \n#include <limits>\r\n#line 6 \"graph/bellman_ford.cpp\"\n\r\n/**\r\n * @title\
+    \ Shortest Path (Bellman-Ford)\r\n */\r\n\r\nauto BellmanFord(int s, WeightedGraph&\
+    \ g) {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\n\t\
+    std::vector d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size();\
     \ i++) {\r\n\t\tfor (int j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e :\
     \ g[j]) {\r\n\t\t\t\tif (d[j] != inf && d[e.first] > d[j] + e.second) {\r\n\t\t\
     \t\t\td[e.first] = d[j] + e.second;\r\n\t\t\t\t\tif (i == g.size() - 1)return\
@@ -53,7 +52,7 @@ data:
   isVerificationFile: true
   path: verify/graph/GRL_1_B.test.cpp
   requiredBy: []
-  timestamp: '2021-02-09 08:06:38+09:00'
+  timestamp: '2021-02-09 09:18:50+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/graph/GRL_1_B.test.cpp

@@ -8,13 +8,13 @@ data:
       title: HashMap
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segment_tree.cpp
-      title: Lazy Segment Tree
+      title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.cpp
-      title: Sparce Table
+      title: Sparse Table
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'

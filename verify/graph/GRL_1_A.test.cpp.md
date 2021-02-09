@@ -19,12 +19,10 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
   bundledCode: "#line 1 \"verify/graph/GRL_1_A.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \r\n#line 2 \"graph/graph.cpp\"\n#include <vector>\r\n#include <utility>\r\n\r\
-    \n/**\r\n * @title \u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
-    \r\n */\r\n\r\nusing UnWeightedGraph = std::vector<std::vector<int>>;\r\nusing\
-    \ WeightedGraph = std::vector<std::vector<std::pair<int, long long>>>;\n#line\
-    \ 3 \"graph/dijkstra.cpp\"\n#include <queue>\r\n#line 5 \"graph/dijkstra.cpp\"\
-    \n#include <limits>\r\n#line 7 \"graph/dijkstra.cpp\"\n\r\n/**\r\n * @title Shortest\
-    \ Path (Dijkstra)\r\n */\r\n\r\nauto Dijkstra(int s, WeightedGraph& g) {\r\n\t\
+    \nusing UnWeightedGraph = std::vector<std::vector<int>>;\r\nusing WeightedGraph\
+    \ = std::vector<std::vector<std::pair<int, long long>>>;\n#line 3 \"graph/dijkstra.cpp\"\
+    \n#include <queue>\r\n#line 5 \"graph/dijkstra.cpp\"\n#include <limits>\r\n#line\
+    \ 7 \"graph/dijkstra.cpp\"\n\r\nauto Dijkstra(int s, WeightedGraph& g) {\r\n\t\
     constexpr auto inf = std::numeric_limits<long long>::max();\r\n\tusing P = std::pair<long\
     \ long, int>;\r\n\tstd::priority_queue<P, std::vector<P>, std::greater<P>> q;\r\
     \n\tstd::vector d(g.size(), inf);\r\n\td[s] = 0;\r\n\tq.push({ 0,s });\r\n\r\n\
@@ -53,7 +51,7 @@ data:
   isVerificationFile: true
   path: verify/graph/GRL_1_A.test.cpp
   requiredBy: []
-  timestamp: '2021-02-09 08:06:38+09:00'
+  timestamp: '2021-02-09 09:18:50+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/graph/GRL_1_A.test.cpp
