@@ -2,10 +2,6 @@
 #include <vector>
 #include <functional>
 
-/**
- * @title Sparce Table
- */
-
 template<class T, class Comp = std::less<T> >
 struct SparseTable {
 	std::vector<std::vector<T>> st;

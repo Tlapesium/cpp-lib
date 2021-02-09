@@ -2,11 +2,6 @@
 #include <smmintrin.h>
 #include <immintrin.h>
 
-/**
- * @title XORShift
- * @docs documents/xorshift.md
- */
-
  //need SSE2
 struct xorshift_32_4 {
 	static unsigned int x[4];

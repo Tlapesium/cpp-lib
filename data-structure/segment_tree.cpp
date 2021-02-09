@@ -2,10 +2,6 @@
 #include <vector>
 #include <iostream>
 
-/**
- * @title Segment Tree
- */
-
 template <class Monoid, class Operator>
 struct SegmentTree {
 	std::vector<Monoid> dat;

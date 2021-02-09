@@ -5,10 +5,6 @@
 #include <limits>
 #include "graph/graph.cpp"
 
-/**
- * @title Shortest Path (Dijkstra)
- */
-
 auto Dijkstra(int s, WeightedGraph& g) {
 	constexpr auto inf = std::numeric_limits<long long>::max();
 	using P = std::pair<long long, int>;

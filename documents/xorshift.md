@@ -1,4 +1,7 @@
-
+---
+title: XORShift
+documentation_of: //utility/xorshift.cpp
+---
 ## 説明
 SIMDを用いて高速化したXORShift。<br>
 乱数がボトルネックになることはあんまりない気がするが、早くて困ることはなさそう。

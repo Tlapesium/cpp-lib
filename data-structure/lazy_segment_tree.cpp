@@ -2,10 +2,6 @@
 #include <vector>
 #include <iostream>
 
-/**
- * @title Lazy Segment Tree
- */
-
 template <class Monoid, class OperatorMonoid, class Operator, class Apply, class Merge >
 struct LazySegmentTree {
 	std::vector<Monoid> dat;
