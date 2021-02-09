@@ -1,5 +1,5 @@
 ---
-title: Segment Tree
+title: Lazy Segment Tree
 documentation_of: //data-structure/lazy_segment_tree.cpp
 ---
 

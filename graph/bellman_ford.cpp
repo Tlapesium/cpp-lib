@@ -4,10 +4,6 @@
 #include <limits>
 #include "graph/graph.cpp"
 
-/**
- * @title Shortest Path (Bellman-Ford)
- */
-
 auto BellmanFord(int s, WeightedGraph& g) {
 	constexpr auto inf = std::numeric_limits<long long>::max();
 	std::vector d(g.size(), inf);;
