@@ -3,10 +3,6 @@
 #include <initializer_list>
 #include <iostream>
 
-/**
- * @title Matrix
- */
-
 template <class T>
 struct Matrix {
 public:

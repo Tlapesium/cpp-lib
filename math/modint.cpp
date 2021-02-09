@@ -3,10 +3,6 @@
 #include <cstdio>
 #include <utility>
 
-/**
- * @title Modint
- */
-
 struct Modint {
 	long long val = 0, mod = 1000000007;
 	Modint(long long x, long long m) : mod(m) { val = ((x % mod) + mod) % mod; }
