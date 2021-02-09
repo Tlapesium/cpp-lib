@@ -8,7 +8,7 @@ data:
       title: HashMap
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segment_tree.cpp
-      title: Segment Tree
+      title: Lazy Segment Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree

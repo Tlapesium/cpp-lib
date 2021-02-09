@@ -13,34 +13,32 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: Shortest Path (Bellman-Ford)
     links: []
   bundledCode: "#line 2 \"graph/bellman_ford.cpp\"\n#include <vector>\r\n#include\
     \ <utility>\r\n#include <limits>\r\n#line 4 \"graph/graph.cpp\"\n\r\nusing UnWeightedGraph\
     \ = std::vector<std::vector<int>>;\r\nusing WeightedGraph = std::vector<std::vector<std::pair<int,\
-    \ long long>>>;\n#line 6 \"graph/bellman_ford.cpp\"\n\r\n/**\r\n * @title Shortest\
-    \ Path (Bellman-Ford)\r\n */\r\n\r\nauto BellmanFord(int s, WeightedGraph& g)\
+    \ long long>>>;\n#line 6 \"graph/bellman_ford.cpp\"\n\r\nauto BellmanFord(int\
+    \ s, WeightedGraph& g) {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\
+    \n\tstd::vector d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size();\
+    \ i++) {\r\n\t\tfor (int j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e :\
+    \ g[j]) {\r\n\t\t\t\tif (d[j] != inf && d[e.first] > d[j] + e.second) {\r\n\t\t\
+    \t\t\td[e.first] = d[j] + e.second;\r\n\t\t\t\t\tif (i == g.size() - 1)return\
+    \ std::vector<long long>();\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn\
+    \ d;\r\n}\r\n\r\n"
+  code: "#pragma once\r\n#include <vector>\r\n#include <utility>\r\n#include <limits>\r\
+    \n#include \"graph/graph.cpp\"\r\n\r\nauto BellmanFord(int s, WeightedGraph& g)\
     \ {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\n\tstd::vector\
     \ d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size(); i++) {\r\
     \n\t\tfor (int j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e : g[j]) {\r\n\
     \t\t\t\tif (d[j] != inf && d[e.first] > d[j] + e.second) {\r\n\t\t\t\t\td[e.first]\
     \ = d[j] + e.second;\r\n\t\t\t\t\tif (i == g.size() - 1)return std::vector<long\
     \ long>();\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn d;\r\n}\r\n\r\n"
-  code: "#pragma once\r\n#include <vector>\r\n#include <utility>\r\n#include <limits>\r\
-    \n#include \"graph/graph.cpp\"\r\n\r\n/**\r\n * @title Shortest Path (Bellman-Ford)\r\
-    \n */\r\n\r\nauto BellmanFord(int s, WeightedGraph& g) {\r\n\tconstexpr auto inf\
-    \ = std::numeric_limits<long long>::max();\r\n\tstd::vector d(g.size(), inf);;\r\
-    \n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size(); i++) {\r\n\t\tfor (int j = 0;\
-    \ j < g.size(); j++) {\r\n\t\t\tfor (auto&& e : g[j]) {\r\n\t\t\t\tif (d[j] !=\
-    \ inf && d[e.first] > d[j] + e.second) {\r\n\t\t\t\t\td[e.first] = d[j] + e.second;\r\
-    \n\t\t\t\t\tif (i == g.size() - 1)return std::vector<long long>();\r\n\t\t\t\t\
-    }\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn d;\r\n}\r\n\r\n"
   dependsOn:
   - graph/graph.cpp
   isVerificationFile: false
   path: graph/bellman_ford.cpp
   requiredBy: []
-  timestamp: '2021-02-09 09:18:50+09:00'
+  timestamp: '2021-02-09 09:31:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/GRL_1_B.test.cpp

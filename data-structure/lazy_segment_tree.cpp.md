@@ -129,7 +129,7 @@ data:
   - verify/data-structure/DSL_2_F.test.cpp
 documentation_of: data-structure/lazy_segment_tree.cpp
 layout: document
-title: Segment Tree
+title: Lazy Segment Tree
 ---
 
 ## 説明
