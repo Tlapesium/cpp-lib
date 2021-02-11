@@ -6,5 +6,6 @@
 "verify/data-structure/static_rmq.test.cpp": "2021-02-09 09:18:50 +0900",
 "verify/graph/GRL_1_A.test.cpp": "2021-02-09 09:18:50 +0900",
 "verify/graph/GRL_1_B.test.cpp": "2021-02-09 09:31:43 +0900",
-"verify/math/yuki1136.test.cpp": "2021-02-09 09:27:54 +0900"
+"verify/math/yuki1136.test.cpp": "2021-02-09 09:27:54 +0900",
+"verify/string/ALDS1_14_B.test.cpp": "2021-02-12 07:58:15 +0900"
 }
