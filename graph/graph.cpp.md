@@ -30,8 +30,8 @@ data:
   isVerificationFile: false
   path: graph/graph.cpp
   requiredBy:
-  - graph/bellman_ford.cpp
   - graph/dijkstra.cpp
+  - graph/bellman_ford.cpp
   timestamp: '2021-02-09 09:18:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

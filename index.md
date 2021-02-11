@@ -34,6 +34,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/modint.cpp
       title: Modint
+  - name: string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: string/rolling_hash.cpp
+      title: Rolling Hash
   - name: utility
     pages:
     - icon: ':warning:'
@@ -75,5 +80,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/math/yuki1136.test.cpp
       title: verify/math/yuki1136.test.cpp
+  - name: verify/string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/string/ALDS1_14_B.test.cpp
+      title: verify/string/ALDS1_14_B.test.cpp
 layout: toppage
 ---
