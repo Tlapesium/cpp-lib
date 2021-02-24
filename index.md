@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: data-structure
     pages:
+    - icon: ':warning:'
+      path: data-structure/binary_trie.cpp
+      title: Binary Trie
     - icon: ':heavy_check_mark:'
       path: data-structure/hashmap.cpp
       title: HashMap
