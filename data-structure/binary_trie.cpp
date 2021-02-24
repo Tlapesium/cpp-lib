@@ -1,4 +1,5 @@
 #pragma once
+#include <utility>
 
 template<class T, int MAX_LOG>
 struct BinaryTrie {
@@ -87,7 +88,7 @@ struct BinaryTrie {
 	}
 
 	void propagate(Node* node, int bit_index) {
-		if (bit_index >= 0 && (node->lazy >> bit_index) & 1) swap(node->child[0], node->child[1]);
+		if (bit_index >= 0 && (node->lazy >> bit_index) & 1) std::swap(node->child[0], node->child[1]);
 		if (node->child[0]) node->child[0]->lazy ^= node->lazy;
 		if (node->child[1]) node->child[1]->lazy ^= node->lazy;
 		node->lazy = T(0);
