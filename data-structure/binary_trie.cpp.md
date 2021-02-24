@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: verify/data-structure/set_xor_min.cpp
+    title: verify/data-structure/set_xor_min.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -102,7 +105,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data-structure/binary_trie.cpp
-  requiredBy: []
+  requiredBy:
+  - verify/data-structure/set_xor_min.cpp
   timestamp: '2021-02-24 23:36:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -50,6 +50,11 @@ data:
     - icon: ':warning:'
       path: utility/xorshift.cpp
       title: XORShift
+  - name: verify/data-structure
+    pages:
+    - icon: ':warning:'
+      path: verify/data-structure/set_xor_min.cpp
+      title: verify/data-structure/set_xor_min.cpp
   verificationCategories:
   - name: example
     pages:
