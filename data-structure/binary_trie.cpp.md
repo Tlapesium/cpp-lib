@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: verify/data-structure/set_xor_min.cpp
-    title: verify/data-structure/set_xor_min.cpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/data-structure/set_xor_min.test.cpp
+    title: verify/data-structure/set_xor_min.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"data-structure/binary_trie.cpp\"\n\r\ntemplate<class T,\
@@ -105,11 +105,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data-structure/binary_trie.cpp
-  requiredBy:
-  - verify/data-structure/set_xor_min.cpp
+  requiredBy: []
   timestamp: '2021-02-24 23:36:37+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify/data-structure/set_xor_min.test.cpp
 documentation_of: data-structure/binary_trie.cpp
 layout: document
 title: Binary Trie

@@ -1,18 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: data-structure/binary_trie.cpp
     title: Binary Trie
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/set_xor_min
     links:
     - https://judge.yosupo.jp/problem/set_xor_min
-  bundledCode: "#line 1 \"verify/data-structure/set_xor_min.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"verify/data-structure/set_xor_min.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/set_xor_min\"\r\n#line 2 \"data-structure/binary_trie.cpp\"\
     \n\r\ntemplate<class T, int MAX_LOG>\r\nstruct BinaryTrie {\r\n\tstruct Node {\r\
     \n\t\tNode* child[2];\r\n\t\tT lazy;\r\n\t\tint size;\r\n\t\tNode() : size(0),\
@@ -58,7 +60,7 @@ data:
     \ }\r\n\tint upper_bound(const T& x) { return count_less(x + 1); }\r\n\tint find(const\
     \ T& x) { return upper_bound(x) - lower_bound(x); }\r\n\tvoid all_xor(const T&\
     \ x) { root->lazy ^= x; }\r\n\tint size() { return root->size; };\r\n\r\n};\r\n\
-    \t\n#line 3 \"verify/data-structure/set_xor_min.cpp\"\n#include <bits/stdc++.h>\r\
+    \t\n#line 3 \"verify/data-structure/set_xor_min.test.cpp\"\n#include <bits/stdc++.h>\r\
     \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tBinaryTrie<int,\
     \ 31> BT;\r\n\tint Q;\r\n\tcin >> Q;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\t\
     int t, x;\r\n\t\tcin >> t >> x;\r\n\t\tif (t == 0) {\r\n\t\t\tif (!BT.find(x))\
@@ -75,16 +77,16 @@ data:
     \ endl;\r\n\t\t\tBT.all_xor(x);\r\n\t\t}\r\n\t}\r\n}"
   dependsOn:
   - data-structure/binary_trie.cpp
-  isVerificationFile: false
-  path: verify/data-structure/set_xor_min.cpp
+  isVerificationFile: true
+  path: verify/data-structure/set_xor_min.test.cpp
   requiredBy: []
-  timestamp: '2021-02-25 00:00:27+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2021-02-25 00:02:18+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/data-structure/set_xor_min.cpp
+documentation_of: verify/data-structure/set_xor_min.test.cpp
 layout: document
 redirect_from:
-- /library/verify/data-structure/set_xor_min.cpp
-- /library/verify/data-structure/set_xor_min.cpp.html
-title: verify/data-structure/set_xor_min.cpp
+- /verify/verify/data-structure/set_xor_min.test.cpp
+- /verify/verify/data-structure/set_xor_min.test.cpp.html
+title: verify/data-structure/set_xor_min.test.cpp
 ---

@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data-structure
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data-structure/binary_trie.cpp
       title: Binary Trie
     - icon: ':heavy_check_mark:'
@@ -50,11 +50,6 @@ data:
     - icon: ':warning:'
       path: utility/xorshift.cpp
       title: XORShift
-  - name: verify/data-structure
-    pages:
-    - icon: ':warning:'
-      path: verify/data-structure/set_xor_min.cpp
-      title: verify/data-structure/set_xor_min.cpp
   verificationCategories:
   - name: example
     pages:
@@ -72,6 +67,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/associative_array.test.cpp
       title: verify/data-structure/associative_array.test.cpp
+    - icon: ':x:'
+      path: verify/data-structure/set_xor_min.test.cpp
+      title: verify/data-structure/set_xor_min.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/static_rmq.test.cpp
       title: verify/data-structure/static_rmq.test.cpp
