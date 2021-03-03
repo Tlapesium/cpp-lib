@@ -3,6 +3,7 @@
 "verify/data-structure/DSL_2_A.test.cpp": "2021-02-09 09:18:50 +0900",
 "verify/data-structure/DSL_2_F.test.cpp": "2021-02-09 09:18:50 +0900",
 "verify/data-structure/associative_array.test.cpp": "2021-02-09 08:23:25 +0900",
+"verify/data-structure/line_add_get_min.test.cpp": "2021-03-03 22:18:58 +0900",
 "verify/data-structure/set_xor_min.test.cpp": "2021-02-25 00:05:02 +0900",
 "verify/data-structure/static_rmq.test.cpp": "2021-02-09 09:18:50 +0900",
 "verify/graph/GRL_1_A.test.cpp": "2021-02-09 09:18:50 +0900",
