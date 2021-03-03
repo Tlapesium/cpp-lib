@@ -105,7 +105,7 @@ title: Li Chao Tree
 
 ## 操作
 ### LiChaoTree()
-LiChaoTree を構築する。
+Li Chao Tree を構築する。
 $x_min$ には $x$ の最小値、$x_max$ には $x$ の最大値を指定する。
 ### add_line(T a, T b)
 直線 $ax+b$ を追加する。
