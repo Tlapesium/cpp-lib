@@ -9,7 +9,7 @@ documentation_of: //data-structure/li_chao_tree.cpp
 ## 操作
 ### LiChaoTree()
 Li Chao Tree を構築する。
-$x_min$ には $x$ の最小値、$x_max$ には $x$ の最大値を指定する。
+x_min には $x$ の最小値、x_max には $x$ の最大値を指定する。
 ### add_line(T a, T b)
 直線 $ax+b$ を追加する。
 ### add_segment(T l, T r, T a, T b)
