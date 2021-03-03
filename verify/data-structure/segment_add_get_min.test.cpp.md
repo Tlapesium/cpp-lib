@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/li_chao_tree.cpp
     title: Li Chao Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/segment_add_get_min
@@ -53,19 +53,7 @@ data:
     \n    }\r\n\r\n    T query(T x) {\r\n        return query(root, x_min, x_max,\
     \ x);\r\n    }\r\n};\r\n#line 3 \"verify/data-structure/segment_add_get_min.test.cpp\"\
     \n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\n\
-    \r\nconstexpr int INF = 2147483647;\r\nint main() {\r\n    LiChaoTree<ll, -INF,\
-    \ INF> LCT;\r\n    int N, Q;\r\n    cin >> N >> Q;\r\n    for (int i = 0; i <\
-    \ N; i++) {\r\n        ll l, r, a, b;\r\n        cin >> l >> r >> a >> b;\r\n\
-    \        LCT.add_segment(l, r, a, b);\r\n    }\r\n    for (int i = 0; i < Q; i++)\
-    \ {\r\n        ll t;\r\n        cin >> t;\r\n        if (t == 0) {\r\n       \
-    \     ll l, r, a, b;\r\n            cin >> l >> r >> a >> b;\r\n            LCT.add_segment(l,\
-    \ r, a, b);\r\n        }\r\n        else {\r\n            ll p;\r\n          \
-    \  cin >> p;\r\n            ll tmp = LCT.query(p);\r\n            if (tmp == INF_LL)cout\
-    \ << \"INFINITY\" << endl;\r\n            else cout << tmp << endl;\r\n      \
-    \  }\r\n    }\r\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\r\
-    \n#include \"data-structure/li_chao_tree.cpp\"\r\n#include <bits/stdc++.h>\r\n\
-    using namespace std;\r\ntypedef long long ll;\r\n\r\nconstexpr int INF = 2147483647;\r\
+    \r\nconstexpr int INF = 2147483647;\r\nconstexpr long long int INF_LL = 9223372036854775807;\r\
     \nint main() {\r\n    LiChaoTree<ll, -INF, INF> LCT;\r\n    int N, Q;\r\n    cin\
     \ >> N >> Q;\r\n    for (int i = 0; i < N; i++) {\r\n        ll l, r, a, b;\r\n\
     \        cin >> l >> r >> a >> b;\r\n        LCT.add_segment(l, r, a, b);\r\n\
@@ -74,14 +62,28 @@ data:
     \ >> l >> r >> a >> b;\r\n            LCT.add_segment(l, r, a, b);\r\n       \
     \ }\r\n        else {\r\n            ll p;\r\n            cin >> p;\r\n      \
     \      ll tmp = LCT.query(p);\r\n            if (tmp == INF_LL)cout << \"INFINITY\"\
-    \ << endl;\r\n            else cout << tmp << endl;\r\n        }\r\n    }\r\n}"
+    \ << endl;\r\n            else cout << tmp << endl;\r\n        }\r\n    }\r\n\
+    }\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/segment_add_get_min\"\r\
+    \n#include \"data-structure/li_chao_tree.cpp\"\r\n#include <bits/stdc++.h>\r\n\
+    using namespace std;\r\ntypedef long long ll;\r\n\r\nconstexpr int INF = 2147483647;\r\
+    \nconstexpr long long int INF_LL = 9223372036854775807;\r\nint main() {\r\n  \
+    \  LiChaoTree<ll, -INF, INF> LCT;\r\n    int N, Q;\r\n    cin >> N >> Q;\r\n \
+    \   for (int i = 0; i < N; i++) {\r\n        ll l, r, a, b;\r\n        cin >>\
+    \ l >> r >> a >> b;\r\n        LCT.add_segment(l, r, a, b);\r\n    }\r\n    for\
+    \ (int i = 0; i < Q; i++) {\r\n        ll t;\r\n        cin >> t;\r\n        if\
+    \ (t == 0) {\r\n            ll l, r, a, b;\r\n            cin >> l >> r >> a >>\
+    \ b;\r\n            LCT.add_segment(l, r, a, b);\r\n        }\r\n        else\
+    \ {\r\n            ll p;\r\n            cin >> p;\r\n            ll tmp = LCT.query(p);\r\
+    \n            if (tmp == INF_LL)cout << \"INFINITY\" << endl;\r\n            else\
+    \ cout << tmp << endl;\r\n        }\r\n    }\r\n}"
   dependsOn:
   - data-structure/li_chao_tree.cpp
   isVerificationFile: true
   path: verify/data-structure/segment_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2021-03-03 22:18:58+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-03-03 22:23:12+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/segment_add_get_min.test.cpp
 layout: document
