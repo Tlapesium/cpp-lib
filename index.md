@@ -12,6 +12,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segment_tree.cpp
       title: Lazy Segment Tree
+    - icon: ':question:'
+      path: data-structure/li_chao_tree.cpp
+      title: Li Chao Tree
     - icon: ':heavy_check_mark:'
       path: data-structure/segment_tree.cpp
       title: Segment Tree
@@ -67,6 +70,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/associative_array.test.cpp
       title: verify/data-structure/associative_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/data-structure/line_add_get_min.test.cpp
+      title: verify/data-structure/line_add_get_min.test.cpp
+    - icon: ':x:'
+      path: verify/data-structure/segment_add_get_min.test.cpp
+      title: verify/data-structure/segment_add_get_min.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/set_xor_min.test.cpp
       title: verify/data-structure/set_xor_min.test.cpp
