@@ -5,6 +5,7 @@ using namespace std;
 typedef long long ll;
 
 constexpr int INF = 2147483647;
+constexpr long long int INF_LL = 9223372036854775807;
 int main() {
     LiChaoTree<ll, -INF, INF> LCT;
     int N, Q;
