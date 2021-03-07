@@ -7,7 +7,8 @@ struct BinaryTrie {
 		Node* child[2];
 		T lazy;
 		int size;
-		Node() : size(0), lazy(0), child{ nullptr, nullptr } {}
+		bool filled;
+		Node() : child{ nullptr, nullptr }, lazy(0), size(0), filled(false) {}
 	};
 	Node* root;
 	BinaryTrie() { root = new Node(); }
@@ -16,12 +17,14 @@ struct BinaryTrie {
 		propagate(node, bit_index);
 		if (bit_index == -1) {
 			node->size++;
+			node->filled = true;
 		}
 		else {
 			auto& to = node->child[(x >> bit_index) & 1];
 			if (!to) to = new Node();
 			insert(x, to, bit_index - 1);
 			node->size++;
+			node->filled = (node->child[0] && node->child[0]->filled) && (node->child[1] && node->child[1]->filled);
 		}
 	}
 
@@ -29,10 +32,12 @@ struct BinaryTrie {
 		propagate(node, bit_index);
 		if (bit_index == -1) {
 			node->size--;
+			node->filled = node->size > 0;
 		}
 		else {
 			erase(x, node->child[(x >> bit_index) & 1], bit_index - 1);
 			node->size--;
+			node->filled = (node->child[0] && node->child[0]->filled) && (node->child[1] && node->child[1]->filled);
 		}
 	}
 
@@ -77,13 +82,26 @@ struct BinaryTrie {
 
 	T kth_element(int k, Node* node, int bit_index) { // 1-indexed
 		propagate(node, bit_index);
-		if (bit_index == -1)return T(0);
+		if (bit_index == -1) return T(0);
 		if ((node->child[0] ? node->child[0]->size : 0) < k) {
 			T ret = kth_element(k - (node->child[0] ? node->child[0]->size : 0), node->child[1], bit_index - 1);
 			return ret | (T(1) << bit_index);
 		}
 		else {
 			return kth_element(k, node->child[0], bit_index - 1);
+		}
+	}
+
+	T mex(Node* node, int bit_index) {
+		propagate(node, bit_index);
+		if (bit_index == -1 || !node->child[0]) return 0;
+		if (node->child[0]->filled) {
+			T ret = T(1) << bit_index;
+			if (node->child[1])ret |= mex(node->child[1], bit_index - 1);
+			return ret;
+		}
+		else {
+			return mex(node->child[0], bit_index - 1);
 		}
 	}
 
@@ -103,8 +121,8 @@ struct BinaryTrie {
 	int lower_bound(const T& x) { return count_less(x); }
 	int upper_bound(const T& x) { return count_less(x + 1); }
 	int find(const T& x) { return upper_bound(x) - lower_bound(x); }
+	T mex() { return mex(root, MAX_LOG); }
 	void all_xor(const T& x) { root->lazy ^= x; }
 	int size() { return root->size; };
 
 };
-	
