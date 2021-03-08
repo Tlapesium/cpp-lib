@@ -15,6 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_1_B.test.cpp
     title: verify/graph/GRL_1_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_4_A.test.cpp
+    title: verify/graph/GRL_4_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_4_B.test.cpp
+    title: verify/graph/GRL_4_B.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -35,7 +41,9 @@ data:
   timestamp: '2021-03-08 20:08:05+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/graph/GRL_4_B.test.cpp
   - verify/graph/GRL_1_B.test.cpp
+  - verify/graph/GRL_4_A.test.cpp
   - verify/graph/GRL_1_A.test.cpp
 documentation_of: graph/graph.cpp
 layout: document
