@@ -6,4 +6,4 @@ struct Edge {
 	Edge(int to) : to(to), cost(1) {};
 	Edge(int to, long long cost) : to(to), cost(cost) {}
 };
-using Graph = vector<vector<Edge>>;
+using Graph = std::vector<std::vector<Edge>>;
