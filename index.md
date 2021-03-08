@@ -38,6 +38,12 @@ data:
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
+      path: math/crt.cpp
+      title: "\u4E2D\u56FD\u5270\u4F59\u5B9A\u7406"
+    - icon: ':heavy_check_mark:'
+      path: math/extgcd.cpp
+      title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\u6CD5"
+    - icon: ':heavy_check_mark:'
       path: math/matrix.cpp
       title: Matrix
     - icon: ':heavy_check_mark:'
@@ -102,8 +108,14 @@ data:
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
+      path: verify/math/NTL_1_E.test.cpp
+      title: verify/math/NTL_1_E.test.cpp
+    - icon: ':heavy_check_mark:'
       path: verify/math/yuki1136.test.cpp
       title: verify/math/yuki1136.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/math/yuki187.test.cpp
+      title: verify/math/yuki187.test.cpp
   - name: verify/string
     pages:
     - icon: ':heavy_check_mark:'

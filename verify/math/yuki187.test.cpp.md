@@ -1,0 +1,70 @@
+---
+data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: math/crt.cpp
+    title: "\u4E2D\u56FD\u5270\u4F59\u5B9A\u7406"
+  - icon: ':heavy_check_mark:'
+    path: math/extgcd.cpp
+    title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\u6CD5"
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://yukicoder.me/problems/no/187
+    links:
+    - https://yukicoder.me/problems/no/187
+  bundledCode: "#line 1 \"verify/math/yuki187.test.cpp\"\n#define PROBLEM \"https://yukicoder.me/problems/no/187\"\
+    \r\n#line 2 \"math/crt.cpp\"\n#include <vector>\r\n#include <numeric>\r\n#include\
+    \ <limits>\r\n#line 2 \"math/extgcd.cpp\"\n#include <utility>\r\n\r\nauto extGCD(long\
+    \ long a, long long b) {\r\n\tlong long x = 1, y = 0, u = 0, v = 1;\r\n\twhile\
+    \ (b != 0) {\r\n\t\tauto j = a % b, k = a / b;\r\n\t\tx -= k * u; y -= k * v;\r\
+    \n\t\tstd::swap(x, u); std::swap(y, v);\r\n\t\ta = b; b = j;\r\n\t}\r\n\treturn\
+    \ std::make_pair(x, y);\r\n}\n#line 6 \"math/crt.cpp\"\n\r\nlong long crt(std::vector<long\
+    \ long>& b, std::vector<long long>& m, long long mod = std::numeric_limits<long\
+    \ long>::max()) {\r\n\tauto pmod = [&](long long a, long long m) {\r\n\t\ta =\
+    \ a % m;\r\n\t\treturn (a < 0 ? a + m : a);\r\n\t};\r\n\tauto modinv = [&](long\
+    \ long a, long long m) {\r\n\t\tauto [x, y] = extGCD(a, m);\r\n\t\treturn pmod(x,\
+    \ m);\r\n\t};\r\n\tfor (int i = 0; i < b.size(); i++) {\r\n\t\tfor (int j = 0;\
+    \ j < i; j++) {\r\n\t\t\tlong long g = std::gcd(m[i], m[j]);\r\n\t\t\tif ((b[i]\
+    \ - b[j]) % g != 0)return -1;\r\n\t\t\tm[i] /= g; m[j] /= g;\r\n\t\t\tlong long\
+    \ gi = std::gcd(m[i], g), gj = g / gi;\r\n\t\t\tdo {\r\n\t\t\t\tg = std::gcd(gi,\
+    \ gj);\r\n\t\t\t\tgi *= g, gj /= g;\r\n\t\t\t} while (g != 1);\r\n\t\t\tm[i] *=\
+    \ gi, m[j] *= gj;\r\n\t\t\tb[i] %= m[i], b[j] %= m[j];\r\n\t\t}\r\n\t}\r\n\tm.push_back(mod);\r\
+    \n\tstd::vector<long long> tmp1(m.size(), 1), tmp2(m.size(), 0);\r\n\tfor (int\
+    \ k = 0; k < b.size(); k++) {\r\n\t\tlong long t = pmod((b[k] - tmp2[k]) * modinv(tmp1[k],\
+    \ m[k]), m[k]);\r\n\t\tfor (int i = k + 1; i < m.size(); i++) {\r\n\t\t\ttmp2[i]\
+    \ = (tmp2[i] + tmp1[i] * t) % m[i];\r\n\t\t\ttmp1[i] = (tmp1[i] * m[k]) % m[i];\r\
+    \n\t\t}\r\n\t}\r\n\treturn tmp2.back();\r\n}\r\n#line 3 \"verify/math/yuki187.test.cpp\"\
+    \n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\n\
+    \r\nint main() {\r\n\tint N;\r\n\tcin >> N;\r\n\tbool flag = false;\r\n\tvector<ll>\
+    \ b(N), m(N);\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcin >> b[i] >> m[i];\r\
+    \n\t\tif (b[i])flag = true;\r\n\t}\r\n\tll ans = crt(b, m, 1000000007);\r\n\t\
+    if (ans != -1 && !flag) {\r\n\t\tans = 1;\r\n\t\tfor (int i = 0; i < N; i++)ans\
+    \ = (ans * m[i]) % 1000000007;\r\n\t}\r\n\tcout << ans << endl;\r\n}\n"
+  code: "#define PROBLEM \"https://yukicoder.me/problems/no/187\"\r\n#include \"math/crt.cpp\"\
+    \r\n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\
+    \n\r\nint main() {\r\n\tint N;\r\n\tcin >> N;\r\n\tbool flag = false;\r\n\tvector<ll>\
+    \ b(N), m(N);\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcin >> b[i] >> m[i];\r\
+    \n\t\tif (b[i])flag = true;\r\n\t}\r\n\tll ans = crt(b, m, 1000000007);\r\n\t\
+    if (ans != -1 && !flag) {\r\n\t\tans = 1;\r\n\t\tfor (int i = 0; i < N; i++)ans\
+    \ = (ans * m[i]) % 1000000007;\r\n\t}\r\n\tcout << ans << endl;\r\n}"
+  dependsOn:
+  - math/crt.cpp
+  - math/extgcd.cpp
+  isVerificationFile: true
+  path: verify/math/yuki187.test.cpp
+  requiredBy: []
+  timestamp: '2021-03-09 01:15:15+09:00'
+  verificationStatus: TEST_ACCEPTED
+  verifiedWith: []
+documentation_of: verify/math/yuki187.test.cpp
+layout: document
+redirect_from:
+- /verify/verify/math/yuki187.test.cpp
+- /verify/verify/math/yuki187.test.cpp.html
+title: verify/math/yuki187.test.cpp
+---
