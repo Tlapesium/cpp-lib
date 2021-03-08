@@ -5,7 +5,7 @@
 #include <limits>
 #include "graph/graph.cpp"
 
-auto Dijkstra(int s, WeightedGraph& g) {
+auto Dijkstra(int s, Graph& g) {
 	constexpr auto inf = std::numeric_limits<long long>::max();
 	using P = std::pair<long long, int>;
 	std::priority_queue<P, std::vector<P>, std::greater<P>> q;
@@ -17,9 +17,9 @@ auto Dijkstra(int s, WeightedGraph& g) {
 		auto [cost, pos] = q.top(); q.pop();
 		if (d[pos] < cost)continue;
 		for (auto&& e : g[pos]) {
-			if (d[e.first] > d[pos] + e.second) {
-				d[e.first] = d[pos] + e.second;
-				q.push({ d[e.first] , e.first });
+			if (d[e.to] > d[pos] + e.cost) {
+				d[e.to] = d[pos] + e.cost;
+				q.push({ d[e.to] , e.to });
 			}
 		}
 	}

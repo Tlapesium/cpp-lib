@@ -8,11 +8,11 @@ typedef long long ll;
 int main() {
 	int V, E, r;
 	cin >> V >> E >> r;
-	WeightedGraph g(V);
+	Graph g(V);
 	for (int i = 0; i < E; i++) {
 		int s, t, c;
 		cin >> s >> t >> c;
-		g[s].push_back({ t,c });
+		g[s].emplace_back(t, c);
 	}
 	auto d = BellmanFord(r, g);
 	if (d.empty())cout << "NEGATIVE CYCLE" << endl;
