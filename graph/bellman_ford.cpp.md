@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/graph.cpp
     title: "\u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_1_B.test.cpp
     title: verify/graph/GRL_1_B.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/bellman_ford.cpp\"\n#include <vector>\r\n#include\
     \ <utility>\r\n#include <limits>\r\n#line 3 \"graph/graph.cpp\"\n\r\nstruct Edge\
     \ {\r\n\tint to; long long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\t\
-    Edge(int to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = vector<vector<Edge>>;\n\
+    Edge(int to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n\
     #line 6 \"graph/bellman_ford.cpp\"\n\r\nauto BellmanFord(int s, Graph& g) {\r\n\
     \tconstexpr auto inf = std::numeric_limits<long long>::max();\r\n\tstd::vector\
     \ d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size(); i++) {\r\
@@ -38,8 +38,8 @@ data:
   isVerificationFile: false
   path: graph/bellman_ford.cpp
   requiredBy: []
-  timestamp: '2021-03-08 20:03:09+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-03-08 20:08:05+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/GRL_1_B.test.cpp
 documentation_of: graph/bellman_ford.cpp

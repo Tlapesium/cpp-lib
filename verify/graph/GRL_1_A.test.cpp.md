@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/dijkstra.cpp
     title: Shortest Path (Dijkstra)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/graph.cpp
     title: "\u30B0\u30E9\u30D5\u7528\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
@@ -20,7 +20,7 @@ data:
   bundledCode: "#line 1 \"verify/graph/GRL_1_A.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \r\n#line 2 \"graph/graph.cpp\"\n#include <vector>\r\n\r\nstruct Edge {\r\n\t\
     int to; long long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\tEdge(int\
-    \ to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = vector<vector<Edge>>;\n\
+    \ to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n\
     #line 3 \"graph/dijkstra.cpp\"\n#include <queue>\r\n#include <utility>\r\n#include\
     \ <limits>\r\n#line 7 \"graph/dijkstra.cpp\"\n\r\nauto Dijkstra(int s, Graph&\
     \ g) {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\n\t\
@@ -51,8 +51,8 @@ data:
   isVerificationFile: true
   path: verify/graph/GRL_1_A.test.cpp
   requiredBy: []
-  timestamp: '2021-03-08 20:03:09+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-03-08 20:08:05+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/graph/GRL_1_A.test.cpp
 layout: document
