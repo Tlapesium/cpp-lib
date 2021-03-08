@@ -8,6 +8,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.cpp
     title: Shortest Path (Dijkstra)
+  - icon: ':heavy_check_mark:'
+    path: graph/topological_sort.cpp
+    title: Topological Sort
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_1_A.test.cpp
@@ -37,6 +40,7 @@ data:
   path: graph/graph.cpp
   requiredBy:
   - graph/dijkstra.cpp
+  - graph/topological_sort.cpp
   - graph/bellman_ford.cpp
   timestamp: '2021-03-08 20:08:05+09:00'
   verificationStatus: LIBRARY_ALL_AC
