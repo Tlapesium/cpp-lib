@@ -1,4 +1,4 @@
 ---
-title: Šg’£ƒ†[ƒNƒŠƒbƒh‚ÌŒÝœ–@
+title: æ‹¡å¼µãƒ¦ãƒ¼ã‚¯ãƒªãƒƒãƒ‰ã®äº’é™¤æ³•
 documentation_of: //math/extgcd.cpp
 ---

@@ -1,4 +1,4 @@
 ---
-title: ’†‘è—]’è—
+title: ä¸­å›½å‰°ä½™å®šç†
 documentation_of: //math/crt.cpp
 ---
