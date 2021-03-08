@@ -2,6 +2,7 @@
 #include <vector>
 #include <numeric>
 #include <limits>
+#include <initializer_list>
 #include "math/extgcd.cpp"
 
 long long crt(std::vector<long long>& b, std::vector<long long>& m, long long mod = std::numeric_limits<long long>::max()) {
@@ -37,4 +38,9 @@ long long crt(std::vector<long long>& b, std::vector<long long>& m, long long mo
 		}
 	}
 	return tmp2.back();
+}
+
+long long crt(std::initializer_list<long long> b, std::initializer_list<long long> m, long long mod = std::numeric_limits<long long>::max()) {
+	std::vector<long long> b_(b), m_(m);
+	return crt(b_, m_, mod);
 }
