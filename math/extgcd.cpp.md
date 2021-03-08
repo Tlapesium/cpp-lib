@@ -43,4 +43,4 @@ title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\u6CD5
 ---
 $ax + by = \mathrm{gcd}(a,b)$ を満たす整数 $(x,y)$ を求める。
 
-$|x| + |y|$ が最小となるものを返し、複数存在する場合は $x \leq y$ であるようなものを返す。
+$\mathrm{abs}(x) + \mathrm{abs}(y)$ が最小となるものを返し、複数存在する場合は $x \leq y$ であるようなものを返す。
