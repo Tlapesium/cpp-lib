@@ -21,6 +21,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.cpp
       title: Sparse Table
+    - icon: ':heavy_check_mark:'
+      path: data-structure/union_find.cpp
+      title: Union Find
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -70,6 +73,12 @@ data:
       title: example/example.test.cpp
   - name: verify/data-structure
     pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/data-structure/DSL_1_A.test.cpp
+      title: verify/data-structure/DSL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/data-structure/DSL_1_B.test.cpp
+      title: verify/data-structure/DSL_1_B.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_A.test.cpp
       title: verify/data-structure/DSL_2_A.test.cpp
