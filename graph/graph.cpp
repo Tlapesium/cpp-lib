@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 
 struct Edge {
 	int to; long long cost;

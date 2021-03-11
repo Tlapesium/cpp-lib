@@ -1,7 +1,4 @@
 #pragma once
-#include <limits>
-#include <algorithm>
-#include <utility>
 
 template<class T, T x_min, T x_max, T inf = std::numeric_limits<T>::max()>
 struct LiChaoTree {

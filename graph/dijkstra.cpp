@@ -1,8 +1,4 @@
 #pragma once
-#include <vector>
-#include <queue>
-#include <utility>
-#include <limits>
 #include "graph/graph.cpp"
 
 auto Dijkstra(int s, Graph& g) {

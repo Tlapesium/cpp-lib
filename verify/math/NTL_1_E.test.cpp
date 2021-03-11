@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_E"
-#include "math/extgcd.cpp"
 #include <bits/stdc++.h>
+#include "math/extgcd.cpp"
 using namespace std;
 typedef long long ll;
 

@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/set_xor_min"
-#include "data-structure/binary_trie.cpp"
 #include <bits/stdc++.h>
+#include "data-structure/binary_trie.cpp"
 using namespace std;
 typedef long long ll;
 

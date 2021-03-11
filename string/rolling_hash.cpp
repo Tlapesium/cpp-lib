@@ -1,9 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <string>
-#include <utility>
-
 struct RollingHash {
 	using u64 = unsigned long long;
 	const u64 mod = (1ULL << 61) - 1;

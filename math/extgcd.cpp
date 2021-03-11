@@ -1,5 +1,4 @@
 #pragma once
-#include <utility>
 
 auto extGCD(long long a, long long b) {
 	long long x = 1, y = 0, u = 0, v = 1;

@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A"
-#include "data-structure/segment_tree.cpp"
 #include <bits/stdc++.h>
+#include "data-structure/segment_tree.cpp"
 using namespace std;
 typedef long long ll;
 

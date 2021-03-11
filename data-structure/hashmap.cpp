@@ -1,6 +1,4 @@
 #pragma once
-#include <functional>
-#include <utility>
 
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {

@@ -1,7 +1,4 @@
 #pragma once
-#include <vector>
-#include <initializer_list>
-#include <iostream>
 
 template <class T>
 struct Matrix {

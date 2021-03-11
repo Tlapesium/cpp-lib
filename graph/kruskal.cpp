@@ -1,7 +1,4 @@
 #pragma once
-#include <vector>
-#include <algorithm>
-#include <utility>
 #include "graph/graph.cpp"
 #include "data-structure/union_find.cpp"
 

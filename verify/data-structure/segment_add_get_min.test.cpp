@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/segment_add_get_min"
-#include "data-structure/li_chao_tree.cpp"
 #include <bits/stdc++.h>
+#include "data-structure/li_chao_tree.cpp"
 using namespace std;
 typedef long long ll;
 

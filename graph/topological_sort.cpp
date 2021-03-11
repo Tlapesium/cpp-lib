@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <algorithm>
 #include "graph/graph.cpp"
 
 auto topological_sort(const Graph& g) {

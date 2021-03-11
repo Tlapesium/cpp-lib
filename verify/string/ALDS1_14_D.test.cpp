@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_D"
-#include "string/suffix_array.cpp"
 #include <bits/stdc++.h>
+#include "string/suffix_array.cpp"
 using namespace std;
 typedef long long ll;
 

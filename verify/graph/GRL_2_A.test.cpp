@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_A"
+#include <bits/stdc++.h>
 #include "graph/graph.cpp"
 #include "graph/kruskal.cpp"
-#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 

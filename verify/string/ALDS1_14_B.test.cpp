@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_B"
-#include "string/rolling_hash.cpp"
 #include <bits/stdc++.h>
+#include "string/rolling_hash.cpp"
 using namespace std;
 typedef long long ll;
 

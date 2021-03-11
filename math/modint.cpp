@@ -1,7 +1,4 @@
 #pragma once
-#include <iostream>
-#include <cstdio>
-#include <utility>
 
 struct Modint {
 	long long val = 0, mod = 1000000007;

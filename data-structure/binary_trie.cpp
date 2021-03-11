@@ -1,5 +1,4 @@
 #pragma once
-#include <utility>
 
 template<class T, int MAX_LOG>
 struct BinaryTrie {

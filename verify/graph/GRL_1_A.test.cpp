@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A"
+#include <bits/stdc++.h>
 #include "graph/graph.cpp"
 #include "graph/dijkstra.cpp"
-#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 

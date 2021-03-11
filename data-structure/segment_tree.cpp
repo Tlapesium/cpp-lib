@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <iostream>
 
 template <class Monoid, class Operator>
 struct SegmentTree {

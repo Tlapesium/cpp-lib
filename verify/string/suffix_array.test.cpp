@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/suffixarray"
-#include "string/suffix_array.cpp"
 #include <bits/stdc++.h>
+#include "string/suffix_array.cpp"
 using namespace std;
 typedef long long ll;
 

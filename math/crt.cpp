@@ -1,8 +1,4 @@
 #pragma once
-#include <vector>
-#include <numeric>
-#include <limits>
-#include <initializer_list>
 #include "math/extgcd.cpp"
 
 long long crt(std::vector<long long>& b, std::vector<long long>& m, long long mod = std::numeric_limits<long long>::max()) {

@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <utility>
 
 struct UnionFind {
 	std::vector<int> siz, par;

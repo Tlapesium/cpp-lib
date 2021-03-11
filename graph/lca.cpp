@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <utility>
 #include "graph/graph.cpp"
 #include "data-structure/sparse_table.cpp"
 

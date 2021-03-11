@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <functional>
 
 template<class T, class Comp = std::less<T> >
 struct SparseTable {

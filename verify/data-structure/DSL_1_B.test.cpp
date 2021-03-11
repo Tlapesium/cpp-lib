@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_B"
-#include "data-structure/union_find.cpp"
 #include <bits/stdc++.h>
+#include "data-structure/union_find.cpp"
 using namespace std;
 typedef long long ll;
 
