@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/string/ALDS1_14_D.test.cpp
+    title: verify/string/ALDS1_14_D.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/string/suffix_array.test.cpp
+    title: verify/string/suffix_array.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"string/suffix_array.cpp\"\n#include <vector>\r\n#include\
@@ -122,18 +128,14 @@ data:
   path: string/suffix_array.cpp
   requiredBy: []
   timestamp: '2021-03-12 00:20:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/string/suffix_array.test.cpp
+  - verify/string/ALDS1_14_D.test.cpp
 documentation_of: string/suffix_array.cpp
 layout: document
-title: Suffix Array
+redirect_from:
+- /library/string/suffix_array.cpp
+- /library/string/suffix_array.cpp.html
+title: string/suffix_array.cpp
 ---
-
-## 説明
-接尾辞配列を構築する。
-
-## 操作
-### SuffixArray(S)
-文字列 $S$ をもとに接尾辞配列を構築する。
-### get_range(T)
-文字列 $T$ を含む接尾辞のindexの上限と下限(半開区間)で求める。
