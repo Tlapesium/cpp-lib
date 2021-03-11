@@ -8,13 +8,13 @@ documentation_of: //data-structure/hashmap.cpp
 イテレータで全要素を取得することも可能。
 
 ## 操作
-### HashMap<$KeyType,ValType$> HashMap($N$)
+### HashMap(N)
 キーの型が $KeyType$ 、値の型が $ValType$ で、バケットサイズが $N$ のハッシュテーブルを構築する。計算量はO($N$)。
-### insert($a,b$)
+### insert(a, b)
 キーが $a$ 、値が $b$ の要素を追加する。計算量はO(1)。
-### erase($a$)
+### erase(a)
 キーが $a$ であるような要素を削除する。計算量はO(1)。
-### operator[] ($a$)
+### operator[] (a)
 キーが $a$ であるような要素の値の参照を取得する。計算量はO(1)。
 キーが $a$ であるような要素が無く要素を追加できるとき、自動で要素が追加される。
 ### size()
