@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <utility>
+#include <iostream>
 
 struct SuffixArray {
 	std::vector<int> sa;
