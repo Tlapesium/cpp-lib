@@ -14,14 +14,13 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"data-structure/li_chao_tree.cpp\"\n#include <limits>\r\n\
-    #include <algorithm>\r\n#include <utility>\r\n\r\ntemplate<class T, T x_min, T\
-    \ x_max, T inf = std::numeric_limits<T>::max()>\r\nstruct LiChaoTree {\r\n   \
-    \ struct Line {\r\n        T a, b;\r\n        Line(T a, T b) : a(a), b(b) {}\r\
-    \n        T operator() (T x) { return x * a + b; }\r\n    };\r\n    struct Node\
-    \ {\r\n        Line line;\r\n        Node* l, * r;\r\n        Node(const Line&\
-    \ x) : line(x), l(nullptr), r(nullptr) {};\r\n    };\r\n    Node* root;\r\n  \
-    \  LiChaoTree() : root(nullptr) { }\r\n\r\n    Node* add_line(Node* node, Line\
+  bundledCode: "#line 2 \"data-structure/li_chao_tree.cpp\"\n\r\ntemplate<class T,\
+    \ T x_min, T x_max, T inf = std::numeric_limits<T>::max()>\r\nstruct LiChaoTree\
+    \ {\r\n    struct Line {\r\n        T a, b;\r\n        Line(T a, T b) : a(a),\
+    \ b(b) {}\r\n        T operator() (T x) { return x * a + b; }\r\n    };\r\n  \
+    \  struct Node {\r\n        Line line;\r\n        Node* l, * r;\r\n        Node(const\
+    \ Line& x) : line(x), l(nullptr), r(nullptr) {};\r\n    };\r\n    Node* root;\r\
+    \n    LiChaoTree() : root(nullptr) { }\r\n\r\n    Node* add_line(Node* node, Line\
     \ line, T l, T r) {\r\n        if (!node)return new Node(line);\r\n\r\n      \
     \  T m = (l + r) / 2;\r\n        if (m == r)m--;\r\n        T node_l = node->line(l),\
     \ node_m = node->line(m), node_r = node->line(r);\r\n        T line_l = line(l),\
@@ -50,8 +49,7 @@ data:
     \  void add_segment(T l, T r, T a, T b) {\r\n        root = add_segment(root,\
     \ Line(a, b), l, r - 1, x_min, x_max);\r\n    }\r\n\r\n    T query(T x) {\r\n\
     \        return query(root, x_min, x_max, x);\r\n    }\r\n};\r\n"
-  code: "#pragma once\r\n#include <limits>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n\r\ntemplate<class T, T x_min, T x_max, T inf = std::numeric_limits<T>::max()>\r\
+  code: "#pragma once\r\n\r\ntemplate<class T, T x_min, T x_max, T inf = std::numeric_limits<T>::max()>\r\
     \nstruct LiChaoTree {\r\n    struct Line {\r\n        T a, b;\r\n        Line(T\
     \ a, T b) : a(a), b(b) {}\r\n        T operator() (T x) { return x * a + b; }\r\
     \n    };\r\n    struct Node {\r\n        Line line;\r\n        Node* l, * r;\r\
@@ -90,7 +88,7 @@ data:
   isVerificationFile: false
   path: data-structure/li_chao_tree.cpp
   requiredBy: []
-  timestamp: '2021-03-03 22:18:58+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/segment_add_get_min.test.cpp

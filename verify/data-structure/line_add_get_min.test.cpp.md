@@ -15,14 +15,14 @@ data:
     links:
     - https://judge.yosupo.jp/problem/line_add_get_min
   bundledCode: "#line 1 \"verify/data-structure/line_add_get_min.test.cpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/line_add_get_min\"\r\n#line 2 \"data-structure/li_chao_tree.cpp\"\
-    \n#include <limits>\r\n#include <algorithm>\r\n#include <utility>\r\n\r\ntemplate<class\
-    \ T, T x_min, T x_max, T inf = std::numeric_limits<T>::max()>\r\nstruct LiChaoTree\
-    \ {\r\n    struct Line {\r\n        T a, b;\r\n        Line(T a, T b) : a(a),\
-    \ b(b) {}\r\n        T operator() (T x) { return x * a + b; }\r\n    };\r\n  \
-    \  struct Node {\r\n        Line line;\r\n        Node* l, * r;\r\n        Node(const\
-    \ Line& x) : line(x), l(nullptr), r(nullptr) {};\r\n    };\r\n    Node* root;\r\
-    \n    LiChaoTree() : root(nullptr) { }\r\n\r\n    Node* add_line(Node* node, Line\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/line_add_get_min\"\r\n#include <bits/stdc++.h>\r\
+    \n#line 2 \"data-structure/li_chao_tree.cpp\"\n\r\ntemplate<class T, T x_min,\
+    \ T x_max, T inf = std::numeric_limits<T>::max()>\r\nstruct LiChaoTree {\r\n \
+    \   struct Line {\r\n        T a, b;\r\n        Line(T a, T b) : a(a), b(b) {}\r\
+    \n        T operator() (T x) { return x * a + b; }\r\n    };\r\n    struct Node\
+    \ {\r\n        Line line;\r\n        Node* l, * r;\r\n        Node(const Line&\
+    \ x) : line(x), l(nullptr), r(nullptr) {};\r\n    };\r\n    Node* root;\r\n  \
+    \  LiChaoTree() : root(nullptr) { }\r\n\r\n    Node* add_line(Node* node, Line\
     \ line, T l, T r) {\r\n        if (!node)return new Node(line);\r\n\r\n      \
     \  T m = (l + r) / 2;\r\n        if (m == r)m--;\r\n        T node_l = node->line(l),\
     \ node_m = node->line(m), node_r = node->line(r);\r\n        T line_l = line(l),\
@@ -50,18 +50,18 @@ data:
     \n        root = add_line(root, Line(a, b), x_min, x_max);\r\n    }\r\n\r\n  \
     \  void add_segment(T l, T r, T a, T b) {\r\n        root = add_segment(root,\
     \ Line(a, b), l, r - 1, x_min, x_max);\r\n    }\r\n\r\n    T query(T x) {\r\n\
-    \        return query(root, x_min, x_max, x);\r\n    }\r\n};\r\n#line 3 \"verify/data-structure/line_add_get_min.test.cpp\"\
-    \n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\n\
-    \r\nconstexpr int INF = 2147483647;\r\nconstexpr long long int INF_LL = 9223372036854775807;\r\
-    \nint main() {\r\n    LiChaoTree<ll, -INF, INF> LCT;\r\n    int N, Q;\r\n    cin\
-    \ >> N >> Q;\r\n    for (int i = 0; i < N; i++) {\r\n        ll a, b;\r\n    \
-    \    cin >> a >> b;\r\n        LCT.add_line(a, b);\r\n    }\r\n    for (int i\
-    \ = 0; i < Q; i++) {\r\n        ll t;\r\n        cin >> t;\r\n        if (t ==\
-    \ 0) {\r\n            ll a, b;\r\n            cin >> a >> b;\r\n            LCT.add_line(a,\
-    \ b);\r\n        }\r\n        else {\r\n            ll p;\r\n            cin >>\
-    \ p;\r\n            cout << LCT.query(p) << endl;\r\n        }\r\n    }\r\n}\n"
+    \        return query(root, x_min, x_max, x);\r\n    }\r\n};\r\n#line 4 \"verify/data-structure/line_add_get_min.test.cpp\"\
+    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nconstexpr int INF = 2147483647;\r\
+    \nconstexpr long long int INF_LL = 9223372036854775807;\r\nint main() {\r\n  \
+    \  LiChaoTree<ll, -INF, INF> LCT;\r\n    int N, Q;\r\n    cin >> N >> Q;\r\n \
+    \   for (int i = 0; i < N; i++) {\r\n        ll a, b;\r\n        cin >> a >> b;\r\
+    \n        LCT.add_line(a, b);\r\n    }\r\n    for (int i = 0; i < Q; i++) {\r\n\
+    \        ll t;\r\n        cin >> t;\r\n        if (t == 0) {\r\n            ll\
+    \ a, b;\r\n            cin >> a >> b;\r\n            LCT.add_line(a, b);\r\n \
+    \       }\r\n        else {\r\n            ll p;\r\n            cin >> p;\r\n\
+    \            cout << LCT.query(p) << endl;\r\n        }\r\n    }\r\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/line_add_get_min\"\r\n\
-    #include \"data-structure/li_chao_tree.cpp\"\r\n#include <bits/stdc++.h>\r\nusing\
+    #include <bits/stdc++.h>\r\n#include \"data-structure/li_chao_tree.cpp\"\r\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nconstexpr int INF = 2147483647;\r\
     \nconstexpr long long int INF_LL = 9223372036854775807;\r\nint main() {\r\n  \
     \  LiChaoTree<ll, -INF, INF> LCT;\r\n    int N, Q;\r\n    cin >> N >> Q;\r\n \
@@ -76,7 +76,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/line_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2021-03-03 22:23:12+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/line_add_get_min.test.cpp

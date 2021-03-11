@@ -63,7 +63,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/rolling_hash.cpp
       title: Rolling Hash
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/suffix_array.cpp
       title: Suffix Array
   - name: utility
@@ -75,11 +75,6 @@ data:
       path: utility/xorshift.cpp
       title: XORShift
   verificationCategories:
-  - name: example
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: example/example.test.cpp
-      title: example/example.test.cpp
   - name: verify/data-structure
     pages:
     - icon: ':heavy_check_mark:'
@@ -148,10 +143,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/string/ALDS1_14_B.test.cpp
       title: verify/string/ALDS1_14_B.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: verify/string/ALDS1_14_D.test.cpp
       title: verify/string/ALDS1_14_D.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: verify/string/suffix_array.test.cpp
       title: verify/string/suffix_array.test.cpp
 layout: toppage

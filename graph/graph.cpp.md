@@ -44,12 +44,12 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"graph/graph.cpp\"\n#include <vector>\r\n\r\nstruct Edge\
-    \ {\r\n\tint to; long long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\t\
-    Edge(int to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n"
-  code: "#pragma once\r\n#include <vector>\r\n\r\nstruct Edge {\r\n\tint to; long\
-    \ long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\tEdge(int to, long long\
-    \ cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;"
+  bundledCode: "#line 2 \"graph/graph.cpp\"\n\r\nstruct Edge {\r\n\tint to; long long\
+    \ cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\tEdge(int to, long long cost)\
+    \ : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n"
+  code: "#pragma once\r\n\r\nstruct Edge {\r\n\tint to; long long cost;\r\n\tEdge(int\
+    \ to) : to(to), cost(1) {};\r\n\tEdge(int to, long long cost) : to(to), cost(cost)\
+    \ {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;"
   dependsOn: []
   isVerificationFile: false
   path: graph/graph.cpp
@@ -59,7 +59,7 @@ data:
   - graph/dijkstra.cpp
   - graph/topological_sort.cpp
   - graph/bellman_ford.cpp
-  timestamp: '2021-03-08 20:08:05+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/GRL_4_B.test.cpp

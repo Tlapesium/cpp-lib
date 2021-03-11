@@ -14,31 +14,29 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"graph/bellman_ford.cpp\"\n#include <vector>\r\n#include\
-    \ <utility>\r\n#include <limits>\r\n#line 3 \"graph/graph.cpp\"\n\r\nstruct Edge\
-    \ {\r\n\tint to; long long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\t\
-    Edge(int to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n\
-    #line 6 \"graph/bellman_ford.cpp\"\n\r\nauto BellmanFord(int s, Graph& g) {\r\n\
+  bundledCode: "#line 2 \"graph/graph.cpp\"\n\r\nstruct Edge {\r\n\tint to; long long\
+    \ cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\tEdge(int to, long long cost)\
+    \ : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n\
+    #line 3 \"graph/bellman_ford.cpp\"\n\r\nauto BellmanFord(int s, Graph& g) {\r\n\
     \tconstexpr auto inf = std::numeric_limits<long long>::max();\r\n\tstd::vector\
     \ d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size(); i++) {\r\
     \n\t\tfor (int j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e : g[j]) {\r\n\
     \t\t\t\tif (d[j] != inf && d[e.to] > d[j] + e.cost) {\r\n\t\t\t\t\td[e.to] = d[j]\
     \ + e.cost;\r\n\t\t\t\t\tif (i == g.size() - 1)return std::vector<long long>();\r\
     \n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn d;\r\n}\n"
-  code: "#pragma once\r\n#include <vector>\r\n#include <utility>\r\n#include <limits>\r\
-    \n#include \"graph/graph.cpp\"\r\n\r\nauto BellmanFord(int s, Graph& g) {\r\n\t\
-    constexpr auto inf = std::numeric_limits<long long>::max();\r\n\tstd::vector d(g.size(),\
-    \ inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size(); i++) {\r\n\t\tfor (int\
-    \ j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e : g[j]) {\r\n\t\t\t\tif (d[j]\
-    \ != inf && d[e.to] > d[j] + e.cost) {\r\n\t\t\t\t\td[e.to] = d[j] + e.cost;\r\
-    \n\t\t\t\t\tif (i == g.size() - 1)return std::vector<long long>();\r\n\t\t\t\t\
-    }\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn d;\r\n}"
+  code: "#pragma once\r\n#include \"graph/graph.cpp\"\r\n\r\nauto BellmanFord(int\
+    \ s, Graph& g) {\r\n\tconstexpr auto inf = std::numeric_limits<long long>::max();\r\
+    \n\tstd::vector d(g.size(), inf);;\r\n\td[s] = 0;\r\n\tfor (int i = 0; i < g.size();\
+    \ i++) {\r\n\t\tfor (int j = 0; j < g.size(); j++) {\r\n\t\t\tfor (auto&& e :\
+    \ g[j]) {\r\n\t\t\t\tif (d[j] != inf && d[e.to] > d[j] + e.cost) {\r\n\t\t\t\t\
+    \td[e.to] = d[j] + e.cost;\r\n\t\t\t\t\tif (i == g.size() - 1)return std::vector<long\
+    \ long>();\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn d;\r\n}"
   dependsOn:
   - graph/graph.cpp
   isVerificationFile: false
   path: graph/bellman_ford.cpp
   requiredBy: []
-  timestamp: '2021-03-08 20:08:05+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/GRL_1_B.test.cpp

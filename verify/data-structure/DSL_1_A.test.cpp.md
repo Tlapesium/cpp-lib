@@ -15,8 +15,8 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_A
   bundledCode: "#line 1 \"verify/data-structure/DSL_1_A.test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_A\"\r\n#line 2 \"data-structure/union_find.cpp\"\
-    \n#include <vector>\r\n#include <utility>\r\n\r\nstruct UnionFind {\r\n\tstd::vector<int>\
+    \ \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_A\"\r\n#include <bits/stdc++.h>\r\
+    \n#line 2 \"data-structure/union_find.cpp\"\n\r\nstruct UnionFind {\r\n\tstd::vector<int>\
     \ siz, par;\r\n\tstd::vector<long long> wei;\r\n\tint f_s;\r\n\r\n\tUnionFind(int\
     \ size) : f_s(size) {\r\n\t\tsiz.assign(size, 1);\r\n\t\twei.assign(size, 0);\r\
     \n\t\tpar.assign(size, 0);\r\n\t\tfor (int i = 0; i < size; i++)par[i] = i;\r\n\
@@ -30,15 +30,15 @@ data:
     \ x, int y) {\r\n\t\treturn root(x) == root(y);\r\n\t}\r\n\tlong long diff(int\
     \ x, int y) {\r\n\t\treturn weight(y) - weight(x);\r\n\t}\r\n\tint size(int x)\
     \ {\r\n\t\treturn siz[x];\r\n\t}\r\n\tint forest_size() {\r\n\t\treturn f_s;\r\
-    \n\t}\r\n};\r\n#line 3 \"verify/data-structure/DSL_1_A.test.cpp\"\n#include <bits/stdc++.h>\r\
-    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N,\
-    \ Q;\r\n\tcin >> N >> Q;\r\n\tUnionFind UF(N);\r\n\tfor (int i = 0; i < Q; i++)\
-    \ {\r\n\t\tint t;\r\n\t\tcin >> t;\r\n\t\tif (t == 0) {\r\n\t\t\tint x, y;\r\n\
-    \t\t\tcin >> x >> y;\r\n\t\t\tUF.merge(x, y);\r\n\t\t}\r\n\t\tif (t == 1) {\r\n\
-    \t\t\tint x, y;\r\n\t\t\tcin >> x >> y;\r\n\t\t\tcout << UF.issame(x, y) << endl;\r\
-    \n\t\t}\r\n\t}\r\n}\n"
+    \n\t}\r\n};\r\n#line 4 \"verify/data-structure/DSL_1_A.test.cpp\"\nusing namespace\
+    \ std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N, Q;\r\n\tcin >>\
+    \ N >> Q;\r\n\tUnionFind UF(N);\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tint\
+    \ t;\r\n\t\tcin >> t;\r\n\t\tif (t == 0) {\r\n\t\t\tint x, y;\r\n\t\t\tcin >>\
+    \ x >> y;\r\n\t\t\tUF.merge(x, y);\r\n\t\t}\r\n\t\tif (t == 1) {\r\n\t\t\tint\
+    \ x, y;\r\n\t\t\tcin >> x >> y;\r\n\t\t\tcout << UF.issame(x, y) << endl;\r\n\t\
+    \t}\r\n\t}\r\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_A\"\r\n\
-    #include \"data-structure/union_find.cpp\"\r\n#include <bits/stdc++.h>\r\nusing\
+    #include <bits/stdc++.h>\r\n#include \"data-structure/union_find.cpp\"\r\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N, Q;\r\
     \n\tcin >> N >> Q;\r\n\tUnionFind UF(N);\r\n\tfor (int i = 0; i < Q; i++) {\r\n\
     \t\tint t;\r\n\t\tcin >> t;\r\n\t\tif (t == 0) {\r\n\t\t\tint x, y;\r\n\t\t\t\
@@ -50,7 +50,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/DSL_1_A.test.cpp
   requiredBy: []
-  timestamp: '2021-03-10 02:08:15+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/DSL_1_A.test.cpp

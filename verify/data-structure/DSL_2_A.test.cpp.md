@@ -15,9 +15,9 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
   bundledCode: "#line 1 \"verify/data-structure/DSL_2_A.test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\r\n#line\
-    \ 2 \"data-structure/segment_tree.cpp\"\n#include <vector>\r\n#include <iostream>\r\
-    \n\r\ntemplate <class Monoid, class Operator>\r\nstruct SegmentTree {\r\n\tstd::vector<Monoid>\
+    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\r\n#include\
+    \ <bits/stdc++.h>\r\n#line 2 \"data-structure/segment_tree.cpp\"\n\r\ntemplate\
+    \ <class Monoid, class Operator>\r\nstruct SegmentTree {\r\n\tstd::vector<Monoid>\
     \ dat;\r\n\r\n\tconst Operator op;\r\n\tconst Monoid IE;\r\n\tconst int sz;\r\n\
     \r\n\t// \u5358\u4F4D\u5143\u3067\u521D\u671F\u5316\u3055\u308C\u305F\u30BB\u30B0\
     \u6728\u3092\u69CB\u7BC9 O(N)\r\n\tSegmentTree(int n, Operator F, Monoid IE) :\
@@ -54,15 +54,14 @@ data:
     return SegmentTree<Monoid, Operator>(n, F, IE);\r\n}\r\n\r\ntemplate<class Monoid,\
     \ class Operator>\r\nSegmentTree<Monoid, Operator> makeSegTree(const std::vector<Monoid>&\
     \ vec, Operator F, Monoid IE) {\r\n\treturn SegmentTree<Monoid, Operator>(vec,\
-    \ F, IE);\r\n}\r\n#line 3 \"verify/data-structure/DSL_2_A.test.cpp\"\n#include\
-    \ <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint\
-    \ main() {\r\n\tint N, Q;\r\n\tcin >> N >> Q;\r\n\tll INF = (1LL << 31LL) - 1LL;\r\
-    \n\tauto ST = makeSegTree(vector(N, INF), [](ll& l, ll& r) {return min(l, r);\
-    \ }, INF);\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tll c, x, y;\r\n\t\tcin >>\
-    \ c >> x >> y;\r\n\t\tif (c == 0) ST.set(x, y);\r\n\t\tif (c == 1)cout << ST.get(x,\
-    \ y + 1) << endl;\r\n\t}\r\n}\n"
+    \ F, IE);\r\n}\r\n#line 4 \"verify/data-structure/DSL_2_A.test.cpp\"\nusing namespace\
+    \ std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N, Q;\r\n\tcin >>\
+    \ N >> Q;\r\n\tll INF = (1LL << 31LL) - 1LL;\r\n\tauto ST = makeSegTree(vector(N,\
+    \ INF), [](ll& l, ll& r) {return min(l, r); }, INF);\r\n\tfor (int i = 0; i <\
+    \ Q; i++) {\r\n\t\tll c, x, y;\r\n\t\tcin >> c >> x >> y;\r\n\t\tif (c == 0) ST.set(x,\
+    \ y);\r\n\t\tif (c == 1)cout << ST.get(x, y + 1) << endl;\r\n\t}\r\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\
-    \r\n#include \"data-structure/segment_tree.cpp\"\r\n#include <bits/stdc++.h>\r\
+    \r\n#include <bits/stdc++.h>\r\n#include \"data-structure/segment_tree.cpp\"\r\
     \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N,\
     \ Q;\r\n\tcin >> N >> Q;\r\n\tll INF = (1LL << 31LL) - 1LL;\r\n\tauto ST = makeSegTree(vector(N,\
     \ INF), [](ll& l, ll& r) {return min(l, r); }, INF);\r\n\tfor (int i = 0; i <\
@@ -73,7 +72,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/DSL_2_A.test.cpp
   requiredBy: []
-  timestamp: '2021-02-09 09:18:50+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/DSL_2_A.test.cpp

@@ -17,22 +17,21 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"math/extgcd.cpp\"\n#include <utility>\r\n\r\nauto extGCD(long\
-    \ long a, long long b) {\r\n\tlong long x = 1, y = 0, u = 0, v = 1;\r\n\twhile\
-    \ (b != 0) {\r\n\t\tauto j = a % b, k = a / b;\r\n\t\tx -= k * u; y -= k * v;\r\
-    \n\t\tstd::swap(x, u); std::swap(y, v);\r\n\t\ta = b; b = j;\r\n\t}\r\n\treturn\
-    \ std::make_pair(x, y);\r\n}\n"
-  code: "#pragma once\r\n#include <utility>\r\n\r\nauto extGCD(long long a, long long\
+  bundledCode: "#line 2 \"math/extgcd.cpp\"\n\r\nauto extGCD(long long a, long long\
     \ b) {\r\n\tlong long x = 1, y = 0, u = 0, v = 1;\r\n\twhile (b != 0) {\r\n\t\t\
     auto j = a % b, k = a / b;\r\n\t\tx -= k * u; y -= k * v;\r\n\t\tstd::swap(x,\
     \ u); std::swap(y, v);\r\n\t\ta = b; b = j;\r\n\t}\r\n\treturn std::make_pair(x,\
-    \ y);\r\n}"
+    \ y);\r\n}\n"
+  code: "#pragma once\r\n\r\nauto extGCD(long long a, long long b) {\r\n\tlong long\
+    \ x = 1, y = 0, u = 0, v = 1;\r\n\twhile (b != 0) {\r\n\t\tauto j = a % b, k =\
+    \ a / b;\r\n\t\tx -= k * u; y -= k * v;\r\n\t\tstd::swap(x, u); std::swap(y, v);\r\
+    \n\t\ta = b; b = j;\r\n\t}\r\n\treturn std::make_pair(x, y);\r\n}"
   dependsOn: []
   isVerificationFile: false
   path: math/extgcd.cpp
   requiredBy:
   - math/crt.cpp
-  timestamp: '2021-03-09 01:15:15+09:00'
+  timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/math/NTL_1_E.test.cpp
