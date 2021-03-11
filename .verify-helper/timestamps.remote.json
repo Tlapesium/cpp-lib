@@ -20,5 +20,6 @@
 "verify/math/yuki187.test.cpp": "2021-03-12 03:00:04 +0900",
 "verify/string/ALDS1_14_B.test.cpp": "2021-03-12 03:00:04 +0900",
 "verify/string/ALDS1_14_D.test.cpp": "2021-03-12 03:15:58 +0900",
-"verify/string/suffix_array.test.cpp": "2021-03-12 03:15:58 +0900"
+"verify/string/suffix_array.test.cpp": "2021-03-12 03:15:58 +0900",
+"verify/string/z_algorithm.test.cpp": "2021-03-12 03:55:20 +0900"
 }
