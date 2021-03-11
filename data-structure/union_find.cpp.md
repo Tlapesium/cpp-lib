@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: graph/kruskal.cpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728 (Kruskal)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_1_A.test.cpp
@@ -9,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_1_B.test.cpp
     title: verify/data-structure/DSL_1_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_2_A.test.cpp
+    title: verify/graph/GRL_2_A.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,12 +53,14 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data-structure/union_find.cpp
-  requiredBy: []
+  requiredBy:
+  - graph/kruskal.cpp
   timestamp: '2021-03-10 02:08:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/DSL_1_B.test.cpp
   - verify/data-structure/DSL_1_A.test.cpp
+  - verify/graph/GRL_2_A.test.cpp
 documentation_of: data-structure/union_find.cpp
 layout: document
 title: Union Find
