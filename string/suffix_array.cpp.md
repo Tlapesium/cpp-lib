@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/string/ALDS1_14_D.test.cpp
     title: verify/string/ALDS1_14_D.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/string/suffix_array.test.cpp
     title: verify/string/suffix_array.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"string/suffix_array.cpp\"\n\r\nstruct SuffixArray {\r\n\t\
@@ -66,7 +66,7 @@ data:
     \ low > 1) {\r\n\t\t\tint mid = (low + high) / 2;\r\n\t\t\tif (lt_substr(T, sa[mid]))low\
     \ = mid;\r\n\t\t\telse high = mid;\r\n\t\t}\r\n\t\tT.back()--;\r\n\t\treturn std::make_pair(tmp,\
     \ high);\r\n\t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < sa.size(); i++)std::cout\
-    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};\n"
+    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};\r\n"
   code: "#pragma once\r\n\r\nstruct SuffixArray {\r\n\tstd::vector<int> sa;\r\n\t\
     const std::string S;\r\n\r\n\tstd::vector<int> sa_is(const std::vector<int>& str,\
     \ int k) {\r\n\r\n\t\tauto induced_sort = [](const std::vector<int>& str, const\
@@ -119,13 +119,13 @@ data:
     \ low > 1) {\r\n\t\t\tint mid = (low + high) / 2;\r\n\t\t\tif (lt_substr(T, sa[mid]))low\
     \ = mid;\r\n\t\t\telse high = mid;\r\n\t\t}\r\n\t\tT.back()--;\r\n\t\treturn std::make_pair(tmp,\
     \ high);\r\n\t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < sa.size(); i++)std::cout\
-    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};"
+    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};\r\n"
   dependsOn: []
   isVerificationFile: false
   path: string/suffix_array.cpp
   requiredBy: []
-  timestamp: '2021-03-12 03:00:04+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-03-12 03:15:58+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/string/suffix_array.test.cpp
   - verify/string/ALDS1_14_D.test.cpp

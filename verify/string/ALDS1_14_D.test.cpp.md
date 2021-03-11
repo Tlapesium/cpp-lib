@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_array.cpp
     title: Suffix Array
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_D
@@ -68,12 +68,12 @@ data:
     \ low > 1) {\r\n\t\t\tint mid = (low + high) / 2;\r\n\t\t\tif (lt_substr(T, sa[mid]))low\
     \ = mid;\r\n\t\t\telse high = mid;\r\n\t\t}\r\n\t\tT.back()--;\r\n\t\treturn std::make_pair(tmp,\
     \ high);\r\n\t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < sa.size(); i++)std::cout\
-    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};\n#line 4 \"\
-    verify/string/ALDS1_14_D.test.cpp\"\nusing namespace std;\r\ntypedef long long\
-    \ ll;\r\n\r\nint main() {\r\n\tstring S;\r\n\tcin >> S;\r\n\tSuffixArray SA(S);\r\
-    \n\tint Q;\r\n\tcin >> Q;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tstring t;\r\
-    \n\t\tcin >> t;\r\n\t\tauto range = SA.get_range(t);\r\n\t\tcout << (range.first\
-    \ != range.second) << endl;\r\n\t}\r\n}\n"
+    \ << sa[i] << (i == sa.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n};\r\n#line 4\
+    \ \"verify/string/ALDS1_14_D.test.cpp\"\nusing namespace std;\r\ntypedef long\
+    \ long ll;\r\n\r\nint main() {\r\n\tstring S;\r\n\tcin >> S;\r\n\tSuffixArray\
+    \ SA(S);\r\n\tint Q;\r\n\tcin >> Q;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\t\
+    string t;\r\n\t\tcin >> t;\r\n\t\tauto range = SA.get_range(t);\r\n\t\tcout <<\
+    \ (range.first != range.second) << endl;\r\n\t}\r\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_D\"\r\
     \n#include <bits/stdc++.h>\r\n#include \"string/suffix_array.cpp\"\r\nusing namespace\
     \ std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tstring S;\r\n\tcin >>\
@@ -85,8 +85,8 @@ data:
   isVerificationFile: true
   path: verify/string/ALDS1_14_D.test.cpp
   requiredBy: []
-  timestamp: '2021-03-12 03:00:04+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-03-12 03:15:58+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/string/ALDS1_14_D.test.cpp
 layout: document
