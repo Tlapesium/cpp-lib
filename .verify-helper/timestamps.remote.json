@@ -15,6 +15,7 @@
 "verify/graph/GRL_4_A.test.cpp": "2021-03-08 23:41:41 +0900",
 "verify/graph/GRL_4_B.test.cpp": "2021-03-08 23:41:41 +0900",
 "verify/graph/GRL_4_C.test.cpp": "2021-03-12 02:14:29 +0900",
+"verify/graph/lca.test.cpp": "2021-03-12 02:24:43 +0900",
 "verify/math/NTL_1_E.test.cpp": "2021-03-09 01:15:15 +0900",
 "verify/math/yuki1136.test.cpp": "2021-02-09 09:27:54 +0900",
 "verify/math/yuki187.test.cpp": "2021-03-09 01:37:05 +0900",
