@@ -59,7 +59,7 @@ data:
       title: Rolling Hash
     - icon: ':heavy_check_mark:'
       path: string/suffix_array.cpp
-      title: string/suffix_array.cpp
+      title: Suffix Array
   - name: utility
     pages:
     - icon: ':warning:'
