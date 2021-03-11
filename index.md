@@ -57,6 +57,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/rolling_hash.cpp
       title: Rolling Hash
+    - icon: ':warning:'
+      path: string/suffix_array.cpp
+      title: string/suffix_array.cpp
   - name: utility
     pages:
     - icon: ':warning:'
