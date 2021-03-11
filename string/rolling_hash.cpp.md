@@ -69,3 +69,16 @@ documentation_of: string/rolling_hash.cpp
 layout: document
 title: Rolling Hash
 ---
+
+## 説明
+ハッシュを用いて文字列の一致判定を高速に行うアルゴリズム。
+
+## 操作
+### RollingHash(S, b)
+文字列 $S$ からハッシュテーブルを構築する。$b$ にはハッシュの基数を指定する。
+### get(l, r)
+区間 $[l,r)$ のハッシュを求める。
+### concat(b, l1, r1, l2, r2)
+区間 $[l1,r1)$ と、ハッシュテーブル $b$ の区間 $[l2,r2)$ を結合したもののハッシュを求める。
+### getLCP(b, l1, l2)
+$l1$ から始まる区間と、ハッシュテーブル $b$ の $l2$ から始まる区間の最長共通接頭辞の長さを求める。

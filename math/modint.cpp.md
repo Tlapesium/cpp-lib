@@ -93,3 +93,6 @@ documentation_of: math/modint.cpp
 layout: document
 title: Modint
 ---
+
+## 説明
+計算の途中に自動的に剰余を取ってくれるデータ構造。

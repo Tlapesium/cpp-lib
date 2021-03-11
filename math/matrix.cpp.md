@@ -79,3 +79,6 @@ documentation_of: math/matrix.cpp
 layout: document
 title: Matrix
 ---
+
+## 説明
+行列の演算をいい感じに行ってくれるやつ。
