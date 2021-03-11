@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_4_C.test.cpp
     title: verify/graph/GRL_4_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/lca.test.cpp
+    title: verify/graph/lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -63,6 +66,7 @@ data:
   timestamp: '2021-03-12 02:14:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/graph/lca.test.cpp
   - verify/graph/GRL_4_C.test.cpp
 documentation_of: graph/lca.cpp
 layout: document

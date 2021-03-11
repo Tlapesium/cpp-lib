@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_4_C.test.cpp
     title: verify/graph/GRL_4_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/lca.test.cpp
+    title: verify/graph/lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,6 +50,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/static_rmq.test.cpp
+  - verify/graph/lca.test.cpp
   - verify/graph/GRL_4_C.test.cpp
 documentation_of: data-structure/sparse_table.cpp
 layout: document

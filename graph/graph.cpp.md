@@ -36,6 +36,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_4_C.test.cpp
     title: verify/graph/GRL_4_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/lca.test.cpp
+    title: verify/graph/lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -62,6 +65,7 @@ data:
   - verify/graph/GRL_4_B.test.cpp
   - verify/graph/GRL_1_B.test.cpp
   - verify/graph/GRL_4_A.test.cpp
+  - verify/graph/lca.test.cpp
   - verify/graph/GRL_1_A.test.cpp
   - verify/graph/GRL_4_C.test.cpp
   - verify/graph/GRL_2_A.test.cpp

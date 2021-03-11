@@ -129,6 +129,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/graph/GRL_4_C.test.cpp
       title: verify/graph/GRL_4_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/lca.test.cpp
+      title: verify/graph/lca.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
