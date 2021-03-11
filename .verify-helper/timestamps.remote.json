@@ -16,5 +16,7 @@
 "verify/math/NTL_1_E.test.cpp": "2021-03-09 01:15:15 +0900",
 "verify/math/yuki1136.test.cpp": "2021-02-09 09:27:54 +0900",
 "verify/math/yuki187.test.cpp": "2021-03-09 01:37:05 +0900",
-"verify/string/ALDS1_14_B.test.cpp": "2021-02-12 07:58:15 +0900"
+"verify/string/ALDS1_14_B.test.cpp": "2021-02-12 07:58:15 +0900",
+"verify/string/ALDS1_14_D.test.cpp": "2021-03-12 00:23:24 +0900",
+"verify/string/suffix_array.test.cpp": "2021-03-12 00:23:24 +0900"
 }
