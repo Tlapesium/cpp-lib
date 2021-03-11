@@ -66,6 +66,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/suffix_array.cpp
       title: Suffix Array
+    - icon: ':heavy_check_mark:'
+      path: string/z_algorithm.cpp
+      title: Z Algorithm
   - name: utility
     pages:
     - icon: ':warning:'
@@ -149,5 +152,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/string/suffix_array.test.cpp
       title: verify/string/suffix_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/string/z_algorithm.test.cpp
+      title: verify/string/z_algorithm.test.cpp
 layout: toppage
 ---
