@@ -57,9 +57,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/rolling_hash.cpp
       title: Rolling Hash
-    - icon: ':heavy_check_mark:'
-      path: string/suffix_array.cpp
-      title: Suffix Array
   - name: utility
     pages:
     - icon: ':warning:'
@@ -133,11 +130,5 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/string/ALDS1_14_B.test.cpp
       title: verify/string/ALDS1_14_B.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: verify/string/ALDS1_14_D.test.cpp
-      title: verify/string/ALDS1_14_D.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: verify/string/suffix_array.test.cpp
-      title: verify/string/suffix_array.test.cpp
 layout: toppage
 ---
