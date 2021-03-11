@@ -12,6 +12,9 @@ data:
     path: graph/kruskal.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 (Kruskal)"
   - icon: ':heavy_check_mark:'
+    path: graph/lca.cpp
+    title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.cpp
     title: Topological Sort
   _extendedVerifiedWith:
@@ -30,6 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_4_B.test.cpp
     title: verify/graph/GRL_4_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_4_C.test.cpp
+    title: verify/graph/GRL_4_C.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -46,6 +52,7 @@ data:
   path: graph/graph.cpp
   requiredBy:
   - graph/kruskal.cpp
+  - graph/lca.cpp
   - graph/dijkstra.cpp
   - graph/topological_sort.cpp
   - graph/bellman_ford.cpp
@@ -56,6 +63,7 @@ data:
   - verify/graph/GRL_1_B.test.cpp
   - verify/graph/GRL_4_A.test.cpp
   - verify/graph/GRL_1_A.test.cpp
+  - verify/graph/GRL_4_C.test.cpp
   - verify/graph/GRL_2_A.test.cpp
 documentation_of: graph/graph.cpp
 layout: document

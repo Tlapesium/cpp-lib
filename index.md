@@ -39,6 +39,9 @@ data:
       path: graph/kruskal.cpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728 (Kruskal)"
     - icon: ':heavy_check_mark:'
+      path: graph/lca.cpp
+      title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
+    - icon: ':heavy_check_mark:'
       path: graph/topological_sort.cpp
       title: Topological Sort
   - name: math
@@ -123,6 +126,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/graph/GRL_4_B.test.cpp
       title: verify/graph/GRL_4_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/GRL_4_C.test.cpp
+      title: verify/graph/GRL_4_C.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
