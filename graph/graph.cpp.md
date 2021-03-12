@@ -15,6 +15,9 @@ data:
     path: graph/lca.cpp
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
   - icon: ':heavy_check_mark:'
+    path: graph/scc.cpp
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.cpp
     title: Topological Sort
   _extendedVerifiedWith:
@@ -28,6 +31,9 @@ data:
     path: verify/graph/GRL_2_A.test.cpp
     title: verify/graph/GRL_2_A.test.cpp
   - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_3_C.test.cpp
+    title: verify/graph/GRL_3_C.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_4_A.test.cpp
     title: verify/graph/GRL_4_A.test.cpp
   - icon: ':heavy_check_mark:'
@@ -39,6 +45,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/lca.test.cpp
     title: verify/graph/lca.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/scc.test.cpp
+    title: verify/graph/scc.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -54,6 +63,7 @@ data:
   isVerificationFile: false
   path: graph/graph.cpp
   requiredBy:
+  - graph/scc.cpp
   - graph/kruskal.cpp
   - graph/lca.cpp
   - graph/dijkstra.cpp
@@ -67,7 +77,9 @@ data:
   - verify/graph/GRL_4_A.test.cpp
   - verify/graph/lca.test.cpp
   - verify/graph/GRL_1_A.test.cpp
+  - verify/graph/scc.test.cpp
   - verify/graph/GRL_4_C.test.cpp
+  - verify/graph/GRL_3_C.test.cpp
   - verify/graph/GRL_2_A.test.cpp
 documentation_of: graph/graph.cpp
 layout: document
