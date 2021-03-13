@@ -20,7 +20,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
-  bundledCode: "#line 1 \"verify/graph/GRL_4_C.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\
+  bundledCode: "#line 1 \"verify/graph/GRL_5_C.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\
     \r\n#include <bits/stdc++.h>\r\n#line 2 \"graph/graph.cpp\"\n\r\nstruct Edge {\r\
     \n\tint to; long long cost;\r\n\tEdge(int to) : to(to), cost(1) {};\r\n\tEdge(int\
     \ to, long long cost) : to(to), cost(cost) {}\r\n};\r\nusing Graph = std::vector<std::vector<Edge>>;\n\
@@ -44,7 +44,7 @@ data:
     \n\t\t\t\ttmp.push_back({ depth,pos });\r\n\t\t\t}\r\n\t\t};\r\n\t\tdfs(dfs, 0,\
     \ -1, 0);\r\n\t\tST = SparseTable<std::pair<int, int>>(tmp);\r\n\t}\r\n\r\n\t\
     int query(int u, int v) {\r\n\t\treturn ST.get(std::min(in[u], in[v]) - 1, std::max(in[u],\
-    \ in[v])).second;\r\n\t}\r\n};\n#line 5 \"verify/graph/GRL_4_C.test.cpp\"\nusing\
+    \ in[v])).second;\r\n\t}\r\n};\n#line 5 \"verify/graph/GRL_5_C.test.cpp\"\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N;\r\n\t\
     cin >> N;\r\n\tGraph g(N);\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tint k;\r\n\
     \t\tcin >> k;\r\n\t\tfor (int j = 0; j < k; j++) {\r\n\t\t\tint t;\r\n\t\t\tcin\
@@ -66,15 +66,15 @@ data:
   - graph/lca.cpp
   - data-structure/sparse_table.cpp
   isVerificationFile: true
-  path: verify/graph/GRL_4_C.test.cpp
+  path: verify/graph/GRL_5_C.test.cpp
   requiredBy: []
-  timestamp: '2021-03-12 03:00:04+09:00'
+  timestamp: '2021-03-14 00:25:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/graph/GRL_4_C.test.cpp
+documentation_of: verify/graph/GRL_5_C.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/graph/GRL_4_C.test.cpp
-- /verify/verify/graph/GRL_4_C.test.cpp.html
-title: verify/graph/GRL_4_C.test.cpp
+- /verify/verify/graph/GRL_5_C.test.cpp
+- /verify/verify/graph/GRL_5_C.test.cpp.html
+title: verify/graph/GRL_5_C.test.cpp
 ---

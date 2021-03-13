@@ -20,6 +20,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/topological_sort.cpp
     title: Topological Sort
+  - icon: ':heavy_check_mark:'
+    path: graph/tree_diameter.cpp
+    title: "\u6728\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_1_A.test.cpp
@@ -40,14 +43,20 @@ data:
     path: verify/graph/GRL_4_B.test.cpp
     title: verify/graph/GRL_4_B.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/graph/GRL_4_C.test.cpp
-    title: verify/graph/GRL_4_C.test.cpp
+    path: verify/graph/GRL_5_A.test.cpp
+    title: verify/graph/GRL_5_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/GRL_5_C.test.cpp
+    title: verify/graph/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/graph/lca.test.cpp
     title: verify/graph/lca.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/graph/scc.test.cpp
     title: verify/graph/scc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/graph/tree_diameter.test.cpp
+    title: verify/graph/tree_diameter.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -64,6 +73,7 @@ data:
   path: graph/graph.cpp
   requiredBy:
   - graph/scc.cpp
+  - graph/tree_diameter.cpp
   - graph/kruskal.cpp
   - graph/lca.cpp
   - graph/dijkstra.cpp
@@ -73,13 +83,15 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/GRL_4_B.test.cpp
+  - verify/graph/GRL_5_A.test.cpp
   - verify/graph/GRL_1_B.test.cpp
   - verify/graph/GRL_4_A.test.cpp
   - verify/graph/lca.test.cpp
   - verify/graph/GRL_1_A.test.cpp
+  - verify/graph/GRL_5_C.test.cpp
   - verify/graph/scc.test.cpp
-  - verify/graph/GRL_4_C.test.cpp
   - verify/graph/GRL_3_C.test.cpp
+  - verify/graph/tree_diameter.test.cpp
   - verify/graph/GRL_2_A.test.cpp
 documentation_of: graph/graph.cpp
 layout: document

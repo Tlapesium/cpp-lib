@@ -10,8 +10,8 @@ data:
     path: verify/data-structure/static_rmq.test.cpp
     title: verify/data-structure/static_rmq.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/graph/GRL_4_C.test.cpp
-    title: verify/graph/GRL_4_C.test.cpp
+    path: verify/graph/GRL_5_C.test.cpp
+    title: verify/graph/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/graph/lca.test.cpp
     title: verify/graph/lca.test.cpp
@@ -50,7 +50,7 @@ data:
   verifiedWith:
   - verify/data-structure/static_rmq.test.cpp
   - verify/graph/lca.test.cpp
-  - verify/graph/GRL_4_C.test.cpp
+  - verify/graph/GRL_5_C.test.cpp
 documentation_of: data-structure/sparse_table.cpp
 layout: document
 title: Sparse Table

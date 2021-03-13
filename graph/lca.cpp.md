@@ -10,8 +10,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/graph/GRL_4_C.test.cpp
-    title: verify/graph/GRL_4_C.test.cpp
+    path: verify/graph/GRL_5_C.test.cpp
+    title: verify/graph/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/graph/lca.test.cpp
     title: verify/graph/lca.test.cpp
@@ -65,7 +65,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/graph/lca.test.cpp
-  - verify/graph/GRL_4_C.test.cpp
+  - verify/graph/GRL_5_C.test.cpp
 documentation_of: graph/lca.cpp
 layout: document
 title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"

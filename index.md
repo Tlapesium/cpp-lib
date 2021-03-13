@@ -47,6 +47,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.cpp
       title: Topological Sort
+    - icon: ':heavy_check_mark:'
+      path: graph/tree_diameter.cpp
+      title: "\u6728\u306E\u76F4\u5F84"
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -131,14 +134,20 @@ data:
       path: verify/graph/GRL_4_B.test.cpp
       title: verify/graph/GRL_4_B.test.cpp
     - icon: ':heavy_check_mark:'
-      path: verify/graph/GRL_4_C.test.cpp
-      title: verify/graph/GRL_4_C.test.cpp
+      path: verify/graph/GRL_5_A.test.cpp
+      title: verify/graph/GRL_5_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/GRL_5_C.test.cpp
+      title: verify/graph/GRL_5_C.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/graph/lca.test.cpp
       title: verify/graph/lca.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/graph/scc.test.cpp
       title: verify/graph/scc.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/graph/tree_diameter.test.cpp
+      title: verify/graph/tree_diameter.test.cpp
   - name: verify/math
     pages:
     - icon: ':heavy_check_mark:'
