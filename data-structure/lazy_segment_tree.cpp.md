@@ -27,44 +27,52 @@ data:
     \tdat.assign(sz * 2 + 1, IE);\r\n\t\tlazy.assign(sz * 2 + 1, OpIE);\r\n\t\twhile\
     \ ((1 << height) <= sz)height++;\r\n\t\tfor (int i = 0; i < sz; i++) dat[i + sz]\
     \ = vec[i];\r\n\t\tfor (int i = sz - 1; i > 0; i--) dat[i] = op(dat[i << 1 | 0],\
-    \ dat[i << 1 | 1]);\r\n\t}\r\n\r\n\tint size() { return sz; }\r\n\tconst Monoid&\
-    \ operator[] (int idx) { return get(idx, idx + 1); }\r\n\r\n\r\n\t// x \u3092\u4F1D\
-    \u642C\u3055\u305B\u308B\r\n\tvoid propagate(int x) {\r\n\t\tif (x < sz) {\r\n\
-    \t\t\tlazy[x << 1 | 0] = merge(lazy[x], lazy[x << 1 | 0]);\r\n\t\t\tlazy[x <<\
-    \ 1 | 1] = merge(lazy[x], lazy[x << 1 | 1]);\r\n\t\t}\r\n\t\tdat[x << 1 | 0] =\
-    \ apply(dat[x << 1 | 0], lazy[x]);\r\n\t\tdat[x << 1 | 1] = apply(dat[x << 1 |\
-    \ 1], lazy[x]);\r\n\t\tlazy[x] = OpIE;\r\n\t}\r\n\r\n\t// x \u3092\u518D\u8A08\
-    \u7B97\u3059\u308B\r\n\tvoid update(int x) {\r\n\t\tdat[x] = op(dat[x << 1 | 0],\
-    \ dat[x << 1 | 1]);\r\n\t}\r\n\r\n\t// \u533A\u9593 [l,r) \u306B x \u3092\u4F5C\
-    \u7528\r\n\tvoid set(int l, int r, OperatorMonoid x) {\r\n\t\tif (l >= r)return;\r\
-    \n\t\tl += sz; r += sz;\r\n\r\n\t\tfor (int i = height; i >= 1; i--) {\r\n\t\t\
-    \tif (((l >> i) << i) != l) propagate(l >> i);\r\n\t\t\tif (((r >> i) << i) !=\
-    \ r) propagate((r - 1) >> i);\r\n\t\t}\r\n\r\n\t\tfor (int l2 = l, r2 = r; l2\
-    \ < r2; l2 >>= 1, r2 >>= 1) {\r\n\t\t\tif (l2 & 1) {\r\n\t\t\t\tif (l2 < sz)lazy[l2]\
-    \ = merge(x, lazy[l2]);\r\n\t\t\t\tdat[l2] = apply(dat[l2], x);\r\n\t\t\t\tl2++;\r\
-    \n\t\t\t}\r\n\t\t\tif (r2 & 1) {\r\n\t\t\t\tr2--;\r\n\t\t\t\tif (r2 < sz)lazy[r2]\
-    \ = merge(x, lazy[r2]);\r\n\t\t\t\tdat[r2] = apply(dat[r2], x);\r\n\t\t\t}\r\n\
-    \t\t}\r\n\r\n\t\tfor (int i = 1; i <= height; i++) {\r\n\t\t\tif (((l >> i) <<\
-    \ i) != l) update(l >> i);\r\n\t\t\tif (((r >> i) << i) != r) update((r - 1) >>\
-    \ i);\r\n\t\t}\r\n\t}\r\n\r\n\t// \u533A\u9593 [l,r) \u306E\u7A4D\u3092\u53D6\u5F97\
-    \r\n\tMonoid get(int l, int r) {\r\n\t\tl += sz; r += sz;\r\n\r\n\t\tfor (int\
-    \ i = height; i >= 1; i--) {\r\n\t\t\tif (((l >> i) << i) != l) propagate(l >>\
-    \ i);\r\n\t\t\tif (((r >> i) << i) != r) propagate(r >> i);\r\n\t\t}\r\n\r\n\t\
-    \tMonoid lm(IE), rm(IE);\r\n\t\tfor (int l2 = l, r2 = r; l2 < r2; l2 >>= 1, r2\
-    \ >>= 1) {\r\n\t\t\tif (l2 & 1) lm = op(lm, dat[l2++]);\r\n\t\t\tif (r2 & 1) rm\
-    \ = op(dat[--r2], rm);\r\n\t\t}\r\n\t\treturn op(lm, rm);\r\n\t}\r\n\r\n\tvoid\
-    \ dump() {\r\n\t\tfor (int i = 0; i < sz; i++)std::cout << get(i, i + 1) << (i\
-    \ == sz ? \"\\n\" : \" \");\r\n\t}\r\n\r\n\t// TODO: 2\u5206\u63A2\u7D22\u3092\
-    \u5B9F\u88C5\u3059\u308B\r\n};\r\n\r\n\r\ntemplate <class Monoid, class OperatorMonoid,\
-    \ class Operator, class Apply, class Merge >\r\nLazySegmentTree<Monoid, OperatorMonoid,\
-    \ Operator, Apply, Merge > makeLazySegTree(int n, Operator F, Apply G, Merge H,\
-    \ Monoid IE1, OperatorMonoid IE2) {\r\n\treturn LazySegmentTree<Monoid, OperatorMonoid,\
-    \ Operator, Apply, Merge >(n, F, G, H, IE1, IE2);\r\n}\r\n\r\ntemplate <class\
+    \ dat[i << 1 | 1]);\r\n\t}\r\n\r\n\tint size() { return sz; }\r\n\tMonoid operator[]\
+    \ (int idx) { return get(idx, idx + 1); }\r\n\r\n\r\n\t// x \u3092\u4F1D\u642C\
+    \u3055\u305B\u308B\r\n\tvoid propagate(int x) {\r\n\t\tif (x < sz) {\r\n\t\t\t\
+    lazy[x << 1 | 0] = merge(lazy[x], lazy[x << 1 | 0]);\r\n\t\t\tlazy[x << 1 | 1]\
+    \ = merge(lazy[x], lazy[x << 1 | 1]);\r\n\t\t}\r\n\t\tdat[x << 1 | 0] = apply(dat[x\
+    \ << 1 | 0], lazy[x]);\r\n\t\tdat[x << 1 | 1] = apply(dat[x << 1 | 1], lazy[x]);\r\
+    \n\t\tlazy[x] = OpIE;\r\n\t}\r\n\r\n\t// x \u3092\u518D\u8A08\u7B97\u3059\u308B\
+    \r\n\tvoid update(int x) {\r\n\t\tdat[x] = op(dat[x << 1 | 0], dat[x << 1 | 1]);\r\
+    \n\t}\r\n\r\n\t// \u533A\u9593 [l,r) \u306B x \u3092\u4F5C\u7528\r\n\tvoid set(int\
+    \ l, int r, OperatorMonoid x) {\r\n\t\tif (l >= r)return;\r\n\t\tl += sz; r +=\
+    \ sz;\r\n\r\n\t\tfor (int i = height; i >= 1; i--) {\r\n\t\t\tif (((l >> i) <<\
+    \ i) != l) propagate(l >> i);\r\n\t\t\tif (((r >> i) << i) != r) propagate((r\
+    \ - 1) >> i);\r\n\t\t}\r\n\r\n\t\tfor (int l2 = l, r2 = r; l2 < r2; l2 >>= 1,\
+    \ r2 >>= 1) {\r\n\t\t\tif (l2 & 1) {\r\n\t\t\t\tif (l2 < sz)lazy[l2] = merge(x,\
+    \ lazy[l2]);\r\n\t\t\t\tdat[l2] = apply(dat[l2], x);\r\n\t\t\t\tl2++;\r\n\t\t\t\
+    }\r\n\t\t\tif (r2 & 1) {\r\n\t\t\t\tr2--;\r\n\t\t\t\tif (r2 < sz)lazy[r2] = merge(x,\
+    \ lazy[r2]);\r\n\t\t\t\tdat[r2] = apply(dat[r2], x);\r\n\t\t\t}\r\n\t\t}\r\n\r\
+    \n\t\tfor (int i = 1; i <= height; i++) {\r\n\t\t\tif (((l >> i) << i) != l) update(l\
+    \ >> i);\r\n\t\t\tif (((r >> i) << i) != r) update((r - 1) >> i);\r\n\t\t}\r\n\
+    \t}\r\n\r\n\t// \u533A\u9593 [l,r) \u306E\u7A4D\u3092\u53D6\u5F97\r\n\tMonoid\
+    \ get(int l, int r) {\r\n\t\tl += sz; r += sz;\r\n\r\n\t\tfor (int i = height;\
+    \ i >= 1; i--) {\r\n\t\t\tif (((l >> i) << i) != l) propagate(l >> i);\r\n\t\t\
+    \tif (((r >> i) << i) != r) propagate(r >> i);\r\n\t\t}\r\n\r\n\t\tMonoid lm(IE),\
+    \ rm(IE);\r\n\t\tfor (int l2 = l, r2 = r; l2 < r2; l2 >>= 1, r2 >>= 1) {\r\n\t\
+    \t\tif (l2 & 1) lm = op(lm, dat[l2++]);\r\n\t\t\tif (r2 & 1) rm = op(dat[--r2],\
+    \ rm);\r\n\t\t}\r\n\t\treturn op(lm, rm);\r\n\t}\r\n\r\n\t// isOK(fold(l,l+1,...,r-1,r))\
+    \ == 1 \u3068\u306A\u308B\u6700\u5C0F\u306Er\u3092\u6C42\u3081\u308B\r\n\ttemplate<class\
+    \ DetermineFunc>\r\n\tint search_r(DetermineFunc isOK, int l = 0) {\r\n\t\tif\
+    \ (l == sz)return -1;\r\n\t\tl += sz;\r\n\t\tfor (int i = height; i >= 1; i--)\
+    \ propagate(l >> i);\r\n\t\tMonoid sum = IE;\r\n\t\tdo {\r\n\t\t\twhile (l % 2\
+    \ == 0)l >>= 1;\r\n\t\t\tif (isOK(op(sum, dat[l]))) {\r\n\t\t\t\twhile (l < sz)\
+    \ {\r\n\t\t\t\t\tpropagate(l);\r\n\t\t\t\t\tl = 2 * l;\r\n\t\t\t\t\tif (!isOK(op(sum,\
+    \ dat[l]))) {\r\n\t\t\t\t\t\tsum = op(sum, dat[l]);\r\n\t\t\t\t\t\tl++;\r\n\t\t\
+    \t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\treturn l - sz;\r\n\t\t\t}\r\n\t\t\tsum = op(sum,\
+    \ dat[l]);\r\n\t\t\tl++;\r\n\t\t} while ((l & -l) != l);\r\n\t\treturn -1;\r\n\
+    \t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < sz; i++)std::cout << get(i,\
+    \ i + 1) << (i == sz ? \"\\n\" : \" \");\r\n\t}\r\n\r\n};\r\n\r\ntemplate <class\
     \ Monoid, class OperatorMonoid, class Operator, class Apply, class Merge >\r\n\
-    LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge > makeLazySegTree(const\
-    \ std::vector<Monoid>& vec, Operator F, Apply G, Merge H, Monoid IE1, OperatorMonoid\
-    \ IE2) {\r\n\treturn LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply,\
-    \ Merge >(vec, F, G, H, IE1, IE2);\r\n}\r\n"
+    LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge > makeLazySegTree(int\
+    \ n, Operator F, Apply G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn\
+    \ LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge >(n, F, G, H,\
+    \ IE1, IE2);\r\n}\r\n\r\ntemplate <class Monoid, class OperatorMonoid, class Operator,\
+    \ class Apply, class Merge >\r\nLazySegmentTree<Monoid, OperatorMonoid, Operator,\
+    \ Apply, Merge > makeLazySegTree(const std::vector<Monoid>& vec, Operator F, Apply\
+    \ G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn LazySegmentTree<Monoid,\
+    \ OperatorMonoid, Operator, Apply, Merge >(vec, F, G, H, IE1, IE2);\r\n}\r\n"
   code: "#pragma once\r\n\r\ntemplate <class Monoid, class OperatorMonoid, class Operator,\
     \ class Apply, class Merge >\r\nstruct LazySegmentTree {\r\n\tstd::vector<Monoid>\
     \ dat;\r\n\tstd::vector<OperatorMonoid> lazy;\r\n\r\n\tconst Operator op;\r\n\t\
@@ -81,9 +89,9 @@ data:
     \tlazy.assign(sz * 2 + 1, OpIE);\r\n\t\twhile ((1 << height) <= sz)height++;\r\
     \n\t\tfor (int i = 0; i < sz; i++) dat[i + sz] = vec[i];\r\n\t\tfor (int i = sz\
     \ - 1; i > 0; i--) dat[i] = op(dat[i << 1 | 0], dat[i << 1 | 1]);\r\n\t}\r\n\r\
-    \n\tint size() { return sz; }\r\n\tconst Monoid& operator[] (int idx) { return\
-    \ get(idx, idx + 1); }\r\n\r\n\r\n\t// x \u3092\u4F1D\u642C\u3055\u305B\u308B\r\
-    \n\tvoid propagate(int x) {\r\n\t\tif (x < sz) {\r\n\t\t\tlazy[x << 1 | 0] = merge(lazy[x],\
+    \n\tint size() { return sz; }\r\n\tMonoid operator[] (int idx) { return get(idx,\
+    \ idx + 1); }\r\n\r\n\r\n\t// x \u3092\u4F1D\u642C\u3055\u305B\u308B\r\n\tvoid\
+    \ propagate(int x) {\r\n\t\tif (x < sz) {\r\n\t\t\tlazy[x << 1 | 0] = merge(lazy[x],\
     \ lazy[x << 1 | 0]);\r\n\t\t\tlazy[x << 1 | 1] = merge(lazy[x], lazy[x << 1 |\
     \ 1]);\r\n\t\t}\r\n\t\tdat[x << 1 | 0] = apply(dat[x << 1 | 0], lazy[x]);\r\n\t\
     \tdat[x << 1 | 1] = apply(dat[x << 1 | 1], lazy[x]);\r\n\t\tlazy[x] = OpIE;\r\n\
@@ -106,23 +114,32 @@ data:
     \ i) != r) propagate(r >> i);\r\n\t\t}\r\n\r\n\t\tMonoid lm(IE), rm(IE);\r\n\t\
     \tfor (int l2 = l, r2 = r; l2 < r2; l2 >>= 1, r2 >>= 1) {\r\n\t\t\tif (l2 & 1)\
     \ lm = op(lm, dat[l2++]);\r\n\t\t\tif (r2 & 1) rm = op(dat[--r2], rm);\r\n\t\t\
-    }\r\n\t\treturn op(lm, rm);\r\n\t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i =\
-    \ 0; i < sz; i++)std::cout << get(i, i + 1) << (i == sz ? \"\\n\" : \" \");\r\n\
-    \t}\r\n\r\n\t// TODO: 2\u5206\u63A2\u7D22\u3092\u5B9F\u88C5\u3059\u308B\r\n};\r\
-    \n\r\n\r\ntemplate <class Monoid, class OperatorMonoid, class Operator, class\
-    \ Apply, class Merge >\r\nLazySegmentTree<Monoid, OperatorMonoid, Operator, Apply,\
-    \ Merge > makeLazySegTree(int n, Operator F, Apply G, Merge H, Monoid IE1, OperatorMonoid\
-    \ IE2) {\r\n\treturn LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply,\
-    \ Merge >(n, F, G, H, IE1, IE2);\r\n}\r\n\r\ntemplate <class Monoid, class OperatorMonoid,\
-    \ class Operator, class Apply, class Merge >\r\nLazySegmentTree<Monoid, OperatorMonoid,\
-    \ Operator, Apply, Merge > makeLazySegTree(const std::vector<Monoid>& vec, Operator\
-    \ F, Apply G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn LazySegmentTree<Monoid,\
+    }\r\n\t\treturn op(lm, rm);\r\n\t}\r\n\r\n\t// isOK(fold(l,l+1,...,r-1,r)) ==\
+    \ 1 \u3068\u306A\u308B\u6700\u5C0F\u306Er\u3092\u6C42\u3081\u308B\r\n\ttemplate<class\
+    \ DetermineFunc>\r\n\tint search_r(DetermineFunc isOK, int l = 0) {\r\n\t\tif\
+    \ (l == sz)return -1;\r\n\t\tl += sz;\r\n\t\tfor (int i = height; i >= 1; i--)\
+    \ propagate(l >> i);\r\n\t\tMonoid sum = IE;\r\n\t\tdo {\r\n\t\t\twhile (l % 2\
+    \ == 0)l >>= 1;\r\n\t\t\tif (isOK(op(sum, dat[l]))) {\r\n\t\t\t\twhile (l < sz)\
+    \ {\r\n\t\t\t\t\tpropagate(l);\r\n\t\t\t\t\tl = 2 * l;\r\n\t\t\t\t\tif (!isOK(op(sum,\
+    \ dat[l]))) {\r\n\t\t\t\t\t\tsum = op(sum, dat[l]);\r\n\t\t\t\t\t\tl++;\r\n\t\t\
+    \t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\treturn l - sz;\r\n\t\t\t}\r\n\t\t\tsum = op(sum,\
+    \ dat[l]);\r\n\t\t\tl++;\r\n\t\t} while ((l & -l) != l);\r\n\t\treturn -1;\r\n\
+    \t}\r\n\r\n\tvoid dump() {\r\n\t\tfor (int i = 0; i < sz; i++)std::cout << get(i,\
+    \ i + 1) << (i == sz ? \"\\n\" : \" \");\r\n\t}\r\n\r\n};\r\n\r\ntemplate <class\
+    \ Monoid, class OperatorMonoid, class Operator, class Apply, class Merge >\r\n\
+    LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge > makeLazySegTree(int\
+    \ n, Operator F, Apply G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn\
+    \ LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge >(n, F, G, H,\
+    \ IE1, IE2);\r\n}\r\n\r\ntemplate <class Monoid, class OperatorMonoid, class Operator,\
+    \ class Apply, class Merge >\r\nLazySegmentTree<Monoid, OperatorMonoid, Operator,\
+    \ Apply, Merge > makeLazySegTree(const std::vector<Monoid>& vec, Operator F, Apply\
+    \ G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn LazySegmentTree<Monoid,\
     \ OperatorMonoid, Operator, Apply, Merge >(vec, F, G, H, IE1, IE2);\r\n}\r\n"
   dependsOn: []
   isVerificationFile: false
   path: data-structure/lazy_segment_tree.cpp
   requiredBy: []
-  timestamp: '2021-03-12 03:00:04+09:00'
+  timestamp: '2021-04-04 19:47:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/DSL_2_F.test.cpp
@@ -147,3 +164,5 @@ $vec$ を元に遅延セグメント木を構築する。
 区間 $[l,r)$ に対して二項演算した結果を返す。
 ### set(l, r, x)
 区間 $[l,r)$ に対して $x$ を作用させる。
+### search_r(isOK, l)
+$[l,r]$ が $isOK$ を満たす最小の $r$ を返す。

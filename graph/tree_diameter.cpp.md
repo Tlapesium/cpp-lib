@@ -50,8 +50,8 @@ data:
   timestamp: '2021-03-14 00:13:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/graph/GRL_5_A.test.cpp
   - verify/graph/tree_diameter.test.cpp
+  - verify/graph/GRL_5_A.test.cpp
 documentation_of: graph/tree_diameter.cpp
 layout: document
 title: "\u6728\u306E\u76F4\u5F84"

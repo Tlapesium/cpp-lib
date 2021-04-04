@@ -91,8 +91,8 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/segment_add_get_min.test.cpp
   - verify/data-structure/line_add_get_min.test.cpp
+  - verify/data-structure/segment_add_get_min.test.cpp
 documentation_of: data-structure/li_chao_tree.cpp
 layout: document
 title: Li Chao Tree

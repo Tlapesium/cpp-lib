@@ -49,8 +49,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/static_rmq.test.cpp
-  - verify/graph/lca.test.cpp
   - verify/graph/GRL_5_C.test.cpp
+  - verify/graph/lca.test.cpp
 documentation_of: data-structure/sparse_table.cpp
 layout: document
 title: Sparse Table
