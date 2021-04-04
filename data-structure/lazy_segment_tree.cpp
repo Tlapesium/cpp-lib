@@ -31,7 +31,7 @@ struct LazySegmentTree {
 	}
 
 	int size() { return sz; }
-	const Monoid& operator[] (int idx) { return get(idx, idx + 1); }
+	Monoid operator[] (int idx) { return get(idx, idx + 1); }
 
 
 	// x を伝搬させる
@@ -96,13 +96,37 @@ struct LazySegmentTree {
 		return op(lm, rm);
 	}
 
+	// isOK(fold(l,l+1,...,r-1,r)) == 1 となる最小のrを求める
+	template<class DetermineFunc>
+	int search_r(DetermineFunc isOK, int l = 0) {
+		if (l == sz)return -1;
+		l += sz;
+		for (int i = height; i >= 1; i--) propagate(l >> i);
+		Monoid sum = IE;
+		do {
+			while (l % 2 == 0)l >>= 1;
+			if (isOK(op(sum, dat[l]))) {
+				while (l < sz) {
+					propagate(l);
+					l = 2 * l;
+					if (!isOK(op(sum, dat[l]))) {
+						sum = op(sum, dat[l]);
+						l++;
+					}
+				}
+				return l - sz;
+			}
+			sum = op(sum, dat[l]);
+			l++;
+		} while ((l & -l) != l);
+		return -1;
+	}
+
 	void dump() {
 		for (int i = 0; i < sz; i++)std::cout << get(i, i + 1) << (i == sz ? "\n" : " ");
 	}
 
-	// TODO: 2分探索を実装する
 };
-
 
 template <class Monoid, class OperatorMonoid, class Operator, class Apply, class Merge >
 LazySegmentTree<Monoid, OperatorMonoid, Operator, Apply, Merge > makeLazySegTree(int n, Operator F, Apply G, Merge H, Monoid IE1, OperatorMonoid IE2) {

@@ -19,7 +19,7 @@ struct SegmentTree {
 	}
 
 	int size() { return sz; }
-	const Monoid& operator[] (int idx) { return dat[idx + sz]; }
+	Monoid operator[] (int idx) { return dat[idx + sz]; }
 
 	// 区間 [l,r) の積を取得
 	Monoid get(int l, int r) {
@@ -42,42 +42,32 @@ struct SegmentTree {
 		}
 	}
 
-	template<class DetermineFunc>
-	int internal_search(Monoid sum, int i, DetermineFunc isOK) {
-		while (i < sz) {
-			Monoid tmp = op(sum, dat[i << 1]);
-			if (isOK(tmp)) i = i << 1;
-			else sum = tmp, i = (i << 1) | 1;
-		}
-		return i - sz;
-	}
-
 	// isOK(fold(l,l+1,...,r-1,r)) == 1 となる最小のrを求める
 	template<class DetermineFunc>
 	int search_r(DetermineFunc isOK, int l = 0) {
+		if (l == sz)return -1;
 		l += sz;
-		int r = sz * 2, tmp = 0;
 		Monoid sum = IE;
-		for (int r_ = r; l < r_; r_ >>= 1, l >>= 1, tmp++) {
-			if (l & 1) {
-				if (isOK(op(sum, dat[l])))return internal_search(sum, l, isOK);
-				sum = op(sum, dat[l]);
-				l++;
+		do {
+			while (l % 2 == 0)l >>= 1;
+			if (isOK(op(sum, dat[l]))) {
+				while (l < sz) {
+					l = 2 * l;
+					if (!isOK(op(sum, dat[l]))) {
+						sum = op(sum, dat[l]);
+						l++;
+					}
+				}
+				return l - sz;
 			}
-		}
-		for (tmp -= 1; tmp >= 0; tmp--) {
-			int r_ = r >> tmp;
-			if (r_ & 1) {
-				r_--;
-				if (isOK(op(sum, dat[r_])))return internal_search(sum, r_, isOK);
-				sum = op(sum, dat[r_]);
-			}
-		}
+			sum = op(sum, dat[l]);
+			l++;
+		} while ((l & -l) != l);
 		return -1;
 	}
 
 	void dump() {
-		for (int i = 0; i < dat.size(); i++) std::cout << dat[i] << (i != dat.size() ? " " : "\n");
+		for (int i = 0; i < sz; i++) std::cout << get(i, i + 1) << (i != sz ? " " : "\n");
 	}
 };
 
