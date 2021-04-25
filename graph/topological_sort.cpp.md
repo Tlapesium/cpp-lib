@@ -46,8 +46,8 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/graph/GRL_4_B.test.cpp
   - verify/graph/GRL_4_A.test.cpp
+  - verify/graph/GRL_4_B.test.cpp
 documentation_of: graph/topological_sort.cpp
 layout: document
 title: Topological Sort

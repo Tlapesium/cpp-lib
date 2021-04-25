@@ -127,8 +127,8 @@ data:
   timestamp: '2021-03-12 03:15:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/string/suffix_array.test.cpp
   - verify/string/ALDS1_14_D.test.cpp
+  - verify/string/suffix_array.test.cpp
 documentation_of: string/suffix_array.cpp
 layout: document
 title: Suffix Array
