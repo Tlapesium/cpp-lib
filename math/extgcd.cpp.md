@@ -34,8 +34,8 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/math/yuki187.test.cpp
   - verify/math/NTL_1_E.test.cpp
+  - verify/math/yuki187.test.cpp
 documentation_of: math/extgcd.cpp
 layout: document
 title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\u6CD5"

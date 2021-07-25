@@ -75,11 +75,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/suffix_array.cpp
       title: Suffix Array
+    - icon: ':warning:'
+      path: string/trie.cpp
+      title: Trie
     - icon: ':heavy_check_mark:'
       path: string/z_algorithm.cpp
       title: Z Algorithm
   - name: utility
     pages:
+    - icon: ':warning:'
+      path: utility/compress.cpp
+      title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':warning:'
       path: utility/gettime.cpp
       title: getTime

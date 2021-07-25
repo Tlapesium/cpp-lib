@@ -58,9 +58,9 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/DSL_1_B.test.cpp
-  - verify/data-structure/DSL_1_A.test.cpp
   - verify/graph/GRL_2_A.test.cpp
+  - verify/data-structure/DSL_1_A.test.cpp
+  - verify/data-structure/DSL_1_B.test.cpp
 documentation_of: data-structure/union_find.cpp
 layout: document
 title: Union Find
