@@ -67,7 +67,7 @@ title: Trie
 文字列の集合を管理するデータ構造。
 
 ## 操作
-### BinaryTrie()
+### Trie()
 空の Trie を構築する。
 ### insert(str)
 文字列 $str$ を集合に追加する。
