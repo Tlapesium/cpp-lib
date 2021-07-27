@@ -30,11 +30,6 @@ struct Modint {
 		return *this;
 	}
 
-	Modint& operator ++ () noexcept { val++; return *this; }
-	Modint& operator -- () noexcept { val--; return *this; }
-	Modint operator ++ (int) noexcept { auto tmp = *this; val++; return tmp; }
-	Modint operator -- (int) noexcept { auto tmp = *this; val--; return tmp; }
-
 };
 
 Modint operator+(const Modint& l, const Modint& r) { return Modint(l) += r; }
@@ -59,7 +54,7 @@ std::istream& operator >> (std::istream& stream, Modint& mi) {
 	mi = Modint(tmp);
 	return stream;
 };
-Modint modpow(Modint x, int k) {
+Modint modpow(Modint x, long long k) {
 	if (k == 0)return 1;
 	if (k % 2 == 0) return modpow(x * x, k / 2);
 	else return x * modpow(x, k - 1);
