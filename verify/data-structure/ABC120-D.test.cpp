@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A"
+#define PROBLEM "https://atcoder.jp/contests/abc120/tasks/abc120_d"
 #include <bits/stdc++.h>
 #include "data-structure/union_find.cpp"
 using namespace std;
