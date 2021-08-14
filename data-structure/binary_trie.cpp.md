@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: verify/data-structure/ABC194-E.test.cpp
+    title: verify/data-structure/ABC194-E.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/data-structure/set_xor_min.test.cpp
     title: verify/data-structure/set_xor_min.test.cpp
   _isVerificationFailed: false
@@ -127,6 +130,7 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/data-structure/ABC194-E.test.cpp
   - verify/data-structure/set_xor_min.test.cpp
 documentation_of: data-structure/binary_trie.cpp
 layout: document

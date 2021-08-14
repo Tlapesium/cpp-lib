@@ -102,6 +102,9 @@ data:
       path: verify/data-structure/ABC120-D.test.cpp
       title: verify/data-structure/ABC120-D.test.cpp
     - icon: ':heavy_check_mark:'
+      path: verify/data-structure/ABC194-E.test.cpp
+      title: verify/data-structure/ABC194-E.test.cpp
+    - icon: ':heavy_check_mark:'
       path: verify/data-structure/AOJ1160.test.cpp
       title: verify/data-structure/AOJ1160.test.cpp
     - icon: ':heavy_check_mark:'
