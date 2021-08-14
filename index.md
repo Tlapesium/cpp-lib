@@ -92,6 +92,11 @@ data:
     - icon: ':warning:'
       path: utility/xorshift.cpp
       title: XORShift
+  - name: verify/data-structure
+    pages:
+    - icon: ':warning:'
+      path: verify/data-structure/ABC120-D.cpp
+      title: verify/data-structure/ABC120-D.cpp
   verificationCategories:
   - name: verify/data-structure
     pages:

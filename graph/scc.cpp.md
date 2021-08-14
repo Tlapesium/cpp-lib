@@ -68,8 +68,8 @@ data:
   timestamp: '2021-03-12 22:46:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/graph/scc.test.cpp
   - verify/graph/GRL_3_C.test.cpp
+  - verify/graph/scc.test.cpp
 documentation_of: graph/scc.cpp
 layout: document
 title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
