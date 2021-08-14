@@ -6,9 +6,15 @@ data:
     path: graph/kruskal.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 (Kruskal)"
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/data-structure/ABC049-D.test.cpp
+    title: verify/data-structure/ABC049-D.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/ABC120-D.test.cpp
     title: verify/data-structure/ABC120-D.test.cpp
+  - icon: ':x:'
+    path: verify/data-structure/AOJ1160.test.cpp
+    title: verify/data-structure/AOJ1160.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_1_A.test.cpp
     title: verify/data-structure/DSL_1_A.test.cpp
@@ -18,9 +24,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/graph/GRL_2_A.test.cpp
     title: verify/graph/GRL_2_A.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"data-structure/union_find.cpp\"\n\r\nstruct UnionFind {\r\
@@ -59,10 +65,12 @@ data:
   requiredBy:
   - graph/kruskal.cpp
   timestamp: '2021-08-15 04:52:35+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - verify/data-structure/ABC049-D.test.cpp
   - verify/data-structure/DSL_1_A.test.cpp
   - verify/data-structure/DSL_1_B.test.cpp
+  - verify/data-structure/AOJ1160.test.cpp
   - verify/data-structure/ABC120-D.test.cpp
   - verify/graph/GRL_2_A.test.cpp
 documentation_of: data-structure/union_find.cpp
