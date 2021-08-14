@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/union_find.cpp
     title: Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc120/tasks/abc120_d
@@ -38,7 +38,7 @@ data:
     \ (N - 1) / 2;;\r\n\tfor (int i = M - 1; i >= 0; i--) {\r\n\t\tans[i] = tmp;\r\
     \n\t\tif (uf.issame(e[i].first, e[i].second))continue;\r\n\t\ttmp -= ll(uf.size(e[i].first))\
     \ * ll(uf.size(e[i].second));\r\n\t\tuf.merge(e[i].first, e[i].second);\r\n\t\
-    }\r\n\tfor (int i = 0; i < M; i++)cout << ans[i] << endl;\r\n}\n"
+    }\r\n\tfor (int i = 0; i < M; i++)cout << ans[i] << endl;\r\n}\r\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc120/tasks/abc120_d\"\r\n\
     #include <bits/stdc++.h>\r\n#include \"data-structure/union_find.cpp\"\r\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tll N, M;\r\n\
@@ -48,14 +48,14 @@ data:
     \ (N - 1) / 2;;\r\n\tfor (int i = M - 1; i >= 0; i--) {\r\n\t\tans[i] = tmp;\r\
     \n\t\tif (uf.issame(e[i].first, e[i].second))continue;\r\n\t\ttmp -= ll(uf.size(e[i].first))\
     \ * ll(uf.size(e[i].second));\r\n\t\tuf.merge(e[i].first, e[i].second);\r\n\t\
-    }\r\n\tfor (int i = 0; i < M; i++)cout << ans[i] << endl;\r\n}"
+    }\r\n\tfor (int i = 0; i < M; i++)cout << ans[i] << endl;\r\n}\r\n"
   dependsOn:
   - data-structure/union_find.cpp
   isVerificationFile: true
   path: verify/data-structure/ABC120-D.test.cpp
   requiredBy: []
-  timestamp: '2021-08-15 04:56:03+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-08-15 05:01:50+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/data-structure/ABC120-D.test.cpp
 layout: document

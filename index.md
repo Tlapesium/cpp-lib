@@ -24,7 +24,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.cpp
       title: Sparse Table
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/union_find.cpp
       title: Union Find
   - name: graph
@@ -95,7 +95,7 @@ data:
   verificationCategories:
   - name: verify/data-structure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/data-structure/ABC120-D.test.cpp
       title: verify/data-structure/ABC120-D.test.cpp
     - icon: ':heavy_check_mark:'
