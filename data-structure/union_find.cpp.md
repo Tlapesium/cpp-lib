@@ -12,7 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/ABC120-D.test.cpp
     title: verify/data-structure/ABC120-D.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/data-structure/AOJ1160.test.cpp
     title: verify/data-structure/AOJ1160.test.cpp
   - icon: ':heavy_check_mark:'

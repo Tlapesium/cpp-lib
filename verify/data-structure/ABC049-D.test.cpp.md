@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://atcoder.jp/contests/abc049/tasks/arc065_b
+    PROBLEM: https://atcoder.jp/contests/arc065/tasks/arc065_b
     links:
-    - https://atcoder.jp/contests/abc049/tasks/arc065_b
+    - https://atcoder.jp/contests/arc065/tasks/arc065_b
   bundledCode: "#line 1 \"verify/data-structure/ABC049-D.test.cpp\"\n#define PROBLEM\
-    \ \"https://atcoder.jp/contests/abc049/tasks/arc065_b\"\r\n#include <bits/stdc++.h>\r\
+    \ \"https://atcoder.jp/contests/arc065/tasks/arc065_b\"\r\n#include <bits/stdc++.h>\r\
     \n#line 2 \"data-structure/union_find.cpp\"\n\r\nstruct UnionFind {\r\nprivate:\r\
     \n\tstd::vector<int> siz, par;\r\n\tstd::vector<long long> wei;\r\n\tint f_s;\r\
     \npublic:\r\n\tUnionFind(int size) : f_s(size) {\r\n\t\tsiz.assign(size, 1);\r\
@@ -39,7 +39,7 @@ data:
     \ int> cnt;\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcnt[{UF1.root(i), UF2.root(i)}]++;\r\
     \n\t}\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcout << cnt[{UF1.root(i), UF2.root(i)}]\
     \ << endl;\r\n\t}\r\n}\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/abc049/tasks/arc065_b\"\r\n\
+  code: "#define PROBLEM \"https://atcoder.jp/contests/arc065/tasks/arc065_b\"\r\n\
     #include <bits/stdc++.h>\r\n#include \"data-structure/union_find.cpp\"\r\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N, K, L;\r\
     \n\tcin >> N >> K >> L;\r\n\tUnionFind UF1(N), UF2(N);\r\n\tfor (int i = 0; i\
@@ -54,7 +54,7 @@ data:
   isVerificationFile: true
   path: verify/data-structure/ABC049-D.test.cpp
   requiredBy: []
-  timestamp: '2021-08-15 05:34:40+09:00'
+  timestamp: '2021-08-15 05:37:10+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/data-structure/ABC049-D.test.cpp
