@@ -1,10 +1,11 @@
 #pragma once
 
 struct UnionFind {
+private:
 	std::vector<int> siz, par;
 	std::vector<long long> wei;
 	int f_s;
-
+public:
 	UnionFind(int size) : f_s(size) {
 		siz.assign(size, 1);
 		wei.assign(size, 0);
@@ -39,7 +40,7 @@ struct UnionFind {
 		return weight(y) - weight(x);
 	}
 	int size(int x) {
-		return siz[x];
+		return siz[root(x)];
 	}
 	int forest_size() {
 		return f_s;
