@@ -24,7 +24,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/sparse_table.cpp
       title: Sparse Table
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data-structure/union_find.cpp
       title: Union Find
   - name: graph
@@ -92,14 +92,12 @@ data:
     - icon: ':warning:'
       path: utility/xorshift.cpp
       title: XORShift
-  - name: verify/data-structure
-    pages:
-    - icon: ':warning:'
-      path: verify/data-structure/ABC120-D.cpp
-      title: verify/data-structure/ABC120-D.cpp
   verificationCategories:
   - name: verify/data-structure
     pages:
+    - icon: ':x:'
+      path: verify/data-structure/ABC120-D.test.cpp
+      title: verify/data-structure/ABC120-D.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_1_A.test.cpp
       title: verify/data-structure/DSL_1_A.test.cpp
