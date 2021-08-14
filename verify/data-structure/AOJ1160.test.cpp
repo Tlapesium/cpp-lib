@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/challenges/search/titles/1160"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160"
 #include <bits/stdc++.h>
 #include "data-structure/union_find.cpp"
 using namespace std;

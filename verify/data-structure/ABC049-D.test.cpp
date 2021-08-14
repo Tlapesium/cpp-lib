@@ -1,4 +1,4 @@
-#define PROBLEM "https://atcoder.jp/contests/abc049/tasks/arc065_b"
+#define PROBLEM "https://atcoder.jp/contests/arc065/tasks/arc065_b"
 #include <bits/stdc++.h>
 #include "data-structure/union_find.cpp"
 using namespace std;
