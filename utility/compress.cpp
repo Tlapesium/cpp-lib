@@ -15,7 +15,7 @@ struct Compress {
 		return std::lower_bound(data.begin(), data.end(), x) - data.begin();
 	}
 
-	const int operator()(int k) const {
+	const T operator()(int k) const {
 		return data[k];
 	}
 };

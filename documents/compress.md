@@ -10,4 +10,4 @@ documentation_of: //utility/compress.cpp
 - :heavy_check_mark: **add(x)** : 整数 $x$ を追加する。
 - :heavy_check_mark: **build()** : 構築する。
 - :heavy_check_mark: **operator\(\)\[x\]** : 座標 $x$ に対応する整数を返す。
-- :question: **operator(k)** : 整数 $k$ に対応する座標を返す。
+- :heavy_check_mark: **operator(k)** : 整数 $k$ に対応する座標を返す。
