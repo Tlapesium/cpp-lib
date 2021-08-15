@@ -83,7 +83,7 @@ data:
       title: Z Algorithm
   - name: utility
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: utility/compress.cpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':warning:'
@@ -209,5 +209,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/string/z_algorithm_2.test.cpp
       title: verify/string/z_algorithm_2.test.cpp
+  - name: verify/utility
+    pages:
+    - icon: ':x:'
+      path: verify/utility/AOJ0580.test.cpp
+      title: verify/utility/AOJ0580.test.cpp
 layout: toppage
 ---
