@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_2_F.test.cpp
     title: verify/data-structure/DSL_2_F.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_2_H.test.cpp
     title: verify/data-structure/DSL_2_H.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"data-structure/lazy_segment_tree.cpp\"\n\r\ntemplate <class\
@@ -143,7 +143,7 @@ data:
   path: data-structure/lazy_segment_tree.cpp
   requiredBy: []
   timestamp: '2021-04-04 19:47:01+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/DSL_2_H.test.cpp
   - verify/data-structure/DSL_2_F.test.cpp

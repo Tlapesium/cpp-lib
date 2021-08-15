@@ -12,7 +12,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/hashmap.cpp
       title: HashMap
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/lazy_segment_tree.cpp
       title: Lazy Segment Tree
     - icon: ':heavy_check_mark:'
@@ -119,13 +119,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_B.test.cpp
       title: verify/data-structure/DSL_2_B.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_F.test.cpp
       title: verify/data-structure/DSL_2_F.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_G.test.cpp
       title: verify/data-structure/DSL_2_G.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/data-structure/DSL_2_H.test.cpp
       title: verify/data-structure/DSL_2_H.test.cpp
     - icon: ':heavy_check_mark:'
