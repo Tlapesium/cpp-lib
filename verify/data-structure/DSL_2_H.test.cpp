@@ -5,6 +5,7 @@ using namespace std;
 typedef long long ll;
 
 int main() {
+	int INF = (1 << 31) - 1;
 	auto F = [](int l, int r) {return min(l, r); };
 	auto G = [](int m, int op) {return m + op; };
 	auto H = [](int a, int b) {return a + b; };
