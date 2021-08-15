@@ -1,0 +1,66 @@
+---
+data:
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: string/rolling_hash.cpp
+    title: Rolling Hash
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
+    links:
+    - https://judge.yosupo.jp/problem/zalgorithm
+  bundledCode: "#line 1 \"verify/string/z_algorithm_2.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/zalgorithm\"\r\n#include <bits/stdc++.h>\r\
+    \n#line 2 \"string/rolling_hash.cpp\"\n\r\nstruct RollingHash {\r\n\tusing u64\
+    \ = unsigned long long;\r\n\tconst u64 mod = (1ULL << 61) - 1;\r\n\tconst u64\
+    \ mask30 = (1ULL << 30) - 1, mask31 = (1ULL << 31) - 1, mask61 = mod;\r\n\tu64\
+    \ calcmod(u64 x) const {\r\n\t\tu64 xu = x >> 61;\r\n\t\tu64 xd = x & mask61;\r\
+    \n\t\tu64 ret = xu + xd;\r\n\t\tif (ret >= mod) ret -= mod;\r\n\t\treturn ret;\r\
+    \n\t}\r\n\tu64 mul(u64 a, u64 b) const {\r\n\t\tu64 au = a >> 31;\r\n\t\tu64 ad\
+    \ = a & mask31;\r\n\t\tu64 bu = b >> 31;\r\n\t\tu64 bd = b & mask31;\r\n\t\tu64\
+    \ mid = ad * bu + au * bd;\r\n\t\tu64 midu = mid >> 30;\r\n\t\tu64 midd = mid\
+    \ & mask30;\r\n\t\treturn au * bu * 2 + midu + (midd << 31) + ad * bd;\r\n\t}\r\
+    \n\r\n\tconst int base, length;\r\n\tstd::vector<u64> hash, power;\r\n\r\n\tRollingHash(const\
+    \ std::string& S, int b) : base(b), length(S.size()) {\r\n\t\thash.resize(length\
+    \ + 1, 0);\r\n\t\tpower.resize(length + 1, 0);\r\n\t\tpower[0] = 1;\r\n\t\tfor\
+    \ (int i = 0; i < length; i++) {\r\n\t\t\tpower[i + 1] = calcmod(mul(power[i],\
+    \ base));\r\n\t\t\thash[i + 1] = calcmod(mul(hash[i], base) + S[i]);\r\n\t\t}\r\
+    \n\t}\r\n\r\n\tauto get(int l, int r) const {\r\n\t\treturn calcmod(hash[r] +\
+    \ mod * 4 - mul(hash[l], power[r - l]));\r\n\t}\r\n\r\n\tauto concat(const RollingHash&\
+    \ b, int l1, int r1, int l2, int r2) const {\r\n\t\tauto h1 = get(l1, r1), h2\
+    \ = b.get(l2, r2);\r\n\t\treturn calcmod(calcmod(mul(h1, b.power[r2 - l2])) +\
+    \ h2);\r\n\t}\r\n\r\n\tint getLCP(const RollingHash& b, int l1, int l2) const\
+    \ {\r\n\t\tint len = std::min(length - l1, b.length - l2);\r\n\t\tint low = -1,\
+    \ high = len + 1;\r\n\t\twhile (high - low > 1) {\r\n\t\t\tint mid = (low + high)\
+    \ / 2;\r\n\t\t\tif (get(l1, l1 + mid) == b.get(l2, l2 + mid))low = mid;\r\n\t\t\
+    \telse high = mid;\r\n\t\t}\r\n\t\treturn low;\r\n\t}\r\n};\n#line 4 \"verify/string/z_algorithm_2.test.cpp\"\
+    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tstring\
+    \ S;\r\n\tcin >> S;\r\n\tRollingHash s(S, 1000000007);\r\n\tfor (int i = 0; i\
+    \ < S.size(); i++) {\r\n\t\tcout << s.getLCP(s, 0, i) << (i == S.size() - 1 ?\
+    \ \"\\n\" : \" \");\r\n\t}\r\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/zalgorithm\"\r\n#include\
+    \ <bits/stdc++.h>\r\n#include \"string/rolling_hash.cpp\"\r\nusing namespace std;\r\
+    \ntypedef long long ll;\r\n\r\nint main() {\r\n\tstring S;\r\n\tcin >> S;\r\n\t\
+    RollingHash s(S, 1000000007);\r\n\tfor (int i = 0; i < S.size(); i++) {\r\n\t\t\
+    cout << s.getLCP(s, 0, i) << (i == S.size() - 1 ? \"\\n\" : \" \");\r\n\t}\r\n\
+    }"
+  dependsOn:
+  - string/rolling_hash.cpp
+  isVerificationFile: true
+  path: verify/string/z_algorithm_2.test.cpp
+  requiredBy: []
+  timestamp: '2021-08-16 07:12:47+09:00'
+  verificationStatus: TEST_ACCEPTED
+  verifiedWith: []
+documentation_of: verify/string/z_algorithm_2.test.cpp
+layout: document
+redirect_from:
+- /verify/verify/string/z_algorithm_2.test.cpp
+- /verify/verify/string/z_algorithm_2.test.cpp.html
+title: verify/string/z_algorithm_2.test.cpp
+---

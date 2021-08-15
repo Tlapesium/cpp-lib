@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/associative_array
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/ITP2_7_B
     links:
-    - https://judge.yosupo.jp/problem/associative_array
-  bundledCode: "#line 1 \"verify/data-structure/associative_array.test.cpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/associative_array\"\r\n#include <bits/stdc++.h>\r\
+    - https://onlinejudge.u-aizu.ac.jp/problems/ITP2_7_B
+  bundledCode: "#line 1 \"verify/data-structure/ITP2_7_B.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/problems/ITP2_7_B\"\r\n#include <bits/stdc++.h>\r\
     \n#line 2 \"data-structure/hashmap.cpp\"\n\r\ntemplate<typename KeyType, typename\
     \ ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>\r\
     \nstruct HashMap {\r\n\tint BucketSize = 0; // \u30D0\u30B1\u30C3\u30C8\u306E\u6570\
@@ -80,30 +80,32 @@ data:
     \ TombSize--;\r\n\t\tBuckets[Hash & (BucketSize - 1)] = { 1,{key,ValType()} };\r\
     \n\t\tDataSize++;\r\n\t\treturn Buckets[Hash & (BucketSize - 1)].data.second;\r\
     \n\t}\r\n\r\n\tconst ValType& operator[] (const KeyType& key) const {\r\n\t\t\
-    return at(key);\r\n\t}\r\n};\n#line 4 \"verify/data-structure/associative_array.test.cpp\"\
-    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\n\r\nint main() {\r\n\t\
-    HashMap<ll, ll> hm;\r\n\tint Q;\r\n\tcin >> Q;\r\n\tll t, k, v;\r\n\tfor (int\
-    \ i = 0; i < Q; i++) {\r\n\t\tcin >> t >> k;\r\n\t\tif (t) {\r\n\t\t\tcout <<\
-    \ hm[k] << endl;\r\n\t\t}\r\n\t\telse {\r\n\t\t\tcin >> v;\r\n\t\t\thm[k] = v;\r\
+    return at(key);\r\n\t}\r\n};\n#line 4 \"verify/data-structure/ITP2_7_B.test.cpp\"\
+    \nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint Q;\r\
+    \n\tcin >> Q;\r\n\tHashMap<int, int> m;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\
+    \t\tint t, x;\r\n\t\tcin >> t >> x;\r\n\t\tif (t == 0) {\r\n\t\t\tm.insert(x,\
+    \ 1);\r\n\t\t\tcout << m.size() << endl;\r\n\t\t}\r\n\t\telse if (t == 1) {\r\n\
+    \t\t\tcout << m.contains(x) << endl;\r\n\t\t}\r\n\t\telse {\r\n\t\t\tm.erase(x);\r\
     \n\t\t}\r\n\t}\r\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/associative_array\"\r\n\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/ITP2_7_B\"\r\n\
     #include <bits/stdc++.h>\r\n#include \"data-structure/hashmap.cpp\"\r\nusing namespace\
-    \ std;\r\ntypedef long long ll;\r\n\r\n\r\nint main() {\r\n\tHashMap<ll, ll> hm;\r\
-    \n\tint Q;\r\n\tcin >> Q;\r\n\tll t, k, v;\r\n\tfor (int i = 0; i < Q; i++) {\r\
-    \n\t\tcin >> t >> k;\r\n\t\tif (t) {\r\n\t\t\tcout << hm[k] << endl;\r\n\t\t}\r\
-    \n\t\telse {\r\n\t\t\tcin >> v;\r\n\t\t\thm[k] = v;\r\n\t\t}\r\n\t}\r\n}"
+    \ std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint Q;\r\n\tcin >> Q;\r\
+    \n\tHashMap<int, int> m;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tint t, x;\r\
+    \n\t\tcin >> t >> x;\r\n\t\tif (t == 0) {\r\n\t\t\tm.insert(x, 1);\r\n\t\t\tcout\
+    \ << m.size() << endl;\r\n\t\t}\r\n\t\telse if (t == 1) {\r\n\t\t\tcout << m.contains(x)\
+    \ << endl;\r\n\t\t}\r\n\t\telse {\r\n\t\t\tm.erase(x);\r\n\t\t}\r\n\t}\r\n}"
   dependsOn:
   - data-structure/hashmap.cpp
   isVerificationFile: true
-  path: verify/data-structure/associative_array.test.cpp
+  path: verify/data-structure/ITP2_7_B.test.cpp
   requiredBy: []
   timestamp: '2021-08-16 07:12:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/data-structure/associative_array.test.cpp
+documentation_of: verify/data-structure/ITP2_7_B.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/data-structure/associative_array.test.cpp
-- /verify/verify/data-structure/associative_array.test.cpp.html
-title: verify/data-structure/associative_array.test.cpp
+- /verify/verify/data-structure/ITP2_7_B.test.cpp
+- /verify/verify/data-structure/ITP2_7_B.test.cpp.html
+title: verify/data-structure/ITP2_7_B.test.cpp
 ---

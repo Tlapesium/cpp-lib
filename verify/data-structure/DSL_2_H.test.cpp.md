@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_F
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_F
-  bundledCode: "#line 1 \"verify/data-structure/DSL_2_F.test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_F\"\r\n#include\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H
+  bundledCode: "#line 1 \"verify/data-structure/DSL_2_H.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H\"\r\n#include\
     \ <bits/stdc++.h>\r\n#line 2 \"data-structure/lazy_segment_tree.cpp\"\n\r\ntemplate\
     \ <class Monoid, class OperatorMonoid, class Operator, class Apply, class Merge\
     \ >\r\nstruct LazySegmentTree {\r\n\tstd::vector<Monoid> dat;\r\n\tstd::vector<OperatorMonoid>\
@@ -78,37 +78,38 @@ data:
     \ Apply, Merge > makeLazySegTree(const std::vector<Monoid>& vec, Operator F, Apply\
     \ G, Merge H, Monoid IE1, OperatorMonoid IE2) {\r\n\treturn LazySegmentTree<Monoid,\
     \ OperatorMonoid, Operator, Apply, Merge >(vec, F, G, H, IE1, IE2);\r\n}\r\n#line\
-    \ 4 \"verify/data-structure/DSL_2_F.test.cpp\"\nusing namespace std;\r\ntypedef\
-    \ long long ll;\r\n\r\nint main() {\r\n\tauto F = [](ll l, ll r) {return min(l,\
-    \ r); };\r\n\tauto G = [](ll m, ll op) {return op == -1 ? m : op; };\r\n\tauto\
-    \ H = [](ll a, ll b) {return a == -1 ? b : a; };\r\n\r\n\tint N, Q;\r\n\tcin >>\
-    \ N >> Q;\r\n\tauto LST = makeLazySegTree(N, F, G, H, INF, -1LL);\r\n\r\n\tll\
-    \ a, b, c, d;\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tcin >> a;\r\n\t\tif (a\
-    \ == 0) {\r\n\t\t\tcin >> b >> c >> d;\r\n\t\t\tLST.set(b, c + 1, d);\r\n\t\t\
-    }\r\n\t\tif (a == 1) {\r\n\t\t\tcin >> b >> c;\r\n\t\t\tcout << LST.get(b, c +\
-    \ 1) << endl;\r\n\t\t}\r\n\t}\r\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_F\"\
+    \ 4 \"verify/data-structure/DSL_2_H.test.cpp\"\nusing namespace std;\r\ntypedef\
+    \ long long ll;\r\n\r\nint main() {\r\n\tauto F = [](int l, int r) {return min(l,\
+    \ r); };\r\n\tauto G = [](int m, int op) {return m + op; };\r\n\tauto H = [](int\
+    \ a, int b) {return a + b; };\r\n\tint N, Q;\r\n\tcin >> N >> Q;\r\n\r\n\tvector<int>\
+    \ v(N, 0);\r\n\tauto LST = makeLazySegTree(v, F, G, H, INF, 0);\r\n\r\n\tfor (int\
+    \ i = 0; i < Q; i++) {\r\n\t\tint t;\r\n\t\tcin >> t;\r\n\t\tif (t == 0) {\r\n\
+    \t\t\tint s, t, x;\r\n\t\t\tcin >> s >> t >> x;\r\n\t\t\tLST.set(s, t + 1, x);\r\
+    \n\t\t}\r\n\t\telse {\r\n\t\t\tint s, t;\r\n\t\t\tcin >> s >> t;\r\n\t\t\tcout\
+    \ << LST.get(s, t + 1) << endl;\r\n\t\t}\r\n\t}\r\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H\"\
     \r\n#include <bits/stdc++.h>\r\n#include \"data-structure/lazy_segment_tree.cpp\"\
     \r\nusing namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tauto\
-    \ F = [](ll l, ll r) {return min(l, r); };\r\n\tauto G = [](ll m, ll op) {return\
-    \ op == -1 ? m : op; };\r\n\tauto H = [](ll a, ll b) {return a == -1 ? b : a;\
-    \ };\r\n\r\n\tint N, Q;\r\n\tcin >> N >> Q;\r\n\tauto LST = makeLazySegTree(N,\
-    \ F, G, H, INF, -1LL);\r\n\r\n\tll a, b, c, d;\r\n\tfor (int i = 0; i < Q; i++)\
-    \ {\r\n\t\tcin >> a;\r\n\t\tif (a == 0) {\r\n\t\t\tcin >> b >> c >> d;\r\n\t\t\
-    \tLST.set(b, c + 1, d);\r\n\t\t}\r\n\t\tif (a == 1) {\r\n\t\t\tcin >> b >> c;\r\
-    \n\t\t\tcout << LST.get(b, c + 1) << endl;\r\n\t\t}\r\n\t}\r\n}"
+    \ F = [](int l, int r) {return min(l, r); };\r\n\tauto G = [](int m, int op) {return\
+    \ m + op; };\r\n\tauto H = [](int a, int b) {return a + b; };\r\n\tint N, Q;\r\
+    \n\tcin >> N >> Q;\r\n\r\n\tvector<int> v(N, 0);\r\n\tauto LST = makeLazySegTree(v,\
+    \ F, G, H, INF, 0);\r\n\r\n\tfor (int i = 0; i < Q; i++) {\r\n\t\tint t;\r\n\t\
+    \tcin >> t;\r\n\t\tif (t == 0) {\r\n\t\t\tint s, t, x;\r\n\t\t\tcin >> s >> t\
+    \ >> x;\r\n\t\t\tLST.set(s, t + 1, x);\r\n\t\t}\r\n\t\telse {\r\n\t\t\tint s,\
+    \ t;\r\n\t\t\tcin >> s >> t;\r\n\t\t\tcout << LST.get(s, t + 1) << endl;\r\n\t\
+    \t}\r\n\t}\r\n}"
   dependsOn:
   - data-structure/lazy_segment_tree.cpp
   isVerificationFile: true
-  path: verify/data-structure/DSL_2_F.test.cpp
+  path: verify/data-structure/DSL_2_H.test.cpp
   requiredBy: []
   timestamp: '2021-08-16 07:12:47+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/data-structure/DSL_2_F.test.cpp
+documentation_of: verify/data-structure/DSL_2_H.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/data-structure/DSL_2_F.test.cpp
-- /verify/verify/data-structure/DSL_2_F.test.cpp.html
-title: verify/data-structure/DSL_2_F.test.cpp
+- /verify/verify/data-structure/DSL_2_H.test.cpp
+- /verify/verify/data-structure/DSL_2_H.test.cpp.html
+title: verify/data-structure/DSL_2_H.test.cpp
 ---

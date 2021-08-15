@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/data-structure/DSL_2_A.test.cpp
     title: verify/data-structure/DSL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/data-structure/DSL_2_B.test.cpp
+    title: verify/data-structure/DSL_2_B.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -86,6 +89,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/data-structure/DSL_2_A.test.cpp
+  - verify/data-structure/DSL_2_B.test.cpp
 documentation_of: data-structure/segment_tree.cpp
 layout: document
 title: Segment Tree
@@ -95,13 +99,8 @@ title: Segment Tree
 一点更新・区間取得が高速にできるデータ構造。
 
 ## 操作
-### makeSegTree(n, F, IE)
-要素数 $n$ 、$F$ の単位元 $IE$ で初期化されたセグメント木を構築する。$F$ は $2$ つの区間をマージする二項演算を指定する。
-### makeSegTree(vec, F, IE)
-$vec$ を元にセグメント木を構築する。
-### get(l, r)
-区間 $[l,r)$ に対して二項演算した結果を返す。
-### set(idx, x)
-$idx$ 番目の要素を $x$ に更新する。
-### search_r(isOK, l)
-$[l,r]$ が $isOK$ を満たす最小の $r$ を返す。
+- :heavy_check_mark: **makeSegTree(n, F, IE)** : 要素数 $n$ 、$F$ の単位元 $IE$ で初期化されたセグメント木を構築する。$F$ は $2$ つの区間をマージする二項演算を指定する。
+- :heavy_check_mark: **makeSegTree(vec, F, IE)** : $vec$ を元にセグメント木を構築する。
+- :heavy_check_mark: **get(l, r)** : 区間 $[l,r)$ に対して二項演算した結果を返す。
+- :heavy_check_mark: **set(idx, x)** : $idx$ 番目の要素を $x$ に更新する。
+- :question: **search_r(isOK, l)** : $[l,r]$ が $isOK$ を満たす最小の $r$ を返す。

@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/string/ALDS1_14_B.test.cpp
     title: verify/string/ALDS1_14_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/string/z_algorithm_2.test.cpp
+    title: verify/string/z_algorithm_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -64,6 +67,7 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/string/z_algorithm_2.test.cpp
   - verify/string/ALDS1_14_B.test.cpp
 documentation_of: string/rolling_hash.cpp
 layout: document
@@ -74,11 +78,7 @@ title: Rolling Hash
 ハッシュを用いて文字列の一致判定を高速に行うアルゴリズム。
 
 ## 操作
-### RollingHash(S, b)
-文字列 $S$ からハッシュテーブルを構築する。$b$ にはハッシュの基数を指定する。
-### get(l, r)
-区間 $[l,r)$ のハッシュを求める。
-### concat(b, l1, r1, l2, r2)
-区間 $[l1,r1)$ と、ハッシュテーブル $b$ の区間 $[l2,r2)$ を結合したもののハッシュを求める。
-### getLCP(b, l1, l2)
-$l1$ から始まる区間と、ハッシュテーブル $b$ の $l2$ から始まる区間の最長共通接頭辞の長さを求める。
+- :heavy_check_mark: **RollingHash(S, b)** : 文字列 $S$ からハッシュテーブルを構築する。$b$ にはハッシュの基数を指定する。
+- :heavy_check_mark: **get(l, r)** : 区間 $[l,r)$ のハッシュを求める。
+- :question: **concat(b, l1, r1, l2, r2)** : 区間 $[l1,r1)$ と、ハッシュテーブル $b$ の区間 $[l2,r2)$ を結合したもののハッシュを求める。
+- :heavy_check_mark: **getLCP(b, l1, l2)** : $l1$ から始まる区間と、ハッシュテーブル $b$ の $l2$ から始まる区間の最長共通接頭辞の長さを求める。
