@@ -3,17 +3,12 @@
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
 	int BucketSize = 0; // バケットの数
-
 	int MaxSize = 0; // MaxSize < DataSize のときリハッシュする
-
 	int DataSize = 0; // 保存されているデータの数
-
 	int TombSize = 0; // 削除されたデータの個数
-
 
 	struct Record {
 		// 0 -> empty  1 -> used  2 -> deleted
-
 		int used = 0;
 		std::pair<KeyType, ValType> data;
 	};

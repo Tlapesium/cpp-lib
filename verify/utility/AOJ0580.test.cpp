@@ -1,4 +1,4 @@
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160"
+#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0580"
 #include <bits/stdc++.h>
 #include "utility/compress.cpp"
 using namespace std;
