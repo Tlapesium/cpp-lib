@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/utility/AOJ0580.test.cpp
     title: verify/utility/AOJ0580.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/compress.cpp\"\n\r\ntemplate<class T>\r\nstruct\
@@ -30,7 +30,7 @@ data:
   path: utility/compress.cpp
   requiredBy: []
   timestamp: '2021-08-16 07:42:44+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/utility/AOJ0580.test.cpp
 documentation_of: utility/compress.cpp
