@@ -3,12 +3,17 @@
 template<typename KeyType, typename ValType, typename HashFunc = std::hash<KeyType>, typename isEqual = std::equal_to<KeyType>>
 struct HashMap {
 	int BucketSize = 0; // バケットの数
+
 	int MaxSize = 0; // MaxSize < DataSize のときリハッシュする
+
 	int DataSize = 0; // 保存されているデータの数
+
 	int TombSize = 0; // 削除されたデータの個数
+
 
 	struct Record {
 		// 0 -> empty  1 -> used  2 -> deleted
+
 		int used = 0;
 		std::pair<KeyType, ValType> data;
 	};
@@ -43,7 +48,7 @@ struct HashMap {
 		resize(1 << (32 - __builtin_clz(InitialBucketSize)));
 	}
 
-	unsigned long long Hasher(const KeyType& a) {
+	auto Hasher(const KeyType& a) {
 		unsigned long long x = HashFunc()(a);
 		x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9ULL;
 		x = (x ^ (x >> 27)) * 0x94d049bb133111ebULL;
@@ -57,7 +62,7 @@ struct HashMap {
 		int OldBucketSize = BucketSize;
 		BucketSize = NewBucketSize;
 		MaxSize = BucketSize * 0.7;
-		DataSize = 0;
+		TombSize = DataSize = 0;
 		Record* tmp = Buckets;
 
 		Buckets = new Record[BucketSize];
@@ -68,35 +73,51 @@ struct HashMap {
 		if (OldBucketSize) delete[] tmp;
 	}
 
-	ValType& insert(const KeyType& a, const ValType& b) {
+	bool insert(const KeyType& a, const ValType& b) {
 		if (DataSize + 1 > MaxSize)resize(BucketSize << 1);
-		unsigned long long Hash = Hasher(a);
+		auto Hash = Hasher(a);
+		auto TombHash = Hash;
+		bool TombFlag = false;
+
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
 			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, a)) {
-				return Buckets[Hash & (BucketSize - 1)].data.second;
+				return false;
 			}
+			if (!TombFlag && Buckets[Hash & (BucketSize - 1)].used == 2)TombFlag = true, TombHash = Hash;
 			Hash++;
 		}
+		if (TombFlag) Hash = TombHash, DataSize--, TombSize--;
 		Buckets[Hash & (BucketSize - 1)] = { 1,{a,b} };
 		DataSize++;
-		return Buckets[Hash & (BucketSize - 1)].data.second;
+		return true;
 	}
 
-	void erase(const KeyType& key) {
-		unsigned long long Hash = Hasher(key);
+	bool erase(const KeyType& key) {
+		auto Hash = Hasher(key);
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
 			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, key)) {
 				Buckets[Hash & (BucketSize - 1)].used = 2;
 				TombSize++;
-				return;
+				return true;
 			}
 			Hash++;
 		}
-		throw "Not Found";
+		return false;
+	}
+
+	bool contains(const KeyType& key) {
+		auto Hash = Hasher(key);
+		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
+			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, key)) {
+				return true;
+			}
+			Hash++;
+		}
+		return false;
 	}
 
 	ValType& at(const KeyType& key) {
-		unsigned long long Hash = Hasher(key);
+		auto Hash = Hasher(key);
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
 			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, key)) {
 				return Buckets[Hash & (BucketSize - 1)].data.second;
@@ -108,13 +129,18 @@ struct HashMap {
 
 	ValType& operator[] (const KeyType& key) {
 		if (DataSize + 1 > MaxSize)resize(BucketSize << 1);
-		unsigned long long Hash = Hasher(key);
+		auto Hash = Hasher(key);
+		auto TombHash = Hash;
+		bool TombFlag = false;
+
 		while (Buckets[Hash & (BucketSize - 1)].used != 0) {
 			if (Buckets[Hash & (BucketSize - 1)].used == 1 && isEqual()(Buckets[Hash & (BucketSize - 1)].data.first, key)) {
 				return Buckets[Hash & (BucketSize - 1)].data.second;
 			}
+			if (!TombFlag && Buckets[Hash & (BucketSize - 1)].used == 2)TombFlag = true, TombHash = Hash;
 			Hash++;
 		}
+		if (TombFlag) Hash = TombHash, DataSize--, TombSize--;
 		Buckets[Hash & (BucketSize - 1)] = { 1,{key,ValType()} };
 		DataSize++;
 		return Buckets[Hash & (BucketSize - 1)].data.second;

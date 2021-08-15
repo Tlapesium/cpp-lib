@@ -11,8 +11,7 @@ int main() {
 
 	int N, Q;
 	cin >> N >> Q;
-	vector v(N, (1LL << 31) - 1);
-	auto LST = makeLazySegTree(v, F, G, H, (1LL << 31) - 1, -1LL);
+	auto LST = makeLazySegTree(N, F, G, H, INF, -1LL);
 
 	ll a, b, c, d;
 	for (int i = 0; i < Q; i++) {
