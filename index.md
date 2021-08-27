@@ -67,6 +67,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/modint.cpp
       title: Modint
+    - icon: ':warning:'
+      path: math/modreal.cpp
+      title: Modreal
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
