@@ -23,6 +23,7 @@ int main() {
 		cnt[{UF1.root(i), UF2.root(i)}]++;
 	}
 	for (int i = 0; i < N; i++) {
-		cout << cnt[{UF1.root(i), UF2.root(i)}] << endl;
+		cout << cnt[{UF1.root(i), UF2.root(i)}] << ' ';
 	}
+    cout << endl;
 }
