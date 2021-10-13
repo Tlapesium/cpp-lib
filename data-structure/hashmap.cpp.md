@@ -151,8 +151,8 @@ data:
   timestamp: '2021-08-16 07:46:02+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/associative_array.test.cpp
   - verify/data-structure/ITP2_7_B.test.cpp
+  - verify/data-structure/associative_array.test.cpp
 documentation_of: data-structure/hashmap.cpp
 layout: document
 title: HashMap

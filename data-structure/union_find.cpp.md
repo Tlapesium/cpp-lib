@@ -67,12 +67,12 @@ data:
   timestamp: '2021-08-15 04:52:35+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - verify/data-structure/ABC049-D.test.cpp
-  - verify/data-structure/DSL_1_A.test.cpp
-  - verify/data-structure/DSL_1_B.test.cpp
-  - verify/data-structure/AOJ1160.test.cpp
-  - verify/data-structure/ABC120-D.test.cpp
   - verify/graph/GRL_2_A.test.cpp
+  - verify/data-structure/DSL_1_B.test.cpp
+  - verify/data-structure/DSL_1_A.test.cpp
+  - verify/data-structure/ABC049-D.test.cpp
+  - verify/data-structure/ABC120-D.test.cpp
+  - verify/data-structure/AOJ1160.test.cpp
 documentation_of: data-structure/union_find.cpp
 layout: document
 title: Union Find

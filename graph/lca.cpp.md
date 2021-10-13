@@ -64,8 +64,8 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/graph/GRL_5_C.test.cpp
   - verify/graph/lca.test.cpp
+  - verify/graph/GRL_5_C.test.cpp
 documentation_of: graph/lca.cpp
 layout: document
 title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"

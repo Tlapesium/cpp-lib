@@ -48,9 +48,9 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/static_rmq.test.cpp
-  - verify/graph/GRL_5_C.test.cpp
   - verify/graph/lca.test.cpp
+  - verify/graph/GRL_5_C.test.cpp
+  - verify/data-structure/static_rmq.test.cpp
 documentation_of: data-structure/sparse_table.cpp
 layout: document
 title: Sparse Table

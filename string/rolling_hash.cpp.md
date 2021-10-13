@@ -67,8 +67,8 @@ data:
   timestamp: '2021-03-12 03:00:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/string/z_algorithm_2.test.cpp
   - verify/string/ALDS1_14_B.test.cpp
+  - verify/string/z_algorithm_2.test.cpp
 documentation_of: string/rolling_hash.cpp
 layout: document
 title: Rolling Hash

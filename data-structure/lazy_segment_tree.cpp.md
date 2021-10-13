@@ -145,8 +145,8 @@ data:
   timestamp: '2021-04-04 19:47:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/data-structure/DSL_2_H.test.cpp
   - verify/data-structure/DSL_2_F.test.cpp
+  - verify/data-structure/DSL_2_H.test.cpp
 documentation_of: data-structure/lazy_segment_tree.cpp
 layout: document
 title: Lazy Segment Tree

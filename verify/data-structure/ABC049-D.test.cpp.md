@@ -38,7 +38,7 @@ data:
     \tcin >> p >> q;\r\n\t\tUF2.merge(p - 1, q - 1);\r\n\t}\r\n\tmap<pair<int, int>,\
     \ int> cnt;\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcnt[{UF1.root(i), UF2.root(i)}]++;\r\
     \n\t}\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcout << cnt[{UF1.root(i), UF2.root(i)}]\
-    \ << endl;\r\n\t}\r\n}\n"
+    \ << ' ';\r\n\t}\r\n    cout << endl;\r\n}\r\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/arc065/tasks/arc065_b\"\r\n\
     #include <bits/stdc++.h>\r\n#include \"data-structure/union_find.cpp\"\r\nusing\
     \ namespace std;\r\ntypedef long long ll;\r\n\r\nint main() {\r\n\tint N, K, L;\r\
@@ -48,13 +48,13 @@ data:
     \ >> p >> q;\r\n\t\tUF2.merge(p - 1, q - 1);\r\n\t}\r\n\tmap<pair<int, int>, int>\
     \ cnt;\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcnt[{UF1.root(i), UF2.root(i)}]++;\r\
     \n\t}\r\n\tfor (int i = 0; i < N; i++) {\r\n\t\tcout << cnt[{UF1.root(i), UF2.root(i)}]\
-    \ << endl;\r\n\t}\r\n}"
+    \ << ' ';\r\n\t}\r\n    cout << endl;\r\n}\r\n"
   dependsOn:
   - data-structure/union_find.cpp
   isVerificationFile: true
   path: verify/data-structure/ABC049-D.test.cpp
   requiredBy: []
-  timestamp: '2021-08-15 05:37:10+09:00'
+  timestamp: '2021-10-13 22:26:13+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/data-structure/ABC049-D.test.cpp
